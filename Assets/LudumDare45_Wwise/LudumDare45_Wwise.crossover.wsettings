@@ -3,6 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{43EFC56A-43FF-45A9-8E48-1678DAD047A2}">
 			<PropertyList>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Desktop\LudumDare45\DogDaze SFX\Bounced"/>
 				<Property Name="Event Action List\{23501ED6-6E4C-46D5-AFE2-D38C6B18C67F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{4A5484E6-2A11-4840-A57A-2E6FA9A01FA3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7AFBA1D8-CAC6-4D32-A1DC-876DB3DFEE8A}\x64_Expand States" Type="string" Value=""/>
