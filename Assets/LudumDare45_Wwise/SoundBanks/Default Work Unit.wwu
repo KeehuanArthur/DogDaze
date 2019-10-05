@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{86D7ABFB-A5AC-4B87-9D18-6FC2859F2145}" SchemaVersion="94">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{86D7ABFB-A5AC-4B87-9D18-6FC2859F2145}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{D71CB15B-F929-4516-ABED-F201DB6D893A}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Dog_Bark" ID="{23501ED6-6E4C-46D5-AFE2-D38C6B18C67F}" WorkUnitID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="TennisBall" ID="{4A5484E6-2A11-4840-A57A-2E6FA9A01FA3}" WorkUnitID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Spray" ID="{7AFBA1D8-CAC6-4D32-A1DC-876DB3DFEE8A}" WorkUnitID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Coin" ID="{90AF7366-5E1D-4EDC-86E6-ED4CE597ABBE}" WorkUnitID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

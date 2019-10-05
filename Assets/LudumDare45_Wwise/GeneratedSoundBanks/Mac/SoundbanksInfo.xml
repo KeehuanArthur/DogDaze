@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>/Users/midikim/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/y:/Desktop/LudumDare45/LudumDare45_Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/midikim/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/y:/Desktop/LudumDare45/LudumDare45_Wwise/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/midikim/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/y:/Desktop/LudumDare45/LudumDare45_Wwise/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/midikim/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/y:/Desktop/LudumDare45/LudumDare45_Wwise/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3603273110" Name="Coin" ObjectPath="\Events\Default Work Unit\Coin"/>
+				<Event Id="2488400822" Name="Dog_Bark" ObjectPath="\Events\Default Work Unit\Dog_Bark"/>
+				<Event Id="35234536" Name="Spray" ObjectPath="\Events\Default Work Unit\Spray"/>
+				<Event Id="2537227879" Name="TennisBall" ObjectPath="\Events\Default Work Unit\TennisBall"/>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
