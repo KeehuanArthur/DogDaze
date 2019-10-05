@@ -1,6 +1,6 @@
 Temp/
 .vscode/
-obj/
+obj/.DS_Store
 Library/ShaderCache/
 
 
