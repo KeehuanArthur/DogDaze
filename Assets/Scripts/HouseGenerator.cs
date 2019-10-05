@@ -7,6 +7,7 @@ public class HouseGenerator : MonoBehaviour
 
     public int columns = 100;
     public int rows = 100;
+    private float zOffset = 1f;
 
     public GameObject[] floor_tiles;
     public GameObject[] wall_tiles;
@@ -53,7 +54,7 @@ public class HouseGenerator : MonoBehaviour
 
                 GameObject instance = Instantiate(
                     frame[i][j][Random.Range(0, frame[i][j].Length)],
-                    new Vector3(i,j,0f),
+                    new Vector3(i,j,zOffset),
                     Quaternion.identity
                 ) as GameObject;
                 instance.transform.SetParent(board_holder);
