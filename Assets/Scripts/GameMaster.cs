@@ -63,7 +63,7 @@ public class GameMaster : MonoBehaviour
         }
         houses[0].materializeHouse();
 
-        houses[0].deMateralizeHouse();
+        // houses[0].deMateralizeHouse();
         // Build Street
 
     }

@@ -43,16 +43,10 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-
-
-
-
-
-
     private void Start()
     {
         playerBody = GetComponent<Rigidbody2D>();
-        playerSprite = GetComponent<SpriteRenderer>();
+        // playerSprite = GetComponent<SpriteRenderer>();
         target = projectile.transform.position; // here
     }
 

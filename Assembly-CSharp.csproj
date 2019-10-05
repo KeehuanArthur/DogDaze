@@ -56,6 +56,8 @@
      <Compile Include="Assets\Scripts\GameMaster.cs" />
      <Compile Include="Assets\Scripts\HouseGenerator.cs" />
      <Compile Include="Assets\Scripts\JunkyardGenerator.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\StreetBuilder.cs" />
      <Compile Include="Assets\Scripts\StreetGenerator.cs" />
      <None Include="Assets\Scripts\tmp.txt" />
