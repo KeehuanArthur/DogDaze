@@ -1,29 +1,50 @@
+<<<<<<< HEAD
 ﻿using UnityEngine;
 
 public class Animal : MovingObject
+=======
+﻿using UnityEngine;
+
+public class Animal : MovingObject
+>>>>>>> 72819a0f579cd6391dcf90477d0a530b3d776385
 {
 	public Transform player;
     public bool moving = true;
 	public Sprite sprite; // for Animal's child classes
     float pushMagnitude = 1000f;
+<<<<<<< HEAD
 
     protected override void Start()
+=======
+
+    protected override void Start()
+>>>>>>> 72819a0f579cd6391dcf90477d0a530b3d776385
     {
 		player = GameObject.FindWithTag("Player").transform;
         //base.speed = Random.value * 4f;
         base.speed = 3f;
 
         base.Start();
+<<<<<<< HEAD
     }
 
+=======
+    }
+
+>>>>>>> 72819a0f579cd6391dcf90477d0a530b3d776385
     public void FixedUpdate()
 	{
         if (moving)
         {
             Move();
         }
+<<<<<<< HEAD
 	}
 
+=======
+	}
+
+>>>>>>> 72819a0f579cd6391dcf90477d0a530b3d776385
     protected override void Move()
     {
 		transform.LookAt(player.transform);
@@ -32,8 +53,13 @@ public class Animal : MovingObject
         transform.rotation = Quaternion.identity;
         //Debug.Log(transform.tag);
         //Debug.Log(transform.position);
+<<<<<<< HEAD
     }
 
+=======
+    }
+
+>>>>>>> 72819a0f579cd6391dcf90477d0a530b3d776385
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.tag == "Player")
@@ -54,7 +80,14 @@ public class Animal : MovingObject
             //moving = true;
             //*/
         }
+<<<<<<< HEAD
     }
 
     //protected override void OnCollisionEnter(Collision collision)
 }
+=======
+    }
+
+    //protected override void OnCollisionEnter(Collision collision)
+}
+>>>>>>> 72819a0f579cd6391dcf90477d0a530b3d776385

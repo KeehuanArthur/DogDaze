@@ -1,6 +1,9 @@
 Temp/
 .vscode/
+<<<<<<< HEAD
 obj/.DS_Store
 Library/ShaderCache/
 
+=======
+>>>>>>> 72819a0f579cd6391dcf90477d0a530b3d776385
 

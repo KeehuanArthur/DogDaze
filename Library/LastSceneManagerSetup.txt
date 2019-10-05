@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+sceneSetups: []
+=======
 sceneSetups:
 - path: Assets/Scenes/MapSetup Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
+>>>>>>> 37ae30525027ab171227c3138352a7cd4274bcee
