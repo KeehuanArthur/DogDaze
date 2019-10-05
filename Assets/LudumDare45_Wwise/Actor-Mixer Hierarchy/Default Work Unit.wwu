@@ -972,6 +972,13 @@
 					</ChildrenList>
 				</BlendContainer>
 				<BlendContainer Name="City_Ambience" ID="{E3364C13-896F-4064-A819-0085A60C90E9}" ShortID="243911407">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
