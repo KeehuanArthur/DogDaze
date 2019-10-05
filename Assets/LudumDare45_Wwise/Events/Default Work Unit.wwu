@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" SchemaVersion="94">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Dog_Bark" ID="{23501ED6-6E4C-46D5-AFE2-D38C6B18C67F}"/>
+				<Event Name="Coin" ID="{90AF7366-5E1D-4EDC-86E6-ED4CE597ABBE}"/>
+				<Event Name="Spray" ID="{7AFBA1D8-CAC6-4D32-A1DC-876DB3DFEE8A}"/>
+				<Event Name="TennisBall" ID="{4A5484E6-2A11-4840-A57A-2E6FA9A01FA3}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

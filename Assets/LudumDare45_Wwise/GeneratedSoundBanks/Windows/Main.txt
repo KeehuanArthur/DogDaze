@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	35234536	Spray			\Default Work Unit\Spray	
+	2488400822	Dog_Bark			\Default Work Unit\Dog_Bark	
+	2537227879	TennisBall			\Default Work Unit\TennisBall	
+	3603273110	Coin			\Default Work Unit\Coin	
+
