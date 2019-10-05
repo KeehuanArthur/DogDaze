@@ -710,6 +710,13 @@
 					</ChildrenList>
 				</RandomSequenceContainer>
 				<Sound Name="Roomtone,TACF,Auditorium,Light Hum" ID="{D971D387-E684-4AC4-8D36-CFEE1C5854F5}" ShortID="127235285">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
@@ -740,10 +747,15 @@
 					<ChildrenList>
 						<Sound Name="America_BBC_ECD24i" ID="{F8A3E44E-3395-4CDF-81B8-A82121C90674}" ShortID="489538912">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>17</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-24</Value>
+										<Value>-25</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -758,7 +770,7 @@
 							<ChildrenList>
 								<AudioFileSource Name="America_BBC_ECD24i" ID="{C8797A7D-1CE4-4567-9D54-3D2B16E1744B}" ShortID="927357170">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="9.49256992373768"/>
+										<Property Name="FadeInDuration" Type="Real64" Value="3.60673659040435"/>
 										<Property Name="FadeOutDuration" Type="Real64" Value="2.94291666666666"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 										<Property Name="TrimBegin" Type="Real64" Value="48.2201260291536"/>
@@ -772,45 +784,12 @@
 								<ActiveSource Name="America_BBC_ECD24i" ID="{C8797A7D-1CE4-4567-9D54-3D2B16E1744B}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="City Wind, Leaves, Distant Traffic  _Stereo (LR)" ID="{5AB805B4-BBA0-43DD-BA48-ED9ED9612A0E}" ShortID="205188490">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-19</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="City Wind, Leaves, Distant Traffic  _Stereo (LR)" ID="{D2C9B0B2-D305-4238-8379-F6028F49A9E5}" ShortID="403216670">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="7.85749598524306"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="4.28590690104168"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="42.3828571325232"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>City Wind, Leaves, Distant Traffic  _Stereo (LR) .wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="City Wind, Leaves, Distant Traffic  _Stereo (LR)" ID="{D2C9B0B2-D305-4238-8379-F6028F49A9E5}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="Industrial_Ambient_Spaces_04" ID="{C0B7E56F-4A6E-47A5-B7D1-6C81724EC88C}" ShortID="144130033">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-29</Value>
+										<Value>-27</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -848,7 +827,7 @@
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-38</Value>
+										<Value>-48</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -875,9 +854,20 @@
 						</Sound>
 						<Sound Name="Bluezone_BC0247_008_ambience_wind" ID="{B01424F3-CF91-4989-BC37-4D1A2355F7DE}" ShortID="575833820">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>36</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>15</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-35</Value>
+										<Value>-28</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -891,6 +881,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Bluezone_BC0247_008_ambience_wind" ID="{D71C5E84-40AF-4835-8C45-466E52F1076A}" ShortID="913886551">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.99666666666667"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.998333333333331"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Bluezone_BC0247_008_ambience_wind.wav</AudioFile>
 								</AudioFileSource>
@@ -899,17 +894,84 @@
 								<ActiveSource Name="Bluezone_BC0247_008_ambience_wind" ID="{D71C5E84-40AF-4835-8C45-466E52F1076A}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="CA_35_Construction Site_Street_Fadromas Loading Truck_3" ID="{3F8133BD-9D45-4019-B679-BA034AB12B00}" ShortID="786107790">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>10</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>50</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-16</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="CA_35_Construction Site_Street_Fadromas Loading Truck_3" ID="{E4652818-F151-4483-8939-8420232FB284}" ShortID="758611887">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="9.73090277777778"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="23.3029513888889"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="131.3671875"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>CA_35_Construction Site_Street_Fadromas Loading Truck_3.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="CA_35_Construction Site_Street_Fadromas Loading Truck_3" ID="{E4652818-F151-4483-8939-8420232FB284}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="City Wind, Leaves, Distant Traffic  _Stereo (LR)" ID="{619D6958-2057-40DC-AAC3-97CC5BA60B8D}" ShortID="803575559">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="City Wind, Leaves, Distant Traffic  _Stereo (LR)" ID="{7B2D88C5-2F01-4E71-BB56-2A3D1DCB8E72}" ShortID="424821462">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="5.71454253472222"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="5.71454253472221"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>City Wind, Leaves, Distant Traffic  _Stereo (LR).wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="City Wind, Leaves, Distant Traffic  _Stereo (LR)" ID="{7B2D88C5-2F01-4E71-BB56-2A3D1DCB8E72}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</BlendContainer>
-				<Sound Name="Park Residential, Birds, Wind, Crows _STEREO" ID="{5DA35564-77A8-4F85-93D5-FDAA47EAC1D4}" ShortID="1024438712">
-					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-38</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
+				<BlendContainer Name="City_Ambience" ID="{E3364C13-896F-4064-A819-0085A60C90E9}" ShortID="243911407">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
@@ -919,15 +981,50 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Park Residential, Birds, Wind, Crows _STEREO" ID="{00AB76C5-D555-4744-A5F0-4A8A2AAA79F0}" ShortID="472187441">
-							<Language>SFX</Language>
-							<AudioFile>Park Residential, Birds, Wind, Crows _STEREO.wav</AudioFile>
-						</AudioFileSource>
+						<Sound Name="Park Residential, Birds, Wind, Crows _STEREO" ID="{5DA35564-77A8-4F85-93D5-FDAA47EAC1D4}" ShortID="1024438712">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>39</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>45</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Park Residential, Birds, Wind, Crows _STEREO" ID="{00AB76C5-D555-4744-A5F0-4A8A2AAA79F0}" ShortID="472187441">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="6.81770833333337"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="17.3541666666666"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Park Residential, Birds, Wind, Crows _STEREO.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Park Residential, Birds, Wind, Crows _STEREO" ID="{00AB76C5-D555-4744-A5F0-4A8A2AAA79F0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Park Residential, Birds, Wind, Crows _STEREO" ID="{00AB76C5-D555-4744-A5F0-4A8A2AAA79F0}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
