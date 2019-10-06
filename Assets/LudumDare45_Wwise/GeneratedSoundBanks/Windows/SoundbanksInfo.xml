@@ -31,9 +31,9 @@
 				<Event Id="2057654685" Name="PlayerDog_Bark" ObjectPath="\Events\Default Work Unit\PlayerDog_Bark" DurationType="OneShot" DurationMin="1.081606" DurationMax="1.265667"/>
 				<Event Id="1936541503" Name="Room_Ambience" ObjectPath="\Events\Default Work Unit\Room_Ambience" DurationType="Infinite"/>
 				<Event Id="1723787087" Name="Roomba" ObjectPath="\Events\Default Work Unit\Roomba" DurationType="Infinite"/>
-				<Event Id="35234536" Name="Spray" ObjectPath="\Events\Default Work Unit\Spray" DurationType="OneShot" DurationMin="0.398721" DurationMax="0.532250"/>
-				<Event Id="2537227879" Name="TennisBall" ObjectPath="\Events\Default Work Unit\TennisBall" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3254411891" Name="SoccerBall" ObjectPath="\Events\Default Work Unit\SoccerBall" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3949529627" Name="Treat" ObjectPath="\Events\Default Work Unit\Treat" DurationType="OneShot" DurationMin="0.646306" DurationMax="0.646306"/>
+				<Event Id="3590456812" Name="Water_Spray" ObjectPath="\Events\Default Work Unit\Water_Spray" DurationType="OneShot" DurationMin="0.398721" DurationMax="0.532250"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="52608069" Language="SFX">
@@ -50,7 +50,7 @@
 				</File>
 				<File Id="158010889" Language="SFX">
 					<ShortName>Cat_Meow_1.wav</ShortName>
-					<Path>SFX/Cat_Meow_1_07B1DE8B.wem</Path>
+					<Path>SFX/Cat_Meow_1_FC4081A6.wem</Path>
 				</File>
 				<File Id="189465755" Language="SFX">
 					<ShortName>Roomba_Move.wav</ShortName>
@@ -62,11 +62,11 @@
 				</File>
 				<File Id="258964341" Language="SFX">
 					<ShortName>Treat_Throw.wav</ShortName>
-					<Path>SFX/Treat_Throw_7D48FB66.wem</Path>
+					<Path>SFX/Treat_Throw_A7AA0CE4.wem</Path>
 				</File>
 				<File Id="375039660" Language="SFX">
 					<ShortName>Dog_Tailwag.wav</ShortName>
-					<Path>SFX/Dog_Tailwag_A4212FB3.wem</Path>
+					<Path>SFX/Dog_Tailwag_E3CD11CF.wem</Path>
 				</File>
 				<File Id="393764157" Language="SFX">
 					<ShortName>SFX_SprayGun2_5.wav</ShortName>
@@ -98,7 +98,7 @@
 				</File>
 				<File Id="615072987" Language="SFX">
 					<ShortName>Cat_Meow_1.wav</ShortName>
-					<Path>SFX/Cat_Meow_1_D4D0169F.wem</Path>
+					<Path>SFX/Cat_Meow_1_C57CF544.wem</Path>
 				</File>
 				<File Id="640937498" Language="SFX">
 					<ShortName>SFX_SprayGun2_4.wav</ShortName>
@@ -114,11 +114,11 @@
 				</File>
 				<File Id="660867108" Language="SFX">
 					<ShortName>Roomtone,TACF,Auditorium,Light Hum.wav</ShortName>
-					<Path>SFX/Roomtone,TACF,Auditorium,Light Hum_6DA3F2D1.wem</Path>
+					<Path>SFX/Roomtone,TACF,Auditorium,Light Hum_B85CC767.wem</Path>
 				</File>
 				<File Id="718176670" Language="SFX">
 					<ShortName>Cat_Meow_1.wav</ShortName>
-					<Path>SFX/Cat_Meow_1_A2901951.wem</Path>
+					<Path>SFX/Cat_Meow_1_23C26BD4.wem</Path>
 				</File>
 				<File Id="734777411" Language="SFX">
 					<ShortName>SFX_SprayGun2_6.wav</ShortName>
@@ -146,7 +146,7 @@
 				</File>
 				<File Id="861376353" Language="SFX">
 					<ShortName>Cat_Meow_1.wav</ShortName>
-					<Path>SFX/Cat_Meow_1_4E899614.wem</Path>
+					<Path>SFX/Cat_Meow_1_EE88B63F.wem</Path>
 				</File>
 				<File Id="861576810" Language="SFX">
 					<ShortName>Dog_Bark_1.wav</ShortName>

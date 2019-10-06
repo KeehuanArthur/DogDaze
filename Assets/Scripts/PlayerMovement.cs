@@ -20,7 +20,17 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D[] Items;
     Rigidbody2D currentItem;
 
-    
+    [Header("Sounds")]
+    public GameObject akMusicPlayer;
+    public AK.Wwise.Event waterSpray;
+    public AK.Wwise.Event tailWig;
+    public AK.Wwise.Event soccerBall;
+    public AK.Wwise.Event roombaSound;
+    public AK.Wwise.Switch Junkyard;
+    public AK.Wwise.Switch Street;
+    public AK.Wwise.Switch room_1;
+    public AK.Wwise.Switch room_2;
+      
 
 
     private void Start()
@@ -39,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-	    if (!gameMaster.doingSetup)
+        if (!gameMaster.doingSetup)
 	    {
 		    MovePlayer();
 		    //Fire();
@@ -48,8 +58,9 @@ public class PlayerMovement : MonoBehaviour
 
 	private void Fire()
     {
-        if (Input.GetMouseButtonDown(0) && currentItem == Items[0])   // Useful for laser
+        if (Input.GetMouseButtonDown(0) && currentItem == Items[0])   // 
         {
+            tailWig.Post(gameObject);//play sound
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Rigidbody2D newCurrentItem;
             newCurrentItem = Instantiate(currentItem, transform.position, Quaternion.identity);
@@ -60,6 +71,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && currentItem == Items[1])   // Useful for tennisball
         {
+
+            waterSpray.Post(gameObject); //play sound
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Rigidbody2D newCurrentItem;
             newCurrentItem = Instantiate(currentItem, transform.position, Quaternion.identity);
@@ -75,27 +88,12 @@ public class PlayerMovement : MonoBehaviour
         // PLAYER MOVEMENT
         float hAxis = Input.GetAxisRaw("Horizontal");
         float vAxis = Input.GetAxisRaw("Vertical");
-        if (hAxis != 0f)
-        {
-            moveInput = new Vector2(hAxis, 0f);
-            if (vAxis != 0f)
-                moveInput = new Vector2(hAxis, vAxis);
-        }
-        else if (vAxis != 0f)
-        {
-            moveInput = new Vector2(0f, vAxis);
-            if (hAxis != 0f)
-                moveInput = new Vector2(hAxis, vAxis);
-        }
-        else
-        { // Infinite movement if this else isnt here....
-            moveInput = new Vector2(hAxis, vAxis);
-        }
+        moveInput = new Vector2(hAxis, vAxis);
         moveVelocity = moveInput.normalized * playerSpeed;
 
 
         // ITEM INPUT
-        if (ItemOption() == 1) // Laser
+        if (ItemOption() == 1) // Tailwig
         {
             currentItem = Items[ItemOption() - 1];
         }
@@ -124,14 +122,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            //switch wwise to tailWig
             return 1;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            //switch wwise to tennisball
             return 2;
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
+            //switch wwise to roomba 
             return 3;
         }
         else
@@ -154,7 +155,9 @@ public class PlayerMovement : MonoBehaviour
 			//gameMaster.cur_game_state = GameMaster.game_state_start_loading_level;
 			gameMaster.UpdateCanvas("House", false, houseNumber);
 			gameMaster.SetCurrentGameState("load");
+            room_1.SetValue(akMusicPlayer); //music changes
             gameMaster.EnterHouse(houseNumber);
+            
         }
 	}
 
@@ -165,6 +168,7 @@ public class PlayerMovement : MonoBehaviour
 			// TODO: save the item under the player
 			gameMaster.UpdateCanvas("Street", true, -1);
 			gameMaster.SetCurrentGameState("load");
+            Street.SetValue(akMusicPlayer);//music changes
 			gameMaster.EnterStreet();
 		}
 	}

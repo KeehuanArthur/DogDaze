@@ -23,10 +23,26 @@ namespace AK
         static const AkUniqueID PLAYERDOG_BARK = 2057654685U;
         static const AkUniqueID ROOM_AMBIENCE = 1936541503U;
         static const AkUniqueID ROOMBA = 1723787087U;
-        static const AkUniqueID SPRAY = 35234536U;
-        static const AkUniqueID TENNISBALL = 2537227879U;
+        static const AkUniqueID SOCCERBALL = 3254411891U;
         static const AkUniqueID TREAT = 3949529627U;
+        static const AkUniqueID WATER_SPRAY = 3590456812U;
     } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace WEAPON
+        {
+            static const AkUniqueID GROUP = 3893417221U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID SOCCERBALL = 3254411891U;
+                static const AkUniqueID TAILWIG = 2999891034U;
+                static const AkUniqueID WATERSPRAY = 666441205U;
+            } // namespace SWITCH
+        } // namespace WEAPON
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {
