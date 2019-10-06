@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainCamera : MonoBehaviour
 {
-    [SerializeField] Transform target;
+    private Transform target;
 
     private void Start()
     {
@@ -15,6 +15,6 @@ public class MainCamera : MonoBehaviour
     void Update()
     {
         transform.position = new Vector3(target.position.x, target.transform.position.y, transform.position.z);
-        transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+        transform.rotation = Quaternion.identity; //Quaternion.Euler(0.0f, 0.0f, 0.0f);
     }
 }
