@@ -11,21 +11,26 @@ public class GameMaster : MonoBehaviour
     [Serializable]
     public class Materials {
 
-        public GameObject[] street_floors;
-        public GameObject[] street_walls;
-        public GameObject[] street_house;
-        public GameObject[] house_floors;
-        public GameObject[] house_walls;
-        public GameObject[] junkyard_floors;
-        public GameObject[] junkyard_walls;
+        public GameObject street_floors;
+        public GameObject street_walls;
+        public GameObject street_house;
+        public GameObject house_floors;
+        public GameObject house_walls;
+        public GameObject junkyard_floors;
+        public GameObject junkyard_walls;
         public GameObject spray_bottle;
         public GameObject roomba;
         public GameObject tennis_ball;
     }
 
     // private List<List<List<GameObject[]>>> houses;
-    private List<HouseGenerator> houses;
+    private List<HouseBuilder> houses;
     public Materials materials = new Materials();
+
+    private Transform board_holder_transform;
+
+    public GameObject player;
+
 
     /**
       Map List:
@@ -35,36 +40,57 @@ public class GameMaster : MonoBehaviour
      */
 
 
-    private HouseGenerator GetHouseGenerator(int house_index, string type) {
+    private SceneBuilder GetHouseGeneratorFactory(int house_index, string type, Transform transform) {
 
-        HouseGenerator hg = new HouseGenerator();
+        SceneBuilder builder;
 
         if (type == "house") {
-            hg.floor_tiles = materials.house_floors;
-            hg.wall_tiles = materials.house_walls;
+            builder = new HouseBuilder();
+            builder.floor_tiles = materials.house_floors;
+            builder.wall_tiles = materials.house_walls;
+            builder.columns = 10;
+            builder.rows = 20;
         }
-        else if (type == "junk") {
-            hg.floor_tiles = materials.junkyard_floors;
-            hg.wall_tiles = materials.junkyard_floors;
+        // else if (type == "junk") {
+        //     builder.floor_tiles = materials.junkyard_floors;
+        //     builder.wall_tiles = materials.junkyard_floors;
+        // }
+        // else if (type == "street") {
+        else {
+            builder = new StreetBuilder();
+            builder.floor_tiles = materials.street_floors;
+            builder.wall_tiles = materials.street_walls;
         }
 
-        return hg;
+        builder.board_holder_transform = transform;
+        return builder;
     }
 
 
     private void BuildWorld() {
 
         // Build Houses
-        houses = new List<HouseGenerator>();
+        houses = new List<HouseBuilder>();
+        board_holder_transform = new GameObject("Board").transform;
         for (int i=0; i < house_count; i++) {
-            HouseGenerator hg = GetHouseGenerator(1, "house");
-            hg.seralizeHouse(10,10,1);
+            HouseBuilder hg = GetHouseGeneratorFactory(1, "house", board_holder_transform) as HouseBuilder;
+            hg.serealize();
             houses.Add(hg);
         }
-        houses[0].materializeHouse();
+        houses[0].materialize();
+        // houses[0].deMaterialize();
 
-        // houses[0].deMateralizeHouse();
+
+
         // Build Street
+        // StreetBuilder street_builder = new StreetBuilder();
+        // street_builder.board_holder_transform = board_holder_transform;
+        // street_builder.floor_tiles = materials.street_floors;
+        // street_builder.wall_tiles = materials.street_walls;
+        // street_builder.seralizeStreet();
+        // street_builder.materalizeStreet();
+
+        // player.transform.position = new Vector3(100,0,-1f);
 
     }
 
