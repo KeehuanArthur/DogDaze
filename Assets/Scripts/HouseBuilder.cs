@@ -12,17 +12,19 @@ public class HouseBuilder : SceneBuilder
         List<List<GameObject>> ret = new List<List<GameObject>>();
         frame = new List<List<GameObject>>();
 
+        GameObject wall_tile = houseComponents.wall_sprite_holder;                   
+        GameObject floor_tile = houseComponents.floor_sprite_holder;
+
+        wall_tile.AddComponent<BoxCollider2D>();
 
         for( int i=0; i < columns; i++ ) {
             frame.Add(new List<GameObject>());
             for( int j=0; j < rows; j++ ) {
                 if (i == 0 || j == 0 || i == columns-1 || j == rows-1) {
-                    GameObject wall_tile = houseComponents.wall_sprite_holder;                   
-                    wall_tile.GetComponent<SpriteRenderer>().sprite = sprite_list[sprite_mapper["floor"][0]];
+                    wall_tile.GetComponent<SpriteRenderer>().sprite = sprite_list[sprite_mapper["wall"][0]];
                     frame[i].Add(wall_tile);
                 }
                 else {
-                    GameObject floor_tile = houseComponents.floor_sprite_holder;
                     floor_tiles.GetComponent<SpriteRenderer>().sprite = sprite_list[sprite_mapper["floor"][0]];
                     frame[i].Add(floor_tiles);    
                 }

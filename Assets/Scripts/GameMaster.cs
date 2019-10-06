@@ -119,9 +119,11 @@ public class GameMaster : MonoBehaviour
     public void EnterHouse(int houseNumber) {
         // TODO: display "level 1" instead of "level start"
         Debug.Log("Enter House" + houseNumber.ToString());
+        
         currentScene.deMaterialize();
         houses[houseNumber].materialize();
-        // TODO: change player position
+        
+        player.transform.position = new Vector3(10,0,-1f);
         SpawnEnemies(houseNumber);
     }
     private void BuildWorld() {
