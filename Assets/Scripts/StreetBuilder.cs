@@ -33,17 +33,6 @@ public class StreetBuilder : SceneBuilder
                 }
             }
         }
-<<<<<<< HEAD
-
-
-        /* Front Mat */
-        
-
-
-
-    }
-=======
->>>>>>> a18c1d34c1ce53812bec8d3aa578e506c96a8846
 
 
         for (int i=0; i < columns; i++)
@@ -106,7 +95,6 @@ public class StreetBuilder : SceneBuilder
                         frame[i][j] = wall_tiles;
                     }
                 }
-            
 
             }
         }

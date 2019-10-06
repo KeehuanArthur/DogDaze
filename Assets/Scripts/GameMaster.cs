@@ -143,17 +143,6 @@ public class GameMaster : MonoBehaviour
 
         // player.transform.position = new Vector3(100,0,-1f);
 
-<<<<<<< HEAD
-    }
-
-
-    void Awake() {
-        cur_game_state = game_state_start_loading_level;
-
-        canvasImage = GameObject.Find("LevelImage");
-
-        BuildWorld();
-=======
     }
 
 	void SpawnEnemies()
@@ -169,17 +158,6 @@ public class GameMaster : MonoBehaviour
 	void Awake() {
 		player = GameObject.FindWithTag("Player");
 
-		BuildWorld();
-		SpawnEnemies();
->>>>>>> a18c1d34c1ce53812bec8d3aa578e506c96a8846
-    }
-
-
-
-    // Start is called before the first frame update
-    void Start()
-<<<<<<< HEAD
-    {            
         sprite_mapper = new Dictionary<string, int[]>();
         sprite_mapper.Add( "floor", new [] {1,2,3} );
         sprite_mapper.Add( "wall", new [] {8, 10, 11});
@@ -191,18 +169,24 @@ public class GameMaster : MonoBehaviour
         rawHouseSprites.Add(spriteListHouse2);
         rawHouseSprites.Add(spriteListHouse3);
 
+
+        cur_game_state = game_state_start_loading_level;
+        canvasImage = GameObject.Find("LevelImage");
+
+		BuildWorld();
+		SpawnEnemies();
+    }
+
+
+
+    // Start is called before the first frame update
+    void Start()
+    {            
+
     }
 
     // Update is called once per frame
     void Update()
-=======
-    {
-		
-	}
-
-	// Update is called once per frame
-	void Update()
->>>>>>> a18c1d34c1ce53812bec8d3aa578e506c96a8846
     {
 
         /* State Definitions */
