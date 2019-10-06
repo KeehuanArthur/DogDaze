@@ -14,17 +14,24 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID BIGDOG_BARK = 1112472142U;
-        static const AkUniqueID COIN = 3603273110U;
+        static const AkUniqueID CAT_HISS = 1347479017U;
+        static const AkUniqueID CAT_MEOW = 1968116890U;
+        static const AkUniqueID DOG_TAILWAG = 2218763125U;
+        static const AkUniqueID FOOTSTEP = 1866025847U;
         static const AkUniqueID JUNKTYARD_AMBIENCE = 2355367520U;
         static const AkUniqueID JUNKYARD_MUSIC = 2717114767U;
         static const AkUniqueID PLAYERDOG_BARK = 2057654685U;
+        static const AkUniqueID ROOM_AMBIENCE = 1936541503U;
+        static const AkUniqueID ROOMBA = 1723787087U;
         static const AkUniqueID SPRAY = 35234536U;
         static const AkUniqueID TENNISBALL = 2537227879U;
+        static const AkUniqueID TREAT = 3949529627U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID PLAYBACK_RATE = 1524500807U;
+        static const AkUniqueID ROOMBA_ACCEL = 2299759966U;
         static const AkUniqueID RPM = 796049864U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;

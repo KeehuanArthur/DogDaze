@@ -14,7 +14,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Coin" ID="{90AF7366-5E1D-4EDC-86E6-ED4CE597ABBE}"/>
 				<Event Name="Spray" ID="{7AFBA1D8-CAC6-4D32-A1DC-876DB3DFEE8A}">
 					<ChildrenList>
 						<Action Name="" ID="{5A1837E5-1D0B-497A-914D-19FC79C52182}" ShortID="1048262437">
@@ -79,6 +78,73 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Junkyard Music" ID="{F8AA21A1-FD1E-4AF9-A279-A0CE4CD0C6A2}" WorkUnitID="{A9B4FD7A-984E-4BCC-BF85-1470EC9C5986}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Room_Ambience" ID="{003D1326-6A33-4810-A754-CD2E1FB5F3F9}">
+					<ChildrenList>
+						<Action Name="" ID="{47484126-E3FD-46F9-B826-77C4FBFBCB23}" ShortID="951025267">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Room_Ambience" ID="{D971D387-E684-4AC4-8D36-CFEE1C5854F5}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Roomba" ID="{DD41B2AB-6872-487A-AD4B-18A3F846BB53}">
+					<ChildrenList>
+						<Action Name="" ID="{B3F758D0-0415-4603-9B0A-75D173DFE7A5}" ShortID="197373847">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Roomba_Move" ID="{38FDD317-9ABB-457C-A5B2-29918DEF0C01}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Treat" ID="{092BC6EC-8D4F-49F3-97F2-18FCDB1614FC}">
+					<ChildrenList>
+						<Action Name="" ID="{DF3A0538-7B8F-4ABC-9F0E-71150D908926}" ShortID="704091443">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Treat_Throw" ID="{DA3AB863-5E7B-4495-A55F-89E9A8D7FFA3}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Footstep" ID="{4909D516-AF38-4340-A49A-6B6E260480E6}"/>
+				<Event Name="Cat_Meow" ID="{B5B0BF93-6383-4FE1-AAA6-3BEC9C966CE6}">
+					<ChildrenList>
+						<Action Name="" ID="{A7B2A11C-7F94-4805-8C56-C88623DD333E}" ShortID="355250012">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cat_Meow" ID="{3A130356-0C66-4CCB-814E-328F5472F2DF}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cat_Hiss" ID="{52062C89-CF45-42E2-8DB6-811E0D35594D}">
+					<ChildrenList>
+						<Action Name="" ID="{F32FECFE-FFBA-4AED-9AB9-7ADE3662B9D2}" ShortID="858053681">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cat_Hissing_1" ID="{868D1B69-6805-409A-BD7D-A832E40B0387}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dog_Tailwag" ID="{3C12C756-E243-42C4-9859-91C51EC87321}">
+					<ChildrenList>
+						<Action Name="" ID="{E5322B69-8080-49CB-AEC5-D6417F22D125}" ShortID="763015793">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dog_Tailwag" ID="{82CA771C-ADC2-4F4A-A731-8CD9BC57FAAC}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

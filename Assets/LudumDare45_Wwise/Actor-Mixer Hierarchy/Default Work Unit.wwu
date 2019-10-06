@@ -599,7 +599,7 @@
 								<ActiveSource Name="BigDog_Bark_1" ID="{4F26F85F-6666-47A0-81AB-8AF31B3F90A5}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="BigDog_Bark_01" ID="{3B71EA9A-D936-4481-A99B-74820EAF2590}" ShortID="1009669469">
+						<Sound Name="BigDog_Bark_3" ID="{3B71EA9A-D936-4481-A99B-74820EAF2590}" ShortID="1009669469">
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
@@ -671,7 +671,7 @@
 								<ActiveSource Name="BigDog_Bark_2" ID="{7F1D2004-214B-4362-8734-1A9D701BA63A}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="BigDog_Bark_02" ID="{383F5F34-FF52-4DF0-8E16-77694DBF4C4E}" ShortID="295246447">
+						<Sound Name="BigDog_Bark_4" ID="{383F5F34-FF52-4DF0-8E16-77694DBF4C4E}" ShortID="295246447">
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
@@ -707,13 +707,76 @@
 								<ActiveSource Name="BigDog_Bark_2" ID="{5376BC11-C9CB-43DE-B997-F3451CBCACB7}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="BigDog_Bark_7" ID="{ABC8EB7B-C7FD-474A-982F-2687903EDD17}" ShortID="82705791">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BigDog_Bark_7" ID="{D7451AA3-BAE0-438E-8F80-E4E967071B24}" ShortID="120945632">
+									<Language>SFX</Language>
+									<AudioFile>BigDog_Bark_7.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BigDog_Bark_7" ID="{D7451AA3-BAE0-438E-8F80-E4E967071B24}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BigDog_Bark_6" ID="{CC45399F-6F01-4206-9B7C-C8D00E2F8930}" ShortID="843505584">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BigDog_Bark_6" ID="{708B1789-B1EE-4E12-ADCC-8CF72A1BA1A4}" ShortID="469992210">
+									<Language>SFX</Language>
+									<AudioFile>BigDog_Bark_6.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BigDog_Bark_6" ID="{708B1789-B1EE-4E12-ADCC-8CF72A1BA1A4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="BigDog_Bark_5" ID="{2F3E011A-4825-4FC7-8DC0-A7EE50B27B36}" ShortID="857078456">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="BigDog_Bark_5" ID="{7788914C-7DCE-46A6-8EF3-FFD4465BCCB8}" ShortID="119396469">
+									<Language>SFX</Language>
+									<AudioFile>BigDog_Bark_5.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="BigDog_Bark_5" ID="{7788914C-7DCE-46A6-8EF3-FFD4465BCCB8}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
-				<Sound Name="Roomtone,TACF,Auditorium,Light Hum" ID="{D971D387-E684-4AC4-8D36-CFEE1C5854F5}" ShortID="127235285">
+				<Sound Name="Room_Ambience" ID="{D971D387-E684-4AC4-8D36-CFEE1C5854F5}" ShortID="127235285">
 					<PropertyList>
-						<Property Name="Volume" Type="Real64">
+						<Property Name="Highpass" Type="int16">
 							<ValueList>
-								<Value>-3</Value>
+								<Value>41</Value>
+							</ValueList>
+						</Property>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>50</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -727,6 +790,10 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Roomtone,TACF,Auditorium,Light Hum" ID="{14F63735-BE17-4764-9149-BB3529E6663E}" ShortID="660867108">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="29.325"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>Roomtone,TACF,Auditorium,Light Hum.wav</AudioFile>
 						</AudioFileSource>
@@ -1032,6 +1099,339 @@
 						</Sound>
 					</ChildrenList>
 				</BlendContainer>
+				<Sound Name="Cat_Hissing_1" ID="{868D1B69-6805-409A-BD7D-A832E40B0387}" ShortID="427090795">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{49C1C945-5ABE-49DF-88C6-A081ADED7C17}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Cat_Hissing_1" ID="{1145719B-E981-4C5E-8D5B-DC643A198787}" ShortID="825233811">
+							<Language>SFX</Language>
+							<AudioFile>Cat_Hissing_1.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Cat_Hissing_1" ID="{1145719B-E981-4C5E-8D5B-DC643A198787}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Dog_Tailwag" ID="{82CA771C-ADC2-4F4A-A731-8CD9BC57FAAC}" ShortID="378411509">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>30</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>20</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{D0B0B875-8EDA-4EA0-A369-8A21BB1CE0C0}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-50"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Dog_Tailwag" ID="{434452D9-4775-449E-8CFD-81126677DACD}" ShortID="375039660">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.660277777777778"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.929891203703704"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Dog_Tailwag.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Dog_Tailwag" ID="{434452D9-4775-449E-8CFD-81126677DACD}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Treat_Throw" ID="{DA3AB863-5E7B-4495-A55F-89E9A8D7FFA3}" ShortID="864768837">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Treat_Throw" ID="{867B3B01-3CE0-46EA-AE2E-AE915283A795}" ShortID="258964341">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.55661476417824"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.342938006365741"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.646306242766204"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Treat_Throw.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Treat_Throw" ID="{867B3B01-3CE0-46EA-AE2E-AE915283A795}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Roomba_Move" ID="{38FDD317-9ABB-457C-A5B2-29918DEF0C01}" ShortID="462076446">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Pitch" Type="int32">
+							<RTPCList>
+								<RTPC Name="" ID="{207F606E-D742-4733-AE40-53A70D1412C7}" ShortID="1040608251">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Roomba_Accel" ID="{5290FDD6-1C72-4267-BB65-48FE5B5403C4}" WorkUnitID="{E21181EA-7B90-4F39-AA51-AEC7D5AE7AFA}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{18864786-3237-4DAE-9A32-18426E43497F}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-505</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>50.43859</XPos>
+												<YPos>-408</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>1</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{58591738-F780-476D-A200-7734785A8697}" ShortID="489919464">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Roomba_Accel" ID="{5290FDD6-1C72-4267-BB65-48FE5B5403C4}" WorkUnitID="{E21181EA-7B90-4F39-AA51-AEC7D5AE7AFA}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{16DE6034-6882-4562-B7CB-D3EEFDE0F19C}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-2.80902</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>49.34211</XPos>
+												<YPos>-0.52256</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Roomba_Move" ID="{775D104C-2D14-4278-A48D-833EDD4D9094}" ShortID="189465755">
+							<Language>SFX</Language>
+							<AudioFile>Roomba_Move.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Roomba_Move" ID="{775D104C-2D14-4278-A48D-833EDD4D9094}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Cat_Meow" ID="{3A130356-0C66-4CCB-814E-328F5472F2DF}" ShortID="565093008">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Cat_Meow_1" ID="{A62D7A0D-70C3-464A-8AD4-A02A2CE50691}" ShortID="154013515">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cat_Meow_1" ID="{FA9F123C-DC39-4BAF-9BA7-5DD8089B5AB9}" ShortID="718176670">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.205656539351852"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0474592013888888"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.53451417824074"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Cat_Meow_1.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="158010889"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cat_Meow_1" ID="{FA9F123C-DC39-4BAF-9BA7-5DD8089B5AB9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Cat_Meow_2" ID="{23675818-632E-45A0-A872-D58669181B0D}" ShortID="1057249940">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cat_Meow_1" ID="{E34BF55F-83BB-4EF1-BE98-2DC653C61271}" ShortID="861376353">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.61361284722222"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.9741099537037"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Cat_Meow_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cat_Meow_1" ID="{E34BF55F-83BB-4EF1-BE98-2DC653C61271}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Cat_Meow_3" ID="{162DF274-42A2-450A-A7CB-F9D6757CBDBC}" ShortID="728002117">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cat_Meow_1" ID="{F7552F14-5094-48BE-9691-107D43C1203D}" ShortID="158010889">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.142377604166667"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.9899296875"/>
+										<Property Name="TrimEnd" Type="Real64" Value="4.36624652777778"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Cat_Meow_1.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="615072987"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cat_Meow_1" ID="{F7552F14-5094-48BE-9691-107D43C1203D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Cat_Meow_4" ID="{60D81CA7-9F7D-453E-9D97-F044652C00F1}" ShortID="658093742">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cat_Meow_1" ID="{DC1B3563-213E-4C6D-B2BF-69F1D509CE71}" ShortID="615072987">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.110738136574074"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.158197337962963"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="4.88829774305556"/>
+										<Property Name="TrimEnd" Type="Real64" Value="6.10641724537037"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Cat_Meow_1.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="718176670"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cat_Meow_1" ID="{DC1B3563-213E-4C6D-B2BF-69F1D509CE71}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
