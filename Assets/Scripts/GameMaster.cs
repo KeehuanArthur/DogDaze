@@ -16,6 +16,10 @@ public class GameMaster : MonoBehaviour
     public float levelStartDelay = 2f;
     private Text levelText;
     private GameObject canvasImage;
+    Dictionary <string, string> nextStage = new Dictionary<string, string>();
+
+    SceneBuilder currentScene;
+
 
     public int house_count = 3;
     private bool doingSetup;
@@ -85,8 +89,6 @@ public class GameMaster : MonoBehaviour
     private SceneBuilder SceneFactory(
         int house_index, string type, Transform transform) {
 
-        Debug.Log("GM.SceneFactory");
-
         if (type == "house") {
             HouseBuilder builder = new HouseBuilder();
             builder.floor_tiles = materials.house_floors;
@@ -114,9 +116,14 @@ public class GameMaster : MonoBehaviour
         }
     }
 
-
+    public void EnterHouse(int houseNumber) {
+        Debug.Log("Enter House" + houseNumber.ToString());
+        currentScene.deMaterialize();
+        houses[houseNumber].materialize();
+        // TODO: change player position
+        SpawnEnemies(houseNumber);
+    }
     private void BuildWorld() {
-        Debug.Log("GM.BuildWorld");
 
 
         // Build Houses
@@ -134,7 +141,10 @@ public class GameMaster : MonoBehaviour
         //Build Street
         StreetBuilder street_builder = SceneFactory(1, "street", board_holder_transform) as StreetBuilder;
         street_builder.serealize();
-        street_builder.materialize();
+
+        currentScene = street_builder;
+        currentScene.materialize();
+        //street_builder.materialize();
         // player.transform.position = new Vector3(15, 0, -1f);
 
 
@@ -150,9 +160,8 @@ public class GameMaster : MonoBehaviour
 
     }
 
-	void SpawnEnemies()
+	void SpawnEnemies(int houseNumber)
 	{
-        Debug.Log("GM.SpawnEnemies");
 		enemies = new List<GameObject>();
 		for (int i = 0; i < 3; i++)
 		{
@@ -162,7 +171,6 @@ public class GameMaster : MonoBehaviour
 
 
 	void Awake() {
-        Debug.Log("GM.BuildWorld");
 		player = GameObject.FindWithTag("Player");
         player.GetComponent<PlayerMovement>().gameMaster = this;
 
@@ -170,7 +178,6 @@ public class GameMaster : MonoBehaviour
         sprite_mapper.Add( "floor", new [] {16,18,19} );
         sprite_mapper.Add( "wall", new [] {8, 10, 11});
         sprite_mapper.Add( "door", new [] {54, 62});
-
 
         rawHouseSprites = new List<Sprite[]>();
         rawHouseSprites.Add(spriteListHouse1);
@@ -181,8 +188,8 @@ public class GameMaster : MonoBehaviour
         cur_game_state = game_state_start_loading_level;
         canvasImage = GameObject.Find("LevelCanvas");
 
+
 		BuildWorld();
-		SpawnEnemies();
     }
 
 
@@ -193,6 +200,11 @@ public class GameMaster : MonoBehaviour
 
     }
 
+    public void SetCurrentGameState(String newState) {
+        if (newState == "load") {
+            cur_game_state = game_state_start_loading_level;
+        }
+    }
     // Update is called once per frame
     void Update()
     {

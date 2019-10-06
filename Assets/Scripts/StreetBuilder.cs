@@ -15,6 +15,7 @@ public class StreetBuilder : SceneBuilder
                 // Doors
                 if (i == 0 && j == 25) {
                     frame[i].Add(door_tiles);
+                    frame[i][frame[i].Count-1].name = "door1";
                 }
 
                 if (i > 10 && i < 20) {

@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         MovePlayer();
-        Fire();
+        //Fire();
     }
 
     private void Fire()
@@ -146,9 +146,12 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log(c.tag);
         Debug.Log(c.GetComponent<BoxCollider2D>().tag);
-        if (c.GetComponent<BoxCollider2D>().tag == "Door") {
-            Debug.Log("door");
-            gameMaster.cur_game_state = GameMaster.game_state_start_loading_level;
+        BoxCollider2D collider = c.GetComponent<BoxCollider2D>();
+        if (collider.tag == "Door") {
+            int houseNumber = Int32.Parse(collider.name.Substring(4,1));
+            //gameMaster.cur_game_state = GameMaster.game_state_start_loading_level;
+            gameMaster.SetCurrentGameState("load");
+            gameMaster.EnterHouse(houseNumber);
         }
     }
 
