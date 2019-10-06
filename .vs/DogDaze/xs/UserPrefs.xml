@@ -1,24 +1,43 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameMaster.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/StreetGenerator.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameMaster.cs" Line="200" Column="1" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="146" Column="1" />
-      <File FileName="Assets/Scripts/Animal.cs" Line="28" Column="18" />
-      <File FileName="Assets/Scripts/HouseBuilder.cs" Line="50" Column="1" />
-      <File FileName="Assets/Scripts/Animals/Bulldog.cs" Line="7" Column="15" />
-      <File FileName="Assets/Scripts/StreetBuilder.cs" Line="104" Column="1" />
+      <File FileName="Assets/Scripts/GameMaster.cs" Line="296" Column="1" />
+      <File FileName="Assets/Scripts/SceneBuilder.cs" Line="88" Column="1" />
+      <File FileName="Assets/Scripts/HouseBuilder.cs" Line="147" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Animal.cs" Line="50" Column="1" />
+      <File FileName="Assets/Scripts/Animals/Bulldog.cs" Line="10" Column="1" />
+      <File FileName="Assets/Scripts/StreetBuilder.cs" Line="112" Column="1" />
+      <File FileName="Assets/Scripts/MovingObject.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HouseGenerator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/JunkyardGenerator.cs" Line="19" Column="1" />
+      <File FileName="Assets/Scripts/StreetGenerator.cs" Line="19" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="DogDaze" expanded="True" selected="True" />
+          <Node name="DogDaze" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Animals" expanded="True" />
+                <Node name="StreetGenerator.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="DogDaze" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9400d4d1-19d6-4ca7-a26c-6412bcf95e8e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

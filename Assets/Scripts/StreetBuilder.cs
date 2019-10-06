@@ -8,6 +8,8 @@ public class StreetBuilder : SceneBuilder
     public override void serealize() {
         frame = new List<List<GameObject>>();
 
+        topFrameObjects = new List<GameObject>();
+        topFramePositions = new List<List<int>>();
 
         for (int i=0; i<columns; i++) {
             frame.Add(new List<GameObject>());
@@ -118,7 +120,6 @@ public class StreetBuilder : SceneBuilder
         frame[29][46] = Instantiate(door2);
         frame[29][45].GetComponent<Doors>().destination = "house1";
         frame[29][45].GetComponent<Doors>().gm = gm;
-
     }
    
 }

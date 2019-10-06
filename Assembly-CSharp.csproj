@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Doors.cs" />
      <Compile Include="Assets\Scripts\GameMaster.cs" />
      <Compile Include="Assets\Scripts\HouseBuilder.cs" />
+     <Compile Include="Assets\Scripts\HouseGenerator.cs" />
      <Compile Include="Assets\Scripts\JunkyardGenerator.cs" />
      <Compile Include="Assets\Scripts\MainCamera.cs" />
      <Compile Include="Assets\Scripts\MovingObject.cs" />

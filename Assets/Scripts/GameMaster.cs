@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 using Random = UnityEngine.Random;
@@ -12,18 +12,19 @@ public class GameMaster : MonoBehaviour
     public const string game_state_start_loading_level = "StartLoadingLevel";
     public const string game_state_loading_level = "LoadingLevel";
     public const string game_state_playing_game = "PlayingGame";
+    public const string game_state_change_nothing = "";
     public string cur_game_state = game_state_loading_level;
     public float levelStartDelay = 2f;
     private Text levelText;
     private GameObject canvasImage;
     Dictionary <string, string> nextStage = new Dictionary<string, string>();
 
+	public bool doingSetup;
+
     SceneBuilder currentScene;
 
 
     public int house_count = 3;
-    private bool doingSetup;
-
 
 
 
@@ -54,6 +55,8 @@ public class GameMaster : MonoBehaviour
         public GameObject floor_sprite_holder;
         public GameObject wall_sprite_holder;
         public GameObject entrance_sprite_holder;
+        public GameObject special_item_sprite_holder;
+
     }
     public  HouseComponents houseComponents;
 
@@ -96,8 +99,8 @@ public class GameMaster : MonoBehaviour
 
         if (type == "house") {
             HouseBuilder builder = new HouseBuilder();
-            builder.floor_tiles = materials.house_floors;
-            builder.wall_tiles = materials.house_walls;
+            //builder.floor_tiles = materials.house_floors;
+            //builder.wall_tiles = materials.house_walls;
             builder.houseComponents = houseComponents;
             builder.columns = 20;
             builder.rows = 20;
@@ -127,29 +130,11 @@ public class GameMaster : MonoBehaviour
         }
     }
 
-    // public void EnterStreet() {
-    //     Debug.Log("Enter Street");
-    //     currentScene.deMaterialize();
-    //     currentScene = street;
-    //     currentScene.materialize();
-
-    //     player.transform.position = new Vector3(100,0,-1f);
-    //     enemies = new List<GameObject>();
-    // }
-
-    // public void EnterHouse(int houseNumber) {
-    //     // TODO: display "level 1" instead of "level start"
-    //     Debug.Log("Enter House" + houseNumber.ToString());
-        
-    //     currentScene.deMaterialize();
-    //     currentScene = houses[houseNumber];
-    //     currentScene.materialize();
-        
-    //     player.transform.position = new Vector3(10,1,-1f);
-    //     SpawnEnemies(houseNumber);
-    // }
-
     public void EnterScene(string location) {
+
+        for (int i = 0; i < enemies.Count; i++) {
+            Destroy(enemies[i]);
+        }
 
         currentScene.deMaterialize();
 
@@ -163,7 +148,7 @@ public class GameMaster : MonoBehaviour
                 currentScene = houses[0];
                 currentScene.materialize();
                 player.transform.position = new Vector3(10,1,-1f);
-                // SpawnEnemies(0);
+                SpawnEnemies(3);
                 break;
             
             case "street":
@@ -172,7 +157,6 @@ public class GameMaster : MonoBehaviour
                 currentScene = street;
                 currentScene.materialize();
                 player.transform.position = new Vector3(15,0,-1f);
-                enemies = new List<GameObject>();
                 break;
 
             case "house1":
@@ -246,7 +230,6 @@ public class GameMaster : MonoBehaviour
 
 	void SpawnEnemies(int houseNumber)
 	{
-		enemies = new List<GameObject>();
 		for (int i = 0; i < 3; i++)
 		{
 			GameObject enemy = Instantiate(enemyPrefab, new Vector3(15,15, -1f), Quaternion.identity);
@@ -261,10 +244,13 @@ public class GameMaster : MonoBehaviour
 		player = GameObject.FindWithTag("Player");
         //player.GetComponent<PlayerMovement>().gameMaster = this;
 
+        enemies = new List<GameObject>();
+
         sprite_mapper = new Dictionary<string, int[]>();
         sprite_mapper.Add( "floor", new [] {16,18,19} );
         sprite_mapper.Add( "wall", new [] {8, 10, 11});
         sprite_mapper.Add( "door", new [] {54, 62});
+		sprite_mapper.Add("specialitem", new[] { 46 });
 
         rawHouseSprites = new List<Sprite[]>();
         rawHouseSprites.Add(spriteListHouse1);
@@ -278,6 +264,25 @@ public class GameMaster : MonoBehaviour
 
 		BuildWorld();
     }
+
+    public void UpdateCanvas(String destination, bool success, int level)
+	{
+		Text canvasText = canvasImage.transform.Find("Image").transform.Find("DisplayText").GetComponent<Text>();
+
+		if (destination == "Street" && success)
+        {
+			canvasText.text = "Success!";
+        }
+        else if (destination == "Street" && !success)
+		{
+			canvasText.text = "Failed..";
+		}
+        else if (destination == "House")
+		{
+			canvasText.text = "Level " + level.ToString();
+		}
+
+	}
 
 
 
@@ -303,12 +308,15 @@ public class GameMaster : MonoBehaviour
                 break;
 
             case game_state_loading_level:
-                // canvasImage.SetActive(true);
+				doingSetup = true;
+				canvasImage.SetActive(true);
                 break;
 
             case game_state_playing_game:
+				doingSetup = false;
                 canvasImage.SetActive(false);
-                break;
+				cur_game_state = game_state_change_nothing;
+				break;
 
             default:
                 break;

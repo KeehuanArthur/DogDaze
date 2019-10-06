@@ -39,10 +39,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MovePlayer();
-        //Fire();
-    }
-
+	    if (!gameMaster.doingSetup)
+	    {
+		    MovePlayer();
+		    Fire();
+		}
+	}
     private void Fire()
     {
         if (Input.GetMouseButtonDown(0) && currentItem == Items[0])   // Useful for laser
@@ -72,22 +74,8 @@ public class PlayerMovement : MonoBehaviour
         // PLAYER MOVEMENT
         float hAxis = Input.GetAxisRaw("Horizontal");
         float vAxis = Input.GetAxisRaw("Vertical");
-        if (hAxis != 0f)
-        {
-            moveInput = new Vector2(hAxis, 0f);
-            if (vAxis != 0f)
-                moveInput = new Vector2(hAxis, vAxis);
-        }
-        else if (vAxis != 0f)
-        {
-            moveInput = new Vector2(0f, vAxis);
-            if (hAxis != 0f)
-                moveInput = new Vector2(hAxis, vAxis);
-        }
-        else
-        { // Infinite movement if this else isnt here....
-            moveInput = new Vector2(hAxis, vAxis);
-        }
+        moveInput = new Vector2(hAxis, vAxis);
+       
         moveVelocity = moveInput.normalized * playerSpeed;
 
 
@@ -143,15 +131,15 @@ public class PlayerMovement : MonoBehaviour
         playerBody.MovePosition(playerBody.position + moveVelocity * Time.fixedDeltaTime);
     }
 
-    // void OnTriggerEnter2D(Collider2D c) 
-    // {
-    //     BoxCollider2D collider = c.GetComponent<BoxCollider2D>();
-    //     if (collider.tag == "Door") {
-    //         int houseNumber = Int32.Parse(collider.name.Substring(4,1));
-    //         //gameMaster.cur_game_state = GameMaster.game_state_start_loading_level;
-    //         gameMaster.SetCurrentGameState(GameMaster.game_state_loading_level);
-    //         gameMaster.EnterHouse(houseNumber);
-    //     }
-    // }
-
+    void OnTriggerStay2D(Collider2D c)
+	{
+        if (c.tag == "SpecialItem" && Input.GetKey(KeyCode.C))
+		{
+			// TODO: save the item under the player
+			gameMaster.UpdateCanvas("Street", true, -1);
+            gameMaster.SetCurrentGameState(GameMaster.game_state_start_loading_level);
+            gameMaster.EnterScene("street");
+        }
+	}
 }
+

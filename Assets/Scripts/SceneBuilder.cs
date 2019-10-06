@@ -23,6 +23,9 @@ public abstract class SceneBuilder : MonoBehaviour
 
     public List<List<GameObject>> frame;
 
+    public List<GameObject> topFrameObjects; // furnitures, items, etc.
+    public List<List<int>> topFramePositions;
+
     public int columns;
     public int rows;
 
@@ -55,6 +58,25 @@ public abstract class SceneBuilder : MonoBehaviour
                 materialize_objects.Add(instance);
             }
         }
+
+
+        for (int i=0; i < topFrameObjects.Count; i++)
+        {
+            int x = topFramePositions[i][0];
+            int y = topFramePositions[i][1];
+
+            GameObject instance = Instantiate(
+                topFrameObjects[i],
+                new Vector3(x, y, zOffset-0.5f),
+                Quaternion.identity
+            ) as GameObject;
+
+            // instance.GetComponent<SpriteRenderer>().sprite = "";
+
+            instance.transform.SetParent(board_holder_transform);
+            materialize_objects.Add(instance);
+        }
+
     }
 
     public void deMaterialize() {
@@ -70,3 +92,5 @@ public abstract class SceneBuilder : MonoBehaviour
     }
 
 }
+
+

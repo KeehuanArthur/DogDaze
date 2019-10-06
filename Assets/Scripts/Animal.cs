@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class Animal : MovingObject
-{
+{ 
 	private Transform player;
 	public Sprite sprite; // for Animal's child classes
+
     public GameMaster gameMaster;
 
     protected override void Start()
@@ -16,10 +17,13 @@ public class Animal : MovingObject
         base.Start();
     }
 
-    // public void FixedUpdate()
-	// {
-    //     Move();
-	// }
+    public void FixedUpdate()
+	{
+        if (!gameMaster.doingSetup)
+		{
+			Move();
+		}
+	}
 
     protected override void Move()
     {
@@ -31,30 +35,16 @@ public class Animal : MovingObject
 
 		transform.position += direction * speed * Time.deltaTime;
         transform.rotation = Quaternion.identity;
-        //Debug.Log(transform.tag);
-        //Debug.Log(transform.position);
     }
 
-    // void OnCollisionEnter2D(Collision2D collision)
-    // {
-    //     if (collision.collider.tag == "Player")
-    //     {
-    //         gameMaster.SetCurrentGameState("load");
-    //         gameMaster.EnterStreet();
-    //     }
-    //     else if (collision.collider.tag == "Enemy")
-    //     {
-    //         // If other animals, push each other off, instead of getting on top of each other
-    //         /*
-    //         Vector2 pushOffDirection = (transform.position - collider.transform.position).normalized;
-    //         Debug.Log(transform.position);
-    //         Debug.Log(collider.transform.position);
-    //         Debug.Log(pushOffDirection);
-    //         base.rb.AddForce(pushOffDirection * pushMagnitude);
-    //         collider.attachedRigidbody.AddForce(pushOffDirection * pushMagnitude);
-    //         */
-    //     }
-    // }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Player")
+        {
+			gameMaster.UpdateCanvas("Street", false, -1);
+            gameMaster.SetCurrentGameState(GameMaster.game_state_start_loading_level);
+            gameMaster.EnterScene("street");
 
-    //protected override void OnCollisionEnter(Collision collision)
+        }
+    }
 }

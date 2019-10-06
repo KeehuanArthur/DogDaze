@@ -17,11 +17,11 @@ public class Doors : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D c) 
     {
-        if (gm.cur_game_state != GameMaster.game_state_playing_game)
-            return;
+        // if (gm.cur_game_state != GameMaster.game_state_playing_game)
+        //     return;
 
-        PolygonCollider2D collider = c.GetComponent<PolygonCollider2D>();
-        if (collider.tag == "Player") {
+        // PolygonCollider2D collider = c.GetComponent<PolygonCollider2D>();
+        if (c.tag == "Player") {
             gm.SetCurrentGameState(GameMaster.game_state_start_loading_level);
             gm.EnterScene(destination);
         }
