@@ -9,10 +9,10 @@ using UnityEngine.UI;
 public class GameMaster : MonoBehaviour
 {
 
-    private const string game_state_start_loading_level = "StartLoadingLevel";
-    private const string game_state_loading_level = "LoadingLevel";
-    private const string game_state_playing_game = "PlayingGame";
-    private string cur_game_state = game_state_loading_level;
+    public const string game_state_start_loading_level = "StartLoadingLevel";
+    public const string game_state_loading_level = "LoadingLevel";
+    public const string game_state_playing_game = "PlayingGame";
+    public string cur_game_state = game_state_loading_level;
     public float levelStartDelay = 2f;
     private Text levelText;
     private GameObject canvasImage;
@@ -29,6 +29,7 @@ public class GameMaster : MonoBehaviour
         public GameObject street_floors;
         public GameObject street_walls;
         public GameObject street_house;
+        public GameObject street_doors;
         public GameObject house_floors;
         public GameObject house_walls;
         public GameObject junkyard_floors;
@@ -84,13 +85,14 @@ public class GameMaster : MonoBehaviour
     private SceneBuilder SceneFactory(
         int house_index, string type, Transform transform) {
 
+        Debug.Log("GM.SceneFactory");
 
         if (type == "house") {
             HouseBuilder builder = new HouseBuilder();
             builder.floor_tiles = materials.house_floors;
             builder.wall_tiles = materials.house_walls;
             builder.houseComponents = houseComponents;
-            builder.columns = 10;
+            builder.columns = 20;
             builder.rows = 20;
             builder.sprite_list = rawHouseSprites[0]; // hardcoded for now cus we only have 1 list of sprites
             builder.sprite_mapper = sprite_mapper;
@@ -101,6 +103,7 @@ public class GameMaster : MonoBehaviour
             StreetBuilder builder = new StreetBuilder();
             builder.floor_tiles = materials.street_floors;
             builder.wall_tiles = materials.street_walls;
+            builder.door_tiles = materials.street_doors;
             builder.columns = 30;
             builder.rows = 80;
             builder.board_holder_transform = transform;            
@@ -113,6 +116,8 @@ public class GameMaster : MonoBehaviour
 
 
     private void BuildWorld() {
+        Debug.Log("GM.BuildWorld");
+
 
         // Build Houses
         houses = new List<HouseBuilder>();
@@ -122,15 +127,15 @@ public class GameMaster : MonoBehaviour
             hg.serealize();
             houses.Add(hg);
         }
-        houses[0].materialize();
-        houses[0].deMaterialize();
+        //houses[0].materialize();
+        //houses[0].deMaterialize();
 
 
-        // Build Street
+        //Build Street
         StreetBuilder street_builder = SceneFactory(1, "street", board_holder_transform) as StreetBuilder;
         street_builder.serealize();
         street_builder.materialize();
-        player.transform.position = new Vector3(15, 0, -1f);
+        // player.transform.position = new Vector3(15, 0, -1f);
 
 
         // Build Street
@@ -147,6 +152,7 @@ public class GameMaster : MonoBehaviour
 
 	void SpawnEnemies()
 	{
+        Debug.Log("GM.SpawnEnemies");
 		enemies = new List<GameObject>();
 		for (int i = 0; i < 3; i++)
 		{
@@ -156,10 +162,12 @@ public class GameMaster : MonoBehaviour
 
 
 	void Awake() {
+        Debug.Log("GM.BuildWorld");
 		player = GameObject.FindWithTag("Player");
+        player.GetComponent<PlayerMovement>().gameMaster = this;
 
         sprite_mapper = new Dictionary<string, int[]>();
-        sprite_mapper.Add( "floor", new [] {1,2,3} );
+        sprite_mapper.Add( "floor", new [] {16,18,19} );
         sprite_mapper.Add( "wall", new [] {8, 10, 11});
         sprite_mapper.Add( "door", new [] {54, 62});
 

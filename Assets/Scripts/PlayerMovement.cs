@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D playerBody;
     SpriteRenderer playerSprite;
+    public GameMaster gameMaster;
 
     [Header("Projectile")] //From here
     private Vector3 target; //To here
@@ -141,5 +142,14 @@ public class PlayerMovement : MonoBehaviour
         playerBody.MovePosition(playerBody.position + moveVelocity * Time.fixedDeltaTime);
     }
 
+    void OnTriggerEnter2D(Collider2D c) 
+    {
+        Debug.Log(c.tag);
+        Debug.Log(c.GetComponent<BoxCollider2D>().tag);
+        if (c.GetComponent<BoxCollider2D>().tag == "Door") {
+            Debug.Log("door");
+            gameMaster.cur_game_state = GameMaster.game_state_start_loading_level;
+        }
+    }
 
 }
