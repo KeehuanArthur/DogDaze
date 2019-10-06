@@ -6,6 +6,11 @@ public class MainCamera : MonoBehaviour
 {
     [SerializeField] Transform target;
 
+    private void Start()
+    {
+        target = GameObject.FindWithTag("Player").transform;
+    }
+
     // Update is called once per frame
     void Update()
     {

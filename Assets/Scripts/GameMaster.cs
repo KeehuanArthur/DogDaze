@@ -29,7 +29,7 @@ public class GameMaster : MonoBehaviour
 
     private Transform board_holder_transform;
 
-    public GameObject player;
+    private GameObject player;
 	public GameObject enemyPrefab;
 	private List<GameObject> enemies;
 
@@ -124,11 +124,11 @@ public class GameMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+		player = GameObject.FindWithTag("Player");
+	}
 
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	void Update()
     {
         
     }
