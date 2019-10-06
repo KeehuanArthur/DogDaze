@@ -106,16 +106,18 @@ public class GameMaster : MonoBehaviour
 
 	void SpawnEnemies()
 	{
+		enemies = new List<GameObject>();
 		for (int i = 0; i < 3; i++)
 		{
-			enemies = new List<GameObject>();
 			enemies.Add(Instantiate(enemyPrefab, new Vector3(i * 5 + 3, i * 5 + 3, -1f), Quaternion.identity));
 		}
 	}
 
 
 	void Awake() {
-        BuildWorld();
+		player = GameObject.FindWithTag("Player");
+
+		BuildWorld();
 		SpawnEnemies();
     }
 
@@ -124,7 +126,7 @@ public class GameMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		player = GameObject.FindWithTag("Player");
+		
 	}
 
 	// Update is called once per frame
