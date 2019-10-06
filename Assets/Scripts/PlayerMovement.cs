@@ -20,7 +20,16 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D[] Items;
     Rigidbody2D currentItem;
 
-    
+    [Header("Sounds")]
+    public GameObject akMusicPlayer;
+    public AK.Wwise.Event waterSpray;
+    public AK.Wwise.Event tailWig;
+    public AK.Wwise.Event soccerBall;
+    public AK.Wwise.Event roombaSound;
+    public AK.Wwise.Switch Junkyard;
+    public AK.Wwise.Switch Street;
+    public AK.Wwise.Switch room_1;
+    public AK.Wwise.Switch room_2;
 
 
     private void Start()
@@ -38,17 +47,23 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FixedUpdate()
+
+
+
+
+
     {
-	    if (!gameMaster.doingSetup)
+        if (!gameMaster.doingSetup)
 	    {
 		    MovePlayer();
 		    Fire();
 		}
 	}
-    private void Fire()
+	private void Fire()
     {
-        if (Input.GetMouseButtonDown(0) && currentItem == Items[0])   // Useful for laser
+        if (Input.GetMouseButtonDown(0) && currentItem == Items[0])   // 
         {
+            tailWig.Post(gameObject);//play sound
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Rigidbody2D newCurrentItem;
             newCurrentItem = Instantiate(currentItem, transform.position, Quaternion.identity);
@@ -59,6 +74,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && currentItem == Items[1])   // Useful for tennisball
         {
+
+            waterSpray.Post(gameObject); //play sound
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Rigidbody2D newCurrentItem;
             newCurrentItem = Instantiate(currentItem, transform.position, Quaternion.identity);
@@ -68,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
 
     public void PlayerInput()
     {
@@ -138,6 +156,7 @@ public class PlayerMovement : MonoBehaviour
 			// TODO: save the item under the player
 			gameMaster.UpdateCanvas("Street", true, -1);
             gameMaster.SetCurrentGameState(GameMaster.game_state_start_loading_level);
+            Street.SetValue(akMusicPlayer);//music changes
             gameMaster.EnterScene("street");
         }
 	}
