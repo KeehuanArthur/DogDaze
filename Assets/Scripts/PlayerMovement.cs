@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
             newProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
 
             target.z = newProjectile.transform.position.z;
-            newProjectile.velocity = newProjectile.transform.TransformDirection(target);
+            newProjectile.velocity = newProjectile.transform.TransformDirection(target-transform.position);
             //newProjectile.transform.position = Vector3.MoveTowards(transform.position, target, projectileSpeed * 10);
             
         }
