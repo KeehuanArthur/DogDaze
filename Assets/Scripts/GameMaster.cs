@@ -3,29 +3,84 @@ using System.Collections.Generic;
 using System;
 using Random = UnityEngine.Random;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class GameMaster : MonoBehaviour
 {
+
+    public const string game_state_start_loading_level = "StartLoadingLevel";
+    public const string game_state_loading_level = "LoadingLevel";
+    public const string game_state_playing_game = "PlayingGame";
+	public const string game_state_change_nothing = "";
+    public string cur_game_state = game_state_loading_level;
+    public float levelStartDelay = 2f;
+    private Text levelText;
+    private GameObject canvasImage;
+	public bool doingSetup;
+	private bool clearStageSuccessfully;
+    Dictionary <string, string> nextStage = new Dictionary<string, string>();
+
+    SceneBuilder currentScene;
+
+
     public int house_count = 3;
+
+
+
 
     [Serializable]
     public class Materials {
 
-        public GameObject[] street_floors;
-        public GameObject[] street_walls;
-        public GameObject[] street_house;
-        public GameObject[] house_floors;
-        public GameObject[] house_walls;
-        public GameObject[] junkyard_floors;
-        public GameObject[] junkyard_walls;
+        public GameObject street_floors;
+        public GameObject street_walls;
+        public GameObject street_house;
+        public GameObject street_doors;
+        public GameObject house_floors;
+        public GameObject house_walls;
+        public GameObject junkyard_floors;
+        public GameObject junkyard_walls;
         public GameObject spray_bottle;
         public GameObject roomba;
         public GameObject tennis_ball;
     }
 
-    // private List<List<List<GameObject[]>>> houses;
-    private List<HouseGenerator> houses;
+
+
+
+    [Serializable]
+    public class HouseComponents{
+        public GameObject floor_sprite_holder;
+        public GameObject wall_sprite_holder;
+        public GameObject entrance_sprite_holder;
+		public GameObject special_item_sprite_holder;
+    }
+    public  HouseComponents houseComponents;
+
+    public Sprite[] spriteListHouse1;
+    public Sprite[] spriteListHouse2;
+    public Sprite[] spriteListHouse3;
+    public Sprite[] streetSpriteList;
+
+    List<Sprite[]> rawHouseSprites;
+
+    IDictionary<string, int[]> sprite_mapper;
+
+
+
+    private void OnLevelWasLoaded(int index) {
+    }
+
+    private List<HouseBuilder> houses;
+    private StreetBuilder street;
     public Materials materials = new Materials();
+
+    private Transform board_holder_transform;
+
+    private GameObject player;
+	public GameObject enemyPrefab;
+	private List<GameObject> enemies;
+
 
     /**
       Map List:
@@ -35,57 +90,208 @@ public class GameMaster : MonoBehaviour
      */
 
 
-    private HouseGenerator GetHouseGenerator(int house_index, string type) {
-
-        HouseGenerator hg = new HouseGenerator();
+    private SceneBuilder SceneFactory(
+        int house_index, string type, Transform transform) {
 
         if (type == "house") {
-            hg.floor_tiles = materials.house_floors;
-            hg.wall_tiles = materials.house_walls;
+            HouseBuilder builder = new HouseBuilder();
+            builder.floor_tiles = materials.house_floors;
+            builder.wall_tiles = materials.house_walls;
+            builder.houseComponents = houseComponents;
+            builder.columns = 20;
+            builder.rows = 20;
+            builder.sprite_list = rawHouseSprites[0]; // hardcoded for now cus we only have 1 list of sprites
+            builder.sprite_mapper = sprite_mapper;
+            builder.board_holder_transform = transform;            
+            return builder;
         }
-        else if (type == "junk") {
-            hg.floor_tiles = materials.junkyard_floors;
-            hg.wall_tiles = materials.junkyard_floors;
+        else if (type == "street") {
+            StreetBuilder builder = new StreetBuilder();
+            builder.floor_tiles = materials.street_floors;
+            builder.wall_tiles = materials.street_walls;
+            builder.door_tiles = materials.street_doors;
+            builder.columns = 30;
+            builder.rows = 80;
+            builder.board_holder_transform = transform;            
+            return builder;
         }
-
-        return hg;
+        else {
+            return null;
+        }
     }
 
+    public void EnterStreet() {
+        currentScene.deMaterialize();
+        currentScene = street;
+        currentScene.materialize();
 
+        player.transform.position = new Vector3(15f,0f,-1f);
+        for (int i=0; i < enemies.Count; i++)
+		{
+			Destroy(enemies[i]);
+		}
+    }
+
+    public void EnterHouse(int houseNumber) {
+        
+        currentScene.deMaterialize();
+        currentScene = houses[houseNumber];
+        currentScene.materialize();
+        
+        player.transform.position = new Vector3(10,1,-1f);
+        SpawnEnemies(houseNumber);
+    }
     private void BuildWorld() {
 
+
         // Build Houses
-        houses = new List<HouseGenerator>();
+        houses = new List<HouseBuilder>();
+        board_holder_transform = new GameObject("Board").transform;
         for (int i=0; i < house_count; i++) {
-            HouseGenerator hg = GetHouseGenerator(1, "house");
-            hg.seralizeHouse(10,10,1);
+            HouseBuilder hg = SceneFactory(1, "house", board_holder_transform) as HouseBuilder;
+            hg.serealize();
             houses.Add(hg);
         }
-        houses[0].materializeHouse();
+        // TEMP - JUST GET DOOR
+        materials.street_doors.GetComponent<SpriteRenderer>().sprite = houses[0].sprite_list[sprite_mapper["door"][0]];
+        //houses[0].materialize();
+        //houses[0].deMaterialize();
 
-        // houses[0].deMateralizeHouse();
+
+        //Build Street
+        street = SceneFactory(1, "street", board_holder_transform) as StreetBuilder;
+        street.serealize();
+
+        currentScene = street;
+        currentScene.materialize();
+        //street_builder.materialize();
+        // player.transform.position = new Vector3(15, 0, -1f);
+
+
         // Build Street
+        // StreetBuilder street_builder = new StreetBuilder();
+        // street_builder.board_holder_transform = board_holder_transform;
+        // street_builder.floor_tiles = materials.street_floors;
+        // street_builder.wall_tiles = materials.street_walls;
+        // street_builder.seralizeStreet();
+        // street_builder.materalizeStreet();
+
+        // player.transform.position = new Vector3(100,0,-1f);
 
     }
 
+	void SpawnEnemies(int houseNumber)
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			GameObject enemy = Instantiate(enemyPrefab, new Vector3(15,15, -1f), Quaternion.identity);
+            //enemy.GetComponent<PlayerMovement>().gameMaster = this;
+            enemies.Add(enemy);
+
+		}
+	}
+
+
+	void Awake() {
+		player = GameObject.FindWithTag("Player");
+		enemies = new List<GameObject>();
+		//player.GetComponent<PlayerMovement>().gameMaster = this;
+
+		sprite_mapper = new Dictionary<string, int[]>();
+        sprite_mapper.Add( "floor", new [] {16,18,19} );
+        sprite_mapper.Add( "wall", new [] {8, 10, 11});
+        sprite_mapper.Add( "door", new [] {54, 62});
+		sprite_mapper.Add("specialitem", new[] { 46 });
+
+        rawHouseSprites = new List<Sprite[]>();
+        rawHouseSprites.Add(spriteListHouse1);
+        rawHouseSprites.Add(spriteListHouse2);
+        rawHouseSprites.Add(spriteListHouse3);
 
 
 
-    void Awake() {
-        BuildWorld();
+        cur_game_state = game_state_start_loading_level;
+        canvasImage = GameObject.Find("LevelCanvas");
+
+
+		BuildWorld();
     }
+
+    public void UpdateCanvas(String destination, bool success, int level)
+	{
+		Text canvasText = canvasImage.transform.Find("Image").transform.Find("DisplayText").GetComponent<Text>();
+
+		if (destination == "Street" && success)
+        {
+			canvasText.text = "Success!";
+        }
+        else if (destination == "Street" && !success)
+		{
+			canvasText.text = "Failed..";
+		}
+        else if (destination == "House")
+		{
+			canvasText.text = "Level " + level.ToString();
+		}
+
+	}
 
 
 
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {            
+
     }
 
+    public void SetCurrentGameState(String newState) {
+        if (newState == "load") {
+            cur_game_state = game_state_start_loading_level;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
-        
+
+        /* State Definitions */
+        switch (cur_game_state) {
+            case game_state_start_loading_level:
+                cur_game_state = game_state_loading_level;
+                StartCoroutine( changeStateCo(game_state_playing_game, 2f) );
+                break;
+
+            case game_state_loading_level:
+				doingSetup = true;
+				canvasImage.SetActive(true);
+                break;
+
+            case game_state_playing_game:
+				doingSetup = false;
+                canvasImage.SetActive(false);
+				cur_game_state = game_state_change_nothing;
+				break;
+
+            default:
+                break;
+        }
     }
+
+    IEnumerator changeStateCo(String state_name, float delayTime) {
+
+        yield return new WaitForSeconds(delayTime);
+        cur_game_state = state_name;
+    }
+
+    // void ChangeGameStates() {
+    //     /* Next State Logic */
+
+    //     switch (cur_game_state) {
+    //         case game_state_playing_game:
+    //             break;
+            
+    //         case game_state_loading_level:
+    //             break;
+    //     }
+
+    // }
 }

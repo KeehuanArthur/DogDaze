@@ -2,14 +2,14 @@
 
 public class Animal : MovingObject
 {
-	public Transform player;
-    public bool moving = true;
+	private Transform player;
 	public Sprite sprite; // for Animal's child classes
-    float pushMagnitude = 1000f;
+    public GameMaster gameMaster;
 
     protected override void Start()
     {
 		player = GameObject.FindWithTag("Player").transform;
+        gameMaster = FindObjectsOfType<GameMaster>()[0];
         //base.speed = Random.value * 4f;
         base.speed = 3f;
 
@@ -18,41 +18,31 @@ public class Animal : MovingObject
 
     public void FixedUpdate()
 	{
-        if (moving)
-        {
-            Move();
-        }
+        if (!gameMaster.doingSetup)
+		{
+			Move();
+		}
 	}
 
     protected override void Move()
     {
 		transform.LookAt(player.transform);
-		transform.position +=
-            (new Vector3(transform.forward.x, transform.forward.y, 0f)) * speed * Time.deltaTime;
+
+		Vector3 direction = new Vector3(transform.forward.x, transform.forward.y, 0f);
+		direction.x *= Random.Range(0.5f, 2f);
+		direction.y *= Random.Range(0.5f, 2f);
+
+		transform.position += direction * speed * Time.deltaTime;
         transform.rotation = Quaternion.identity;
-        //Debug.Log(transform.tag);
-        //Debug.Log(transform.position);
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collider.tag == "Player")
+        if (collision.collider.tag == "Player")
         {
-            // TODO: Stage over. Restart
-        }
-        else if (collider.tag == "Enemy")
-        {
-            // If other animals, push each other off, instead of getting on top of each other
-            ///*
-            moving = false;
-            Vector2 pushOffDirection = (transform.position - collider.transform.position).normalized;
-            Debug.Log(transform.position);
-            Debug.Log(collider.transform.position);
-            Debug.Log(pushOffDirection);
-            base.rb.AddForce(pushOffDirection * pushMagnitude);
-            collider.attachedRigidbody.AddForce(pushOffDirection * pushMagnitude);
-            //moving = true;
-            //*/
+			gameMaster.UpdateCanvas("Street", false, -1);
+			gameMaster.SetCurrentGameState("load");
+            gameMaster.EnterStreet();
         }
     }
 
