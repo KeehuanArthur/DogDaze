@@ -40,7 +40,7 @@ public class GameMaster : MonoBehaviour
      */
 
 
-    private SceneBuilder GetHouseGeneratorFactory(int house_index, string type, Transform transform) {
+    private SceneBuilder SceneFactory(int house_index, string type, Transform transform) {
 
         SceneBuilder builder;
 
@@ -60,6 +60,8 @@ public class GameMaster : MonoBehaviour
             builder = new StreetBuilder();
             builder.floor_tiles = materials.street_floors;
             builder.wall_tiles = materials.street_walls;
+            builder.columns = 200;
+            builder.rows = 300;
         }
 
         builder.board_holder_transform = transform;
@@ -73,13 +75,19 @@ public class GameMaster : MonoBehaviour
         houses = new List<HouseBuilder>();
         board_holder_transform = new GameObject("Board").transform;
         for (int i=0; i < house_count; i++) {
-            HouseBuilder hg = GetHouseGeneratorFactory(1, "house", board_holder_transform) as HouseBuilder;
+            HouseBuilder hg = SceneFactory(1, "house", board_holder_transform) as HouseBuilder;
             hg.serealize();
             houses.Add(hg);
         }
         houses[0].materialize();
-        // houses[0].deMaterialize();
+        houses[0].deMaterialize();
 
+
+        // Build Street
+        StreetBuilder street_builder = SceneFactory(1, "street", board_holder_transform) as StreetBuilder;
+        street_builder.serealize();
+        street_builder.materialize();
+        player.transform.position = new Vector3(100, 0, -1f);
 
 
         // Build Street

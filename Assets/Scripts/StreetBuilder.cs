@@ -5,7 +5,9 @@ using UnityEngine;
 public class StreetBuilder : SceneBuilder
 {
     public override void serealize() {
-        
+        frame = new List<List<GameObject>>();
+
+
         for (int i=0; i<columns; i++) {
             frame.Add(new List<GameObject>());
             for (int j=0; j<rows; j++ ) {

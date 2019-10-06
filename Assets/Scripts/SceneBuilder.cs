@@ -29,6 +29,8 @@ public abstract class SceneBuilder : MonoBehaviour
                 if (frame[i][j] == null)
                     continue;
 
+                // print("making tile");
+
                 GameObject instance = Instantiate(
                     frame[i][j],
                     new Vector3(i,j,zOffset),
@@ -47,6 +49,8 @@ public abstract class SceneBuilder : MonoBehaviour
     }
 
     public void Start() {
+        // print("starting Scene Builder");
+        Debug.Log("Starting Scene Builder");
         frame = new List<List<GameObject>>();
     }
 
