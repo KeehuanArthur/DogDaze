@@ -1,6 +1,36 @@
 Event	ID	Name			Wwise Object Path	Notes
 	35234536	Spray			\Default Work Unit\Spray	
-	2488400822	Dog_Bark			\Default Work Unit\Dog_Bark	
+	1112472142	BigDog_Bark			\Default Work Unit\BigDog_Bark	
+	2057654685	PlayerDog_Bark			\Default Work Unit\PlayerDog_Bark	
+	2355367520	Junktyard_Ambience			\Default Work Unit\Junktyard_Ambience	
 	2537227879	TennisBall			\Default Work Unit\TennisBall	
+	2717114767	Junkyard_Music			\Default Work Unit\Junkyard_Music	
 	3603273110	Coin			\Default Work Unit\Coin	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	52608069	Dog_Bark_7	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\Dog_Bark_7_5F75EC9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SmallDog_Bark\Dog_Bark_7		8034
+	228904637	SFX_SprayGun2_1	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\SFX_SprayGun2_1_5F75EC9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SprayGun2\SFX_SprayGun2_1		6612
+	393764157	SFX_SprayGun2_5	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\SFX_SprayGun2_5_5F75EC9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SprayGun2\SFX_SprayGun2_5		6731
+	424821462	City Wind, Leaves, Distant Traffic  _Stereo (LR)	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\City Wind, Leaves, Distant Traffic  _Stereo (LR)_80C7FECB.wem		\Actor-Mixer Hierarchy\Default Work Unit\JunkYard_Ambience\City Wind, Leaves, Distant Traffic  _Stereo (LR)		2238728
+	463127310	Dog_Bark_6	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\Dog_Bark_6_5F75EC9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SmallDog_Bark\Dog_Bark_6		8968
+	497012732	Dog_Bark_3	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\Dog_Bark_3_5F75EC9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SmallDog_Bark\Dog_Bark_3		10685
+	498552040	Junkyard Music rough 32 bars	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\Junkyard Music rough 32 bars_4E227324.wem		\Interactive Music Hierarchy\Default Work Unit\Junkyard Music\Junkyard Music rough 32 bars\Junkyard Music rough 32 bars		1186280
+	604519845	BigDog_Bark_2	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\BigDog_Bark_2_E8626DDF.wem		\Actor-Mixer Hierarchy\Default Work Unit\BigDog_Bark\BigDog_Bark_2		5258
+	640937498	SFX_SprayGun2_4	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\SFX_SprayGun2_4_5F75EC9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SprayGun2\SFX_SprayGun2_4		7260
+	642405637	BigDog_Bark_02	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\BigDog_Bark_2_5ADE1C32.wem		\Actor-Mixer Hierarchy\Default Work Unit\BigDog_Bark\BigDog_Bark_02		7010
+	644922975	Traffic_city_day_close	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\Traffic_city_day_close_DF327584.wem		\Actor-Mixer Hierarchy\Default Work Unit\JunkYard_Ambience\Traffic_city_day_close		3416033
+	734777411	SFX_SprayGun2_6	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\SFX_SprayGun2_6_5F75EC9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SprayGun2\SFX_SprayGun2_6		7538
+	758611887	CA_35_Construction Site_Street_Fadromas Loading Truck_3	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\CA_35_Construction Site_Street_Fadromas Loading Truck_3_F6AB9501.wem		\Actor-Mixer Hierarchy\Default Work Unit\JunkYard_Ambience\CA_35_Construction Site_Street_Fadromas Loading Truck_3		1972787
+	784391014	Dog_Bark_4	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\Dog_Bark_4_5F75EC9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SmallDog_Bark\Dog_Bark_4		8744
+	850115381	SFX_SprayGun2_3	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\SFX_SprayGun2_3_5F75EC9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SprayGun2\SFX_SprayGun2_3		6923
+	854986852	BigDog_Bark_1	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\BigDog_Bark_1_3F63EB85.wem		\Actor-Mixer Hierarchy\Default Work Unit\BigDog_Bark\BigDog_Bark_1		6390
+	861576810	Dog_Bark_1	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\Dog_Bark_1_5F75EC9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SmallDog_Bark\Dog_Bark_1		8862
+	867120203	Dog_Bark_2	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\Dog_Bark_2_5F75EC9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SmallDog_Bark\Dog_Bark_2		10168
+	874834152	Dog_Bark_5	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\Dog_Bark_5_5F75EC9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SmallDog_Bark\Dog_Bark_5		8944
+	885128090	BigDog_Bark_01	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\BigDog_Bark_1_C0D3C335.wem		\Actor-Mixer Hierarchy\Default Work Unit\BigDog_Bark\BigDog_Bark_01		11019
+	910188283	SFX_SprayGun2_2	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\SFX_SprayGun2_2_5F75EC9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SprayGun2\SFX_SprayGun2_2		6997
+	913886551	Bluezone_BC0247_008_ambience_wind	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\Bluezone_BC0247_008_ambience_wind_8E45B736.wem		\Actor-Mixer Hierarchy\Default Work Unit\JunkYard_Ambience\Bluezone_BC0247_008_ambience_wind		494714
+	927357170	America_BBC_ECD24i	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\America.BBC.ECD24i_1BE78C15.wem		\Actor-Mixer Hierarchy\Default Work Unit\JunkYard_Ambience\America_BBC_ECD24i		523292
+	1040663324	SFX_SprayGun2_7	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\SFX_SprayGun2_7_5F75EC9A.wem		\Actor-Mixer Hierarchy\Default Work Unit\SprayGun2\SFX_SprayGun2_7		7863
+	1061477611	Industrial_Ambient_Spaces_04	Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\.cache\Windows\SFX\Industrial_Ambient_Spaces_04_980F397B.wem		\Actor-Mixer Hierarchy\Default Work Unit\JunkYard_Ambience\Industrial_Ambient_Spaces_04		319226
 

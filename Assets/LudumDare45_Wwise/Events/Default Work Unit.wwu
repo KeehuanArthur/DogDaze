@@ -63,6 +63,27 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Junkyard_Music" ID="{AE3C0EE0-A4E1-45AC-9754-C6AC7D49DB55}">
+					<ChildrenList>
+						<Action Name="" ID="{8BDE4893-6D49-41EC-B75A-DC8143C65CED}" ShortID="155993354">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Junkyard Music" ID="{F8AA21A1-FD1E-4AF9-A279-A0CE4CD0C6A2}" WorkUnitID="{A9B4FD7A-984E-4BCC-BF85-1470EC9C5986}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FC9E9FC6-EECA-4161-8BEE-CA81B4542FAA}" ShortID="590506798">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Junkyard Music" ID="{F8AA21A1-FD1E-4AF9-A279-A0CE4CD0C6A2}" WorkUnitID="{A9B4FD7A-984E-4BCC-BF85-1470EC9C5986}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

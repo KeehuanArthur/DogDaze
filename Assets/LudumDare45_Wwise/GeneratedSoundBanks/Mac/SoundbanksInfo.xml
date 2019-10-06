@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>/Users/midikim/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/y:/Desktop/LudumDare45/LudumDare45_Wwise/</ProjectRoot>
-		<SourceFilesRoot>/Users/midikim/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/y:/Desktop/LudumDare45/LudumDare45_Wwise/.cache/Mac/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/midikim/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/y:/Desktop/LudumDare45/LudumDare45_Wwise/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ProjectRoot>/Users/midikim/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/y:/Desktop/LudumDare45/DogDaze/Assets/LudumDare45_Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/midikim/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/y:/Desktop/LudumDare45/DogDaze/Assets/LudumDare45_Wwise/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/midikim/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/y:/Desktop/LudumDare45/DogDaze/Assets/LudumDare45_Wwise/GeneratedSoundBanks/Mac/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/midikim/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/y:/Desktop/LudumDare45/LudumDare45_Wwise/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/midikim/Library/Application Support/Wwise2019/Bottles/wwise/dosdevices/y:/Desktop/LudumDare45/DogDaze/Assets/LudumDare45_Wwise/GeneratedSoundBanks/Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -21,11 +21,116 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3603273110" Name="Coin" ObjectPath="\Events\Default Work Unit\Coin"/>
-				<Event Id="2488400822" Name="Dog_Bark" ObjectPath="\Events\Default Work Unit\Dog_Bark"/>
-				<Event Id="35234536" Name="Spray" ObjectPath="\Events\Default Work Unit\Spray"/>
-				<Event Id="2537227879" Name="TennisBall" ObjectPath="\Events\Default Work Unit\TennisBall"/>
+				<Event Id="1112472142" Name="BigDog_Bark" ObjectPath="\Events\Default Work Unit\BigDog_Bark" DurationType="OneShot" DurationMin="0.300982" DurationMax="0.712498"/>
+				<Event Id="3603273110" Name="Coin" ObjectPath="\Events\Default Work Unit\Coin" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2355367520" Name="Junktyard_Ambience" ObjectPath="\Events\Default Work Unit\Junktyard_Ambience" DurationType="Infinite"/>
+				<Event Id="2717114767" Name="Junkyard_Music" ObjectPath="\Events\Default Work Unit\Junkyard_Music" DurationType="Infinite"/>
+				<Event Id="2057654685" Name="PlayerDog_Bark" ObjectPath="\Events\Default Work Unit\PlayerDog_Bark" DurationType="OneShot" DurationMin="1.081606" DurationMax="1.265667"/>
+				<Event Id="35234536" Name="Spray" ObjectPath="\Events\Default Work Unit\Spray" DurationType="OneShot" DurationMin="0.398721" DurationMax="0.532250"/>
+				<Event Id="2537227879" Name="TennisBall" ObjectPath="\Events\Default Work Unit\TennisBall" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="52608069" Language="SFX">
+					<ShortName>Dog_Bark_7.wav</ShortName>
+					<Path>SFX/Dog_Bark_7_5F75EC9A.wem</Path>
+				</File>
+				<File Id="228904637" Language="SFX">
+					<ShortName>SFX_SprayGun2_1.wav</ShortName>
+					<Path>SFX/SFX_SprayGun2_1_5F75EC9A.wem</Path>
+				</File>
+				<File Id="393764157" Language="SFX">
+					<ShortName>SFX_SprayGun2_5.wav</ShortName>
+					<Path>SFX/SFX_SprayGun2_5_5F75EC9A.wem</Path>
+				</File>
+				<File Id="424821462" Language="SFX">
+					<ShortName>City Wind, Leaves, Distant Traffic  _Stereo (LR).wav</ShortName>
+					<Path>SFX/City Wind, Leaves, Distant Traffic  _Stereo (LR)_80C7FECB.wem</Path>
+				</File>
+				<File Id="463127310" Language="SFX">
+					<ShortName>Dog_Bark_6.wav</ShortName>
+					<Path>SFX/Dog_Bark_6_5F75EC9A.wem</Path>
+				</File>
+				<File Id="497012732" Language="SFX">
+					<ShortName>Dog_Bark_3.wav</ShortName>
+					<Path>SFX/Dog_Bark_3_5F75EC9A.wem</Path>
+				</File>
+				<File Id="498552040" Language="SFX">
+					<ShortName>Junkyard Music rough 32 bars.wav</ShortName>
+					<Path>SFX/Junkyard Music rough 32 bars_4E227324.wem</Path>
+				</File>
+				<File Id="604519845" Language="SFX">
+					<ShortName>BigDog_Bark_2.wav</ShortName>
+					<Path>SFX/BigDog_Bark_2_E8626DDF.wem</Path>
+				</File>
+				<File Id="640937498" Language="SFX">
+					<ShortName>SFX_SprayGun2_4.wav</ShortName>
+					<Path>SFX/SFX_SprayGun2_4_5F75EC9A.wem</Path>
+				</File>
+				<File Id="642405637" Language="SFX">
+					<ShortName>BigDog_Bark_2.wav</ShortName>
+					<Path>SFX/BigDog_Bark_2_5ADE1C32.wem</Path>
+				</File>
+				<File Id="644922975" Language="SFX">
+					<ShortName>Traffic_city_day_close.wav</ShortName>
+					<Path>SFX/Traffic_city_day_close_DF327584.wem</Path>
+				</File>
+				<File Id="734777411" Language="SFX">
+					<ShortName>SFX_SprayGun2_6.wav</ShortName>
+					<Path>SFX/SFX_SprayGun2_6_5F75EC9A.wem</Path>
+				</File>
+				<File Id="758611887" Language="SFX">
+					<ShortName>CA_35_Construction Site_Street_Fadromas Loading Truck_3.wav</ShortName>
+					<Path>SFX/CA_35_Construction Site_Street_Fadromas Loading Truck_3_F6AB9501.wem</Path>
+				</File>
+				<File Id="784391014" Language="SFX">
+					<ShortName>Dog_Bark_4.wav</ShortName>
+					<Path>SFX/Dog_Bark_4_5F75EC9A.wem</Path>
+				</File>
+				<File Id="850115381" Language="SFX">
+					<ShortName>SFX_SprayGun2_3.wav</ShortName>
+					<Path>SFX/SFX_SprayGun2_3_5F75EC9A.wem</Path>
+				</File>
+				<File Id="854986852" Language="SFX">
+					<ShortName>BigDog_Bark_1.wav</ShortName>
+					<Path>SFX/BigDog_Bark_1_3F63EB85.wem</Path>
+				</File>
+				<File Id="861576810" Language="SFX">
+					<ShortName>Dog_Bark_1.wav</ShortName>
+					<Path>SFX/Dog_Bark_1_5F75EC9A.wem</Path>
+				</File>
+				<File Id="867120203" Language="SFX">
+					<ShortName>Dog_Bark_2.wav</ShortName>
+					<Path>SFX/Dog_Bark_2_5F75EC9A.wem</Path>
+				</File>
+				<File Id="874834152" Language="SFX">
+					<ShortName>Dog_Bark_5.wav</ShortName>
+					<Path>SFX/Dog_Bark_5_5F75EC9A.wem</Path>
+				</File>
+				<File Id="885128090" Language="SFX">
+					<ShortName>BigDog_Bark_1.wav</ShortName>
+					<Path>SFX/BigDog_Bark_1_C0D3C335.wem</Path>
+				</File>
+				<File Id="910188283" Language="SFX">
+					<ShortName>SFX_SprayGun2_2.wav</ShortName>
+					<Path>SFX/SFX_SprayGun2_2_5F75EC9A.wem</Path>
+				</File>
+				<File Id="913886551" Language="SFX">
+					<ShortName>Bluezone_BC0247_008_ambience_wind.wav</ShortName>
+					<Path>SFX/Bluezone_BC0247_008_ambience_wind_8E45B736.wem</Path>
+				</File>
+				<File Id="927357170" Language="SFX">
+					<ShortName>America.BBC.ECD24i.wav</ShortName>
+					<Path>SFX/America.BBC.ECD24i_1BE78C15.wem</Path>
+				</File>
+				<File Id="1040663324" Language="SFX">
+					<ShortName>SFX_SprayGun2_7.wav</ShortName>
+					<Path>SFX/SFX_SprayGun2_7_5F75EC9A.wem</Path>
+				</File>
+				<File Id="1061477611" Language="SFX">
+					<ShortName>Industrial_Ambient_Spaces_04.wav</ShortName>
+					<Path>SFX/Industrial_Ambient_Spaces_04_980F397B.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>
