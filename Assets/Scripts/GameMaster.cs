@@ -171,7 +171,7 @@ public class GameMaster : MonoBehaviour
 
 
         cur_game_state = game_state_start_loading_level;
-        canvasImage = GameObject.Find("LevelImage");
+        canvasImage = GameObject.Find("LevelCanvas");
 
 		BuildWorld();
 		SpawnEnemies();
