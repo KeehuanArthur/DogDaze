@@ -55,6 +55,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Animal.cs" />
      <Compile Include="Assets\Scripts\Animals\Bulldog.cs" />
+     <Compile Include="Assets\Scripts\Doors.cs" />
      <Compile Include="Assets\Scripts\GameMaster.cs" />
      <Compile Include="Assets\Scripts\HouseBuilder.cs" />
      <Compile Include="Assets\Scripts\JunkyardGenerator.cs" />

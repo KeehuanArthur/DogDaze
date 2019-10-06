@@ -16,10 +16,10 @@ public class Animal : MovingObject
         base.Start();
     }
 
-    public void FixedUpdate()
-	{
-        Move();
-	}
+    // public void FixedUpdate()
+	// {
+    //     Move();
+	// }
 
     protected override void Move()
     {
@@ -35,26 +35,26 @@ public class Animal : MovingObject
         //Debug.Log(transform.position);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Player")
-        {
-            gameMaster.SetCurrentGameState("load");
-            gameMaster.EnterStreet();
-        }
-        else if (collision.collider.tag == "Enemy")
-        {
-            // If other animals, push each other off, instead of getting on top of each other
-            /*
-            Vector2 pushOffDirection = (transform.position - collider.transform.position).normalized;
-            Debug.Log(transform.position);
-            Debug.Log(collider.transform.position);
-            Debug.Log(pushOffDirection);
-            base.rb.AddForce(pushOffDirection * pushMagnitude);
-            collider.attachedRigidbody.AddForce(pushOffDirection * pushMagnitude);
-            */
-        }
-    }
+    // void OnCollisionEnter2D(Collision2D collision)
+    // {
+    //     if (collision.collider.tag == "Player")
+    //     {
+    //         gameMaster.SetCurrentGameState("load");
+    //         gameMaster.EnterStreet();
+    //     }
+    //     else if (collision.collider.tag == "Enemy")
+    //     {
+    //         // If other animals, push each other off, instead of getting on top of each other
+    //         /*
+    //         Vector2 pushOffDirection = (transform.position - collider.transform.position).normalized;
+    //         Debug.Log(transform.position);
+    //         Debug.Log(collider.transform.position);
+    //         Debug.Log(pushOffDirection);
+    //         base.rb.AddForce(pushOffDirection * pushMagnitude);
+    //         collider.attachedRigidbody.AddForce(pushOffDirection * pushMagnitude);
+    //         */
+    //     }
+    // }
 
     //protected override void OnCollisionEnter(Collision collision)
 }

@@ -472,6 +472,7 @@ MonoBehaviour:
   - {fileID: -1729979468973562479, guid: ab258c0e242edd746b33344f07139021, type: 3}
   spriteListHouse2: []
   spriteListHouse3: []
+  streetSpriteList: []
   materials:
     street_floors: {fileID: 4119429476235930303, guid: d63da3d52aaa1594f965303d20fa0db9,
       type: 3}
@@ -491,6 +492,10 @@ MonoBehaviour:
     spray_bottle: {fileID: 0}
     roomba: {fileID: 0}
     tennis_ball: {fileID: 0}
+    house_door1: {fileID: 4760892321435367772, guid: 0867efcd9892ec046917559dcac23d26,
+      type: 3}
+    house_door2: {fileID: 7400511629851420552, guid: 10d945d198cc2554f94d84115b0ab8e3,
+      type: 3}
   enemyPrefab: {fileID: 554029463243545625, guid: 5fc17a4e152503141ab13887d78c45b3,
     type: 3}
 --- !u!4 &1084845973

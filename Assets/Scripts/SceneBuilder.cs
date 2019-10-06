@@ -4,9 +4,14 @@ using UnityEngine;
 
 public abstract class SceneBuilder : MonoBehaviour
 {
+
+    public GameMaster gm;
     public GameObject floor_tiles;
     public GameObject wall_tiles;
     public GameObject door_tiles;
+
+    public GameObject door1;
+    public GameObject door2;
 
     public Sprite[] sprite_list;
 

@@ -143,15 +143,15 @@ public class PlayerMovement : MonoBehaviour
         playerBody.MovePosition(playerBody.position + moveVelocity * Time.fixedDeltaTime);
     }
 
-    void OnTriggerEnter2D(Collider2D c) 
-    {
-        BoxCollider2D collider = c.GetComponent<BoxCollider2D>();
-        if (collider.tag == "Door") {
-            int houseNumber = Int32.Parse(collider.name.Substring(4,1));
-            //gameMaster.cur_game_state = GameMaster.game_state_start_loading_level;
-            gameMaster.SetCurrentGameState("load");
-            gameMaster.EnterHouse(houseNumber);
-        }
-    }
+    // void OnTriggerEnter2D(Collider2D c) 
+    // {
+    //     BoxCollider2D collider = c.GetComponent<BoxCollider2D>();
+    //     if (collider.tag == "Door") {
+    //         int houseNumber = Int32.Parse(collider.name.Substring(4,1));
+    //         //gameMaster.cur_game_state = GameMaster.game_state_start_loading_level;
+    //         gameMaster.SetCurrentGameState(GameMaster.game_state_loading_level);
+    //         gameMaster.EnterHouse(houseNumber);
+    //     }
+    // }
 
 }

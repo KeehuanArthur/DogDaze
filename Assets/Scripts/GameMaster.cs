@@ -41,6 +41,8 @@ public class GameMaster : MonoBehaviour
         public GameObject spray_bottle;
         public GameObject roomba;
         public GameObject tennis_ball;
+        public GameObject house_door1;
+        public GameObject house_door2;
     }
 
 
@@ -91,6 +93,7 @@ public class GameMaster : MonoBehaviour
     private SceneBuilder SceneFactory(
         int house_index, string type, Transform transform) {
 
+
         if (type == "house") {
             HouseBuilder builder = new HouseBuilder();
             builder.floor_tiles = materials.house_floors;
@@ -100,7 +103,10 @@ public class GameMaster : MonoBehaviour
             builder.rows = 20;
             builder.sprite_list = rawHouseSprites[0]; // hardcoded for now cus we only have 1 list of sprites
             builder.sprite_mapper = sprite_mapper;
-            builder.board_holder_transform = transform;            
+            builder.board_holder_transform = transform; 
+            builder.door1 = materials.house_door1;
+            builder.door2 = materials.house_door2;    
+            builder.gm = this;       
             return builder;
         }
         else if (type == "street") {
@@ -110,7 +116,10 @@ public class GameMaster : MonoBehaviour
             builder.door_tiles = materials.street_doors;
             builder.columns = 30;
             builder.rows = 80;
-            builder.board_holder_transform = transform;            
+            builder.board_holder_transform = transform;
+            builder.door1 = materials.house_door1;
+            builder.door2 = materials.house_door2;
+            builder.gm = this;
             return builder;
         }
         else {
@@ -118,27 +127,84 @@ public class GameMaster : MonoBehaviour
         }
     }
 
-    public void EnterStreet() {
-        Debug.Log("Enter Street");
-        currentScene.deMaterialize();
-        currentScene = street;
-        currentScene.materialize();
+    // public void EnterStreet() {
+    //     Debug.Log("Enter Street");
+    //     currentScene.deMaterialize();
+    //     currentScene = street;
+    //     currentScene.materialize();
 
-        player.transform.position = new Vector3(100,0,-1f);
-        enemies = new List<GameObject>();
+    //     player.transform.position = new Vector3(100,0,-1f);
+    //     enemies = new List<GameObject>();
+    // }
+
+    // public void EnterHouse(int houseNumber) {
+    //     // TODO: display "level 1" instead of "level start"
+    //     Debug.Log("Enter House" + houseNumber.ToString());
+        
+    //     currentScene.deMaterialize();
+    //     currentScene = houses[houseNumber];
+    //     currentScene.materialize();
+        
+    //     player.transform.position = new Vector3(10,1,-1f);
+    //     SpawnEnemies(houseNumber);
+    // }
+
+    public void EnterScene(string location) {
+
+        currentScene.deMaterialize();
+
+        Debug.Log("EnterScene received: " + location);
+
+        switch (location) {
+
+            case "house0":
+                Debug.Log("Entering Scene: House0");
+
+                currentScene = houses[0];
+                currentScene.materialize();
+                player.transform.position = new Vector3(10,1,-1f);
+                // SpawnEnemies(0);
+                break;
+            
+            case "street":
+                Debug.Log("Entering Scene: Street");
+
+                currentScene = street;
+                currentScene.materialize();
+                player.transform.position = new Vector3(15,0,-1f);
+                enemies = new List<GameObject>();
+                break;
+
+            case "house1":
+                Debug.Log("Entering Scene: House1");
+
+                currentScene = houses[1];
+                currentScene.materialize();
+                player.transform.position = new Vector3(10,1,-1f);
+                SpawnEnemies(0);
+                break;
+
+            case "house2":
+                Debug.Log("Entering Scene: House2");
+
+                currentScene = houses[2];
+                currentScene.materialize();
+                player.transform.position = new Vector3(10,1,-1f);
+                SpawnEnemies(0);
+                break;
+
+            case "junkyard":
+                Debug.Log("Entering Scene: Junkyard");
+                break;
+            
+            default:
+                Debug.Log("Your scene dun fked up");
+                break;
+            
+        }
     }
 
-    public void EnterHouse(int houseNumber) {
-        // TODO: display "level 1" instead of "level start"
-        Debug.Log("Enter House" + houseNumber.ToString());
-        
-        currentScene.deMaterialize();
-        currentScene = houses[houseNumber];
-        currentScene.materialize();
-        
-        player.transform.position = new Vector3(10,1,-1f);
-        SpawnEnemies(houseNumber);
-    }
+
     private void BuildWorld() {
 
 
@@ -151,7 +217,7 @@ public class GameMaster : MonoBehaviour
             houses.Add(hg);
         }
         // TEMP - JUST GET DOOR
-        materials.street_doors.GetComponent<SpriteRenderer>().sprite = houses[0].sprite_list[sprite_mapper["door"][0]];
+        // materials.street_doors.GetComponent<SpriteRenderer>().sprite = houses[0].sprite_list[sprite_mapper["door"][0]];
         //houses[0].materialize();
         //houses[0].deMaterialize();
 
@@ -210,7 +276,6 @@ public class GameMaster : MonoBehaviour
         cur_game_state = game_state_start_loading_level;
         canvasImage = GameObject.Find("LevelCanvas");
 
-
 		BuildWorld();
     }
 
@@ -223,9 +288,7 @@ public class GameMaster : MonoBehaviour
     }
 
     public void SetCurrentGameState(String newState) {
-        if (newState == "load") {
-            cur_game_state = game_state_start_loading_level;
-        }
+        cur_game_state = newState;
     }
     // Update is called once per frame
     void Update()
@@ -235,11 +298,12 @@ public class GameMaster : MonoBehaviour
         switch (cur_game_state) {
             case game_state_start_loading_level:
                 cur_game_state = game_state_loading_level;
-                StartCoroutine( changeStateCo(game_state_playing_game, 2f) );
+                canvasImage.SetActive(true);
+                StartCoroutine( changeStateCo(game_state_playing_game, 0.5f) );
                 break;
 
             case game_state_loading_level:
-                canvasImage.SetActive(true);
+                // canvasImage.SetActive(true);
                 break;
 
             case game_state_playing_game:

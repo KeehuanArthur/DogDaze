@@ -54,6 +54,15 @@ public class HouseBuilder : SceneBuilder
             column_divider2 = Random.Range(column_divider1 + 4, columns);
             CreateRandomVerticalWall(row_divider, column_divider2);
         }
+
+
+
+        // Add Doors
+        frame[8][0] = Instantiate(door1);
+        frame[8][1] = Instantiate(door2);
+
+        frame[8][1].GetComponent<Doors>().destination = "street";
+        frame[8][1].GetComponent<Doors>().gm = gm;
     }
 
     void CreateRandomVerticalWall(int horizontal_wall_location, int new_column_location) {
@@ -88,7 +97,6 @@ public class HouseBuilder : SceneBuilder
                         total_index_counter += 1;
                         if (total_index_counter < 5 && total_index_counter > 2)
                             continue;
-                        Debug.Log("trying to add wall");
                         frame[i][j] = wall_tile;
                     }
                 }
