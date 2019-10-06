@@ -3,9 +3,7 @@
 public class Animal : MovingObject
 {
 	private Transform player;
-    public bool moving = true;
 	public Sprite sprite; // for Animal's child classes
-    float pushMagnitude = 1000f;
 
     protected override void Start()
     {
@@ -18,10 +16,7 @@ public class Animal : MovingObject
 
     public void FixedUpdate()
 	{
-        if (moving)
-        {
-            Move();
-        }
+        Move();
 	}
 
     protected override void Move()
@@ -43,16 +38,14 @@ public class Animal : MovingObject
         else if (collider.tag == "Enemy")
         {
             // If other animals, push each other off, instead of getting on top of each other
-            ///*
-            moving = false;
+            /*
             Vector2 pushOffDirection = (transform.position - collider.transform.position).normalized;
             Debug.Log(transform.position);
             Debug.Log(collider.transform.position);
             Debug.Log(pushOffDirection);
             base.rb.AddForce(pushOffDirection * pushMagnitude);
             collider.attachedRigidbody.AddForce(pushOffDirection * pushMagnitude);
-            //moving = true;
-            //*/
+            */
         }
     }
 
