@@ -1,6 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A9B4FD7A-984E-4BCC-BF85-1470EC9C5986}" SchemaVersion="94">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{A9B4FD7A-984E-4BCC-BF85-1470EC9C5986}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A9B4FD7A-984E-4BCC-BF85-1470EC9C5986}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicPlaylistContainer Name="Junkyard Music" ID="{F8AA21A1-FD1E-4AF9-A279-A0CE4CD0C6A2}" ShortID="656310278">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Tempo" Type="Real64" Value="100"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicSegment Name="Junkyard Music rough 32 bars" ID="{93C6218F-66D9-400B-A81E-9AA546791E93}" ShortID="949605546">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="81600"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Junkyard Music rough 32 bars" ID="{38017B32-ECFF-4AAC-BD5C-BB7A49C8C998}" ShortID="75689683">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Junkyard Music rough 32 bars" ID="{9938B1CC-454E-49D9-A9E9-8B590F174925}" ShortID="498552040">
+											<Language>SFX</Language>
+											<AudioFile>Junkyard Music rough 32 bars.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<TransitionList>
+										<MusicTransition Name="Root" ID="{137735BA-8A66-4248-B4F1-6D584C2A198F}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</TransitionList>
+									<SequenceList>
+										<MusicTrackSequence Name="" ID="{0F2A1155-D86F-49D5-91E3-C828CA2D580B}">
+											<ClipList>
+												<MusicClip Name="Junkyard Music rough 32 bars" ID="{5A6F401F-19D9-4D07-8651-AFA1A9FBF512}">
+													<PropertyList>
+														<Property Name="EndTrimOffset" Type="Real64" Value="81600"/>
+														<Property Name="FadeInMode" Type="int16" Value="0"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="5146.10804851157"/>
+													</PropertyList>
+													<AudioSourceRef Name="Junkyard Music rough 32 bars" ID="{9938B1CC-454E-49D9-A9E9-8B590F174925}"/>
+												</MusicClip>
+											</ClipList>
+										</MusicTrackSequence>
+									</SequenceList>
+								</MusicTrack>
+							</ChildrenList>
+							<CueList>
+								<MusicCue Name="Entry Cue" ID="{58B0B8EF-7C06-421B-A64B-784DA6CA5B17}"/>
+								<MusicCue Name="Exit Cue" ID="{5E6F44C5-46BC-423B-BB80-50AC0B08D97E}">
+									<PropertyList>
+										<Property Name="CueType" Type="int16" Value="1"/>
+										<Property Name="TimeMs" Type="Real64" Value="76800"/>
+									</PropertyList>
+								</MusicCue>
+							</CueList>
+						</MusicSegment>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{CC5A032A-D311-48D1-93B3-777698D13CB9}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{2E19960F-1AB7-412E-8C6C-79885F59ACFB}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<Playlist>
+						<MusicPlaylistItem Name="" ID="{3B5185EB-3EE8-440F-A93C-7524E5167F0B}" ShortID="115514455">
+							<PropertyList>
+								<Property Name="LoopCount" Type="int16" Value="0"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicPlaylistItem Name="" ID="{CBFBA07B-7478-40C6-805F-1AD53768D99C}" ShortID="593586364">
+									<PropertyList>
+										<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+									</PropertyList>
+									<SegmentRef Name="Junkyard Music rough 32 bars" ID="{93C6218F-66D9-400B-A81E-9AA546791E93}"/>
+								</MusicPlaylistItem>
+							</ChildrenList>
+						</MusicPlaylistItem>
+					</Playlist>
+				</MusicPlaylistContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>
