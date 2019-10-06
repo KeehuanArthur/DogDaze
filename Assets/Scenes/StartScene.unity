@@ -483,18 +483,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   house_count: 3
   materials:
-    street_floors: []
-    street_walls: []
-    street_house: []
-    house_floors:
-    - {fileID: 4119429476235930303, guid: d63da3d52aaa1594f965303d20fa0db9, type: 3}
-    house_walls:
-    - {fileID: 2532768911129738080, guid: c1dbfa77f223c7e4a9885e1bb6096cc5, type: 3}
-    junkyard_floors: []
-    junkyard_walls: []
+    street_floors: {fileID: 4119429476235930303, guid: d63da3d52aaa1594f965303d20fa0db9,
+      type: 3}
+    street_walls: {fileID: 2532768911129738080, guid: c1dbfa77f223c7e4a9885e1bb6096cc5,
+      type: 3}
+    street_house: {fileID: 0}
+    house_floors: {fileID: 4119429476235930303, guid: d63da3d52aaa1594f965303d20fa0db9,
+      type: 3}
+    house_walls: {fileID: 2532768911129738080, guid: c1dbfa77f223c7e4a9885e1bb6096cc5,
+      type: 3}
+    junkyard_floors: {fileID: 4119429476235930303, guid: d63da3d52aaa1594f965303d20fa0db9,
+      type: 3}
+    junkyard_walls: {fileID: 2532768911129738080, guid: c1dbfa77f223c7e4a9885e1bb6096cc5,
+      type: 3}
     spray_bottle: {fileID: 0}
     roomba: {fileID: 0}
     tennis_ball: {fileID: 0}
+  player: {fileID: 0}
 --- !u!4 &1084845973
 Transform:
   m_ObjectHideFlags: 0
