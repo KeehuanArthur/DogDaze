@@ -58,6 +58,7 @@ public class GameMaster : MonoBehaviour
     public Sprite[] spriteListHouse1;
     public Sprite[] spriteListHouse2;
     public Sprite[] spriteListHouse3;
+    public Sprite[] streetSpriteList;
 
     List<Sprite[]> rawHouseSprites;
 
