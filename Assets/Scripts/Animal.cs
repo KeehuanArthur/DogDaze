@@ -4,10 +4,12 @@ public class Animal : MovingObject
 {
 	private Transform player;
 	public Sprite sprite; // for Animal's child classes
+    public GameMaster gameMaster;
 
     protected override void Start()
     {
 		player = GameObject.FindWithTag("Player").transform;
+        gameMaster = FindObjectsOfType<GameMaster>()[0];
         //base.speed = Random.value * 4f;
         base.speed = 3f;
 
@@ -33,13 +35,14 @@ public class Animal : MovingObject
         //Debug.Log(transform.position);
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collider.tag == "Player")
+        if (collision.collider.tag == "Player")
         {
-            // TODO: Stage over. Restart
+            gameMaster.SetCurrentGameState("load");
+            gameMaster.EnterStreet();
         }
-        else if (collider.tag == "Enemy")
+        else if (collision.collider.tag == "Enemy")
         {
             // If other animals, push each other off, instead of getting on top of each other
             /*

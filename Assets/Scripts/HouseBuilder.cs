@@ -5,6 +5,7 @@ using UnityEngine;
 public class HouseBuilder : SceneBuilder
 {
 
+    private string specialItem;
     public GameMaster.HouseComponents houseComponents;
 
     public override void serealize() {

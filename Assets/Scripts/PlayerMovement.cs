@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         playerBody = GetComponent<Rigidbody2D>();
+        gameMaster = FindObjectsOfType<GameMaster>()[0];
         // playerSprite = GetComponent<SpriteRenderer>();
         //target = projectile.transform.position; // here
     }
@@ -144,8 +145,6 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D c) 
     {
-        Debug.Log(c.tag);
-        Debug.Log(c.GetComponent<BoxCollider2D>().tag);
         BoxCollider2D collider = c.GetComponent<BoxCollider2D>();
         if (collider.tag == "Door") {
             int houseNumber = Int32.Parse(collider.name.Substring(4,1));

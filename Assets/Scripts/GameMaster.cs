@@ -69,6 +69,7 @@ public class GameMaster : MonoBehaviour
     }
 
     private List<HouseBuilder> houses;
+    private StreetBuilder street;
     public Materials materials = new Materials();
 
     private Transform board_holder_transform;
@@ -116,14 +117,25 @@ public class GameMaster : MonoBehaviour
         }
     }
 
+    public void EnterStreet() {
+        Debug.Log("Enter Street");
+        currentScene.deMaterialize();
+        currentScene = street;
+        currentScene.materialize();
+
+        player.transform.position = new Vector3(100,0,-1f);
+        enemies = new List<GameObject>();
+    }
+
     public void EnterHouse(int houseNumber) {
         // TODO: display "level 1" instead of "level start"
         Debug.Log("Enter House" + houseNumber.ToString());
         
         currentScene.deMaterialize();
-        houses[houseNumber].materialize();
+        currentScene = houses[houseNumber];
+        currentScene.materialize();
         
-        player.transform.position = new Vector3(10,0,-1f);
+        player.transform.position = new Vector3(10,1,-1f);
         SpawnEnemies(houseNumber);
     }
     private void BuildWorld() {
@@ -144,10 +156,10 @@ public class GameMaster : MonoBehaviour
 
 
         //Build Street
-        StreetBuilder street_builder = SceneFactory(1, "street", board_holder_transform) as StreetBuilder;
-        street_builder.serealize();
+        street = SceneFactory(1, "street", board_holder_transform) as StreetBuilder;
+        street.serealize();
 
-        currentScene = street_builder;
+        currentScene = street;
         currentScene.materialize();
         //street_builder.materialize();
         // player.transform.position = new Vector3(15, 0, -1f);
@@ -170,14 +182,17 @@ public class GameMaster : MonoBehaviour
 		enemies = new List<GameObject>();
 		for (int i = 0; i < 3; i++)
 		{
-			enemies.Add(Instantiate(enemyPrefab, new Vector3(i * 5 + 3, i * 5 + 3, -1f), Quaternion.identity));
+			GameObject enemy = Instantiate(enemyPrefab, new Vector3(15,15, -1f), Quaternion.identity);
+            //enemy.GetComponent<PlayerMovement>().gameMaster = this;
+            enemies.Add(enemy);
+
 		}
 	}
 
 
 	void Awake() {
 		player = GameObject.FindWithTag("Player");
-        player.GetComponent<PlayerMovement>().gameMaster = this;
+        //player.GetComponent<PlayerMovement>().gameMaster = this;
 
         sprite_mapper = new Dictionary<string, int[]>();
         sprite_mapper.Add( "floor", new [] {16,18,19} );
