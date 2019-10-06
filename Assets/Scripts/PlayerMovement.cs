@@ -33,17 +33,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        PlayerInput();
-        transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
-    }
+		PlayerInput();
+		transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+	}
 
     private void FixedUpdate()
     {
-        MovePlayer();
-        //Fire();
-    }
+	    if (!gameMaster.doingSetup)
+	    {
+		    MovePlayer();
+		    //Fire();
+		}
+	}
 
-    private void Fire()
+	private void Fire()
     {
         if (Input.GetMouseButtonDown(0) && currentItem == Items[0])   // Useful for laser
         {
@@ -145,12 +148,12 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D c) 
     {
-		Debug.Log(c.tag);
         BoxCollider2D collider = c.GetComponent<BoxCollider2D>();
         if (collider.tag == "Door") {
             int houseNumber = Int32.Parse(collider.name.Substring(4,1));
-            //gameMaster.cur_game_state = GameMaster.game_state_start_loading_level;
-            gameMaster.SetCurrentGameState("load");
+			//gameMaster.cur_game_state = GameMaster.game_state_start_loading_level;
+			gameMaster.UpdateCanvas("House", false, houseNumber);
+			gameMaster.SetCurrentGameState("load");
             gameMaster.EnterHouse(houseNumber);
         }
 	}
@@ -160,6 +163,7 @@ public class PlayerMovement : MonoBehaviour
         if (c.tag == "SpecialItem" && Input.GetKey(KeyCode.C))
 		{
 			// TODO: save the item under the player
+			gameMaster.UpdateCanvas("Street", true, -1);
 			gameMaster.SetCurrentGameState("load");
 			gameMaster.EnterStreet();
 		}

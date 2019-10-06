@@ -1,11 +1,11 @@
-﻿<Properties StartupConfiguration="{76EC0281-163F-FEAD-D621-E79C57D63131}|">
+﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameMaster.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameMaster.cs" Line="198" Column="1" />
+      <File FileName="Assets/Scripts/GameMaster.cs" Line="225" Column="49" />
       <File FileName="Assets/Scripts/SceneBuilder.cs" Line="50" Column="41" />
-      <File FileName="Assets/Scripts/HouseBuilder.cs" Line="45" Column="1" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="158" Column="52" />
-      <File FileName="Assets/Scripts/Animal.cs" Line="61" Column="1" />
+      <File FileName="Assets/Scripts/HouseBuilder.cs" Line="147" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="164" Column="39" />
+      <File FileName="Assets/Scripts/Animal.cs" Line="42" Column="1" />
       <File FileName="Assets/Scripts/Animals/Bulldog.cs" />
       <File FileName="Assets/Scripts/StreetBuilder.cs" Line="11" Column="1" />
       <File FileName="Assets/Scripts/MovingObject.cs" Line="10" Column="13" />
@@ -13,13 +13,7 @@
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="DogDaze" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="GameMaster.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
+          <Node name="DogDaze" expanded="True" />
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
@@ -27,14 +21,13 @@
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="DogDaze" expanded="True" selected="True" />
+          <Node name="DogDaze" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="54078243-a886-482c-86e0-e8eb2307a29b" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

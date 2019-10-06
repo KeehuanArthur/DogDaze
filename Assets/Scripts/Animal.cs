@@ -18,7 +18,10 @@ public class Animal : MovingObject
 
     public void FixedUpdate()
 	{
-        Move();
+        if (!gameMaster.doingSetup)
+		{
+			Move();
+		}
 	}
 
     protected override void Move()
@@ -31,28 +34,15 @@ public class Animal : MovingObject
 
 		transform.position += direction * speed * Time.deltaTime;
         transform.rotation = Quaternion.identity;
-        //Debug.Log(transform.tag);
-        //Debug.Log(transform.position);
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.tag == "Player")
         {
-            gameMaster.SetCurrentGameState("load");
+			gameMaster.UpdateCanvas("Street", false, -1);
+			gameMaster.SetCurrentGameState("load");
             gameMaster.EnterStreet();
-        }
-        else if (collision.collider.tag == "Enemy")
-        {
-            // If other animals, push each other off, instead of getting on top of each other
-            /*
-            Vector2 pushOffDirection = (transform.position - collider.transform.position).normalized;
-            Debug.Log(transform.position);
-            Debug.Log(collider.transform.position);
-            Debug.Log(pushOffDirection);
-            base.rb.AddForce(pushOffDirection * pushMagnitude);
-            collider.attachedRigidbody.AddForce(pushOffDirection * pushMagnitude);
-            */
         }
     }
 

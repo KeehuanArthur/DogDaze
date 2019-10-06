@@ -12,17 +12,19 @@ public class GameMaster : MonoBehaviour
     public const string game_state_start_loading_level = "StartLoadingLevel";
     public const string game_state_loading_level = "LoadingLevel";
     public const string game_state_playing_game = "PlayingGame";
+	public const string game_state_change_nothing = "";
     public string cur_game_state = game_state_loading_level;
     public float levelStartDelay = 2f;
     private Text levelText;
     private GameObject canvasImage;
+	public bool doingSetup;
+	private bool clearStageSuccessfully;
     Dictionary <string, string> nextStage = new Dictionary<string, string>();
 
     SceneBuilder currentScene;
 
 
     public int house_count = 3;
-    private bool doingSetup;
 
 
 
@@ -119,7 +121,6 @@ public class GameMaster : MonoBehaviour
     }
 
     public void EnterStreet() {
-        Debug.Log("Enter Street");
         currentScene.deMaterialize();
         currentScene = street;
         currentScene.materialize();
@@ -132,8 +133,6 @@ public class GameMaster : MonoBehaviour
     }
 
     public void EnterHouse(int houseNumber) {
-        // TODO: display "level 1" instead of "level start"
-        Debug.Log("Enter House" + houseNumber.ToString());
         
         currentScene.deMaterialize();
         currentScene = houses[houseNumber];
@@ -218,6 +217,25 @@ public class GameMaster : MonoBehaviour
 		BuildWorld();
     }
 
+    public void UpdateCanvas(String destination, bool success, int level)
+	{
+		Text canvasText = canvasImage.transform.Find("Image").transform.Find("DisplayText").GetComponent<Text>();
+
+		if (destination == "Street" && success)
+        {
+			canvasText.text = "Success!";
+        }
+        else if (destination == "Street" && !success)
+		{
+			canvasText.text = "Failed..";
+		}
+        else if (destination == "House")
+		{
+			canvasText.text = "Level " + level.ToString();
+		}
+
+	}
+
 
 
     // Start is called before the first frame update
@@ -243,12 +261,15 @@ public class GameMaster : MonoBehaviour
                 break;
 
             case game_state_loading_level:
-                canvasImage.SetActive(true);
+				doingSetup = true;
+				canvasImage.SetActive(true);
                 break;
 
             case game_state_playing_game:
+				doingSetup = false;
                 canvasImage.SetActive(false);
-                break;
+				cur_game_state = game_state_change_nothing;
+				break;
 
             default:
                 break;
