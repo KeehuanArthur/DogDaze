@@ -2,7 +2,7 @@
 
 public class Animal : MovingObject
 {
-	public Transform player;
+	private Transform player;
     public bool moving = true;
 	public Sprite sprite; // for Animal's child classes
     float pushMagnitude = 1000f;

@@ -30,6 +30,8 @@ public class GameMaster : MonoBehaviour
     private Transform board_holder_transform;
 
     public GameObject player;
+	public GameObject enemyPrefab;
+	private List<GameObject> enemies;
 
 
     /**
@@ -102,11 +104,19 @@ public class GameMaster : MonoBehaviour
 
     }
 
+	void SpawnEnemies()
+	{
+		for (int i = 0; i < 3; i++)
+		{
+			enemies = new List<GameObject>();
+			enemies.Add(Instantiate(enemyPrefab, new Vector3(i * 5 + 3, i * 5 + 3, -1f), Quaternion.identity));
+		}
+	}
 
 
-
-    void Awake() {
+	void Awake() {
         BuildWorld();
+		SpawnEnemies();
     }
 
 
