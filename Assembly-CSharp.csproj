@@ -277,6 +277,7 @@
      <None Include="Assets\LudumDare45_Wwise\IncrementalSoundBankData.xml" />
      <None Include="Assets\StreamingAssets\desc.txt" />
      <None Include="Assets\LudumDare45_Wwise\GeneratedSoundBanks\Windows\SoundbanksInfo.xml" />
+     <None Include="Assets\Scripts\test.txt" />
      <None Include="Assets\LudumDare45_Wwise\GeneratedSoundBanks\Mac\PluginInfo.xml" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/ArthurLee/DogDaze/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
