@@ -22,8 +22,12 @@ public class Animal : MovingObject
     protected override void Move()
     {
 		transform.LookAt(player.transform);
-		transform.position +=
-            (new Vector3(transform.forward.x, transform.forward.y, 0f)) * speed * Time.deltaTime;
+
+		Vector3 direction = new Vector3(transform.forward.x, transform.forward.y, 0f);
+		direction.x *= Random.Range(0.5f, 2f);
+		direction.y *= Random.Range(0.5f, 2f);
+
+		transform.position += direction * speed * Time.deltaTime;
         transform.rotation = Quaternion.identity;
         //Debug.Log(transform.tag);
         //Debug.Log(transform.position);
