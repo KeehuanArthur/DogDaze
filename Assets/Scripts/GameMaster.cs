@@ -124,7 +124,7 @@ public class GameMaster : MonoBehaviour
         currentScene = street;
         currentScene.materialize();
 
-        player.transform.position = new Vector3(15,0,-1f);
+        player.transform.position = new Vector3(15f,0f,-1f);
         for (int i=0; i < enemies.Count; i++)
 		{
 			Destroy(enemies[i]);
