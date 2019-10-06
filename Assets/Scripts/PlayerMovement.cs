@@ -117,15 +117,15 @@ public class PlayerMovement : MonoBehaviour
 
     public int ItemOption()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             return 1;
         }
-        else if (Input.GetButton("Fire2"))
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             return 2;
         }
-        else if (Input.GetButton("Fire3"))
+        else if (Input.GetKeyDown(KeyCode.Space))
         {
             return 3;
         }
