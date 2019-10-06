@@ -58,6 +58,7 @@ public class GameMaster : MonoBehaviour
     public Sprite[] spriteListHouse1;
     public Sprite[] spriteListHouse2;
     public Sprite[] spriteListHouse3;
+    public Sprite[] streetSpriteList;
 
     List<Sprite[]> rawHouseSprites;
 
@@ -123,7 +124,7 @@ public class GameMaster : MonoBehaviour
         currentScene = street;
         currentScene.materialize();
 
-        player.transform.position = new Vector3(10,0,-1f);
+        player.transform.position = new Vector3(15,0,-1f);
         for (int i=0; i < enemies.Count; i++)
 		{
 			Destroy(enemies[i]);
