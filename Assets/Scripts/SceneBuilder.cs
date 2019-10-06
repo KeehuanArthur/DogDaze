@@ -6,6 +6,13 @@ public abstract class SceneBuilder : MonoBehaviour
 {
     public GameObject floor_tiles;
     public GameObject wall_tiles;
+    public GameObject door_tiles;
+
+    public Sprite[] sprite_list;
+
+    public IDictionary<string, int[]> sprite_mapper;
+
+    
 
     protected float zOffset = 1;
 
@@ -36,6 +43,9 @@ public abstract class SceneBuilder : MonoBehaviour
                     new Vector3(i,j,zOffset),
                     Quaternion.identity
                 ) as GameObject;
+
+                // instance.GetComponent<SpriteRenderer>().sprite = "";
+
                 instance.transform.SetParent(board_holder_transform);
                 materialize_objects.Add(instance);
             }
