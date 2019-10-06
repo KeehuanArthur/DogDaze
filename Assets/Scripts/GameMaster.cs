@@ -46,12 +46,12 @@ public class GameMaster : MonoBehaviour
 
 
 
-
     [Serializable]
     public class HouseComponents{
         public GameObject floor_sprite_holder;
         public GameObject wall_sprite_holder;
         public GameObject entrance_sprite_holder;
+		public GameObject special_item_sprite_holder;
     }
     public  HouseComponents houseComponents;
 
@@ -123,8 +123,11 @@ public class GameMaster : MonoBehaviour
         currentScene = street;
         currentScene.materialize();
 
-        player.transform.position = new Vector3(100,0,-1f);
-        enemies = new List<GameObject>();
+        player.transform.position = new Vector3(10,0,-1f);
+        for (int i=0; i < enemies.Count; i++)
+		{
+			Destroy(enemies[i]);
+		}
     }
 
     public void EnterHouse(int houseNumber) {
@@ -179,7 +182,6 @@ public class GameMaster : MonoBehaviour
 
 	void SpawnEnemies(int houseNumber)
 	{
-		enemies = new List<GameObject>();
 		for (int i = 0; i < 3; i++)
 		{
 			GameObject enemy = Instantiate(enemyPrefab, new Vector3(15,15, -1f), Quaternion.identity);
@@ -192,12 +194,14 @@ public class GameMaster : MonoBehaviour
 
 	void Awake() {
 		player = GameObject.FindWithTag("Player");
-        //player.GetComponent<PlayerMovement>().gameMaster = this;
+		enemies = new List<GameObject>();
+		//player.GetComponent<PlayerMovement>().gameMaster = this;
 
-        sprite_mapper = new Dictionary<string, int[]>();
+		sprite_mapper = new Dictionary<string, int[]>();
         sprite_mapper.Add( "floor", new [] {16,18,19} );
         sprite_mapper.Add( "wall", new [] {8, 10, 11});
         sprite_mapper.Add( "door", new [] {54, 62});
+		sprite_mapper.Add("specialitem", new[] { 46 });
 
         rawHouseSprites = new List<Sprite[]>();
         rawHouseSprites.Add(spriteListHouse1);

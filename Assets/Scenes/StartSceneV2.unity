@@ -405,6 +405,8 @@ MonoBehaviour:
       type: 3}
     entrance_sprite_holder: {fileID: 2154697239531509544, guid: b8818e81d3f571e45b77df2735fb78fb,
       type: 3}
+    special_item_sprite_holder: {fileID: 1888565162034176709, guid: 1f9c3963e73ac4354b69186653831263,
+      type: 3}
   spriteListHouse1:
   - {fileID: 2106698703749645104, guid: ab258c0e242edd746b33344f07139021, type: 3}
   - {fileID: -2629116292057181006, guid: ab258c0e242edd746b33344f07139021, type: 3}

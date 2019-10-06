@@ -145,6 +145,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D c) 
     {
+		Debug.Log(c.tag);
         BoxCollider2D collider = c.GetComponent<BoxCollider2D>();
         if (collider.tag == "Door") {
             int houseNumber = Int32.Parse(collider.name.Substring(4,1));
@@ -152,6 +153,12 @@ public class PlayerMovement : MonoBehaviour
             gameMaster.SetCurrentGameState("load");
             gameMaster.EnterHouse(houseNumber);
         }
-    }
+        else if (collider.tag == "SpecialItem")
+		{
+            // TODO: save the item under the player
+			gameMaster.SetCurrentGameState("load");
+			gameMaster.EnterStreet();
+		}
+	}
 
 }

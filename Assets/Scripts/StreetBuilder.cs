@@ -6,6 +6,8 @@ public class StreetBuilder : SceneBuilder
 {
     public override void serealize() {
         frame = new List<List<GameObject>>();
+        topFrameObjects = new List<GameObject>();
+        topFramePositions = new List<List<int>>();
 
 
         for (int i=0; i<columns; i++) {
