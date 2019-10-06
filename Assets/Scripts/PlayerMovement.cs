@@ -153,9 +153,13 @@ public class PlayerMovement : MonoBehaviour
             gameMaster.SetCurrentGameState("load");
             gameMaster.EnterHouse(houseNumber);
         }
-        else if (collider.tag == "SpecialItem")
+	}
+
+    void OnTriggerStay2D(Collider2D c)
+	{
+        if (c.tag == "SpecialItem" && Input.GetKey(KeyCode.C))
 		{
-            // TODO: save the item under the player
+			// TODO: save the item under the player
 			gameMaster.SetCurrentGameState("load");
 			gameMaster.EnterStreet();
 		}
