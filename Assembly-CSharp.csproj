@@ -55,11 +55,12 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Animal.cs" />
      <Compile Include="Assets\Scripts\GameMaster.cs" />
-     <Compile Include="Assets\Scripts\HouseGenerator.cs" />
+     <Compile Include="Assets\Scripts\HouseBuilder.cs" />
      <Compile Include="Assets\Scripts\JunkyardGenerator.cs" />
      <Compile Include="Assets\Scripts\MovingObject.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
+     <Compile Include="Assets\Scripts\SceneBuilder.cs" />
      <Compile Include="Assets\Scripts\StreetBuilder.cs" />
      <Compile Include="Assets\Scripts\StreetGenerator.cs" />
      <Compile Include="Assets\Wwise\Deployment\API\Generated\Common\_ArrayPoolDefault.cs" />
