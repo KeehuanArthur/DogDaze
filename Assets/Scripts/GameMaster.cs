@@ -117,6 +117,7 @@ public class GameMaster : MonoBehaviour
     }
 
     public void EnterHouse(int houseNumber) {
+        // TODO: display "level 1" instead of "level start"
         Debug.Log("Enter House" + houseNumber.ToString());
         currentScene.deMaterialize();
         houses[houseNumber].materialize();
@@ -134,6 +135,8 @@ public class GameMaster : MonoBehaviour
             hg.serealize();
             houses.Add(hg);
         }
+        // TEMP - JUST GET DOOR
+        materials.street_doors.GetComponent<SpriteRenderer>().sprite = houses[0].sprite_list[sprite_mapper["door"][0]];
         //houses[0].materialize();
         //houses[0].deMaterialize();
 
@@ -183,6 +186,7 @@ public class GameMaster : MonoBehaviour
         rawHouseSprites.Add(spriteListHouse1);
         rawHouseSprites.Add(spriteListHouse2);
         rawHouseSprites.Add(spriteListHouse3);
+
 
 
         cur_game_state = game_state_start_loading_level;
