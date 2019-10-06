@@ -68,7 +68,9 @@ public class GameMaster : MonoBehaviour
 
     private Transform board_holder_transform;
 
-    public GameObject player;
+    private GameObject player;
+	public GameObject enemyPrefab;
+	private List<GameObject> enemies;
 
 
     /**
@@ -141,6 +143,7 @@ public class GameMaster : MonoBehaviour
 
         // player.transform.position = new Vector3(100,0,-1f);
 
+<<<<<<< HEAD
     }
 
 
@@ -150,12 +153,32 @@ public class GameMaster : MonoBehaviour
         canvasImage = GameObject.Find("LevelImage");
 
         BuildWorld();
+=======
+    }
+
+	void SpawnEnemies()
+	{
+		enemies = new List<GameObject>();
+		for (int i = 0; i < 3; i++)
+		{
+			enemies.Add(Instantiate(enemyPrefab, new Vector3(i * 5 + 3, i * 5 + 3, -1f), Quaternion.identity));
+		}
+	}
+
+
+	void Awake() {
+		player = GameObject.FindWithTag("Player");
+
+		BuildWorld();
+		SpawnEnemies();
+>>>>>>> a18c1d34c1ce53812bec8d3aa578e506c96a8846
     }
 
 
 
     // Start is called before the first frame update
     void Start()
+<<<<<<< HEAD
     {            
         sprite_mapper = new Dictionary<string, int[]>();
         sprite_mapper.Add( "floor", new [] {1,2,3} );
@@ -172,6 +195,14 @@ public class GameMaster : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+=======
+    {
+		
+	}
+
+	// Update is called once per frame
+	void Update()
+>>>>>>> a18c1d34c1ce53812bec8d3aa578e506c96a8846
     {
 
         /* State Definitions */
