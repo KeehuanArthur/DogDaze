@@ -96,7 +96,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Footstep" ID="{4909D516-AF38-4340-A49A-6B6E260480E6}"/>
 				<Event Name="Cat_Meow" ID="{B5B0BF93-6383-4FE1-AAA6-3BEC9C966CE6}">
 					<ChildrenList>
 						<Action Name="" ID="{A7B2A11C-7F94-4805-8C56-C88623DD333E}" ShortID="355250012">
@@ -130,8 +129,29 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Water_Spray" ID="{3990311E-24EC-4E22-B991-E53406D09EDF}"/>
+				<Event Name="Water_Spray" ID="{3990311E-24EC-4E22-B991-E53406D09EDF}">
+					<ChildrenList>
+						<Action Name="" ID="{BC1B9A2B-3170-4A1E-A03F-AB8FFC84D766}" ShortID="735823154">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SprayGun2" ID="{82D190F0-8CDC-4A9E-AE49-ABFBCB917CC0}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="SoccerBall" ID="{10D5DA4E-20FC-4311-8A31-34763D189297}"/>
+				<Event Name="Item_Pickup" ID="{C20509F2-B3CC-4C28-948C-B068759E6370}">
+					<ChildrenList>
+						<Action Name="" ID="{7277715A-6ACE-4EB7-83ED-6C310D2B6795}" ShortID="862888284">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Item_PickUp" ID="{8AB54418-24E7-49E3-B507-3E70AF00C040}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
