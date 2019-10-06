@@ -60,8 +60,8 @@ public class GameMaster : MonoBehaviour
             builder = new StreetBuilder();
             builder.floor_tiles = materials.street_floors;
             builder.wall_tiles = materials.street_walls;
-            builder.columns = 200;
-            builder.rows = 300;
+            builder.columns = 30;
+            builder.rows = 80;
         }
 
         builder.board_holder_transform = transform;
@@ -87,7 +87,7 @@ public class GameMaster : MonoBehaviour
         StreetBuilder street_builder = SceneFactory(1, "street", board_holder_transform) as StreetBuilder;
         street_builder.serealize();
         street_builder.materialize();
-        player.transform.position = new Vector3(100, 0, -1f);
+        player.transform.position = new Vector3(15, 0, -1f);
 
 
         // Build Street

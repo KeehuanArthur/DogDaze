@@ -12,15 +12,19 @@ public class StreetBuilder : SceneBuilder
             frame.Add(new List<GameObject>());
             for (int j=0; j<rows; j++ ) {
 
-                if (i > 75 && i < 125) {
+                if (i > 10 && i < 20) {
                     frame[i].Add(floor_tiles);
                 }
 
-                else if (i < 75 && j > 50 && j < 100) {
+                else if (i <= 10 && j > 20 && j < 30) {
                     frame[i].Add(floor_tiles);
                 }
 
-                else if (i > 250 && j > 200 && j < 250) {
+                else if (i >= 20 && j > 40 && j < 50) {
+                    frame[i].Add(floor_tiles);
+                }
+
+                else if ( j > 60 ) {
                     frame[i].Add(floor_tiles);
                 }
 
