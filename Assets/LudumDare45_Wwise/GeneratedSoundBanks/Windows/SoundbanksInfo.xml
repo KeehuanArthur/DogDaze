@@ -21,18 +21,21 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="85412153" Name="Ambience" ObjectPath="\Events\Default Work Unit\Ambience" DurationType="Infinite"/>
+				<Event Id="70746309" Name="Ball_Bounce" ObjectPath="\Events\Default Work Unit\Ball_Bounce" DurationType="OneShot" DurationMin="0.122729" DurationMax="0.122729"/>
+				<Event Id="3043259223" Name="Ball_Kick" ObjectPath="\Events\Default Work Unit\Ball_Kick" DurationType="OneShot" DurationMin="0.858775" DurationMax="0.910366"/>
 				<Event Id="1112472142" Name="BigDog_Bark" ObjectPath="\Events\Default Work Unit\BigDog_Bark" DurationType="OneShot" DurationMin="0.300982" DurationMax="2.282417"/>
 				<Event Id="1347479017" Name="Cat_Hiss" ObjectPath="\Events\Default Work Unit\Cat_Hiss" DurationType="OneShot" DurationMin="1.814775" DurationMax="1.922688"/>
 				<Event Id="1968116890" Name="Cat_Meow" ObjectPath="\Events\Default Work Unit\Cat_Meow" DurationType="OneShot" DurationMin="1.218120" DurationMax="1.534514"/>
 				<Event Id="2218763125" Name="Dog_Tailwag" ObjectPath="\Events\Default Work Unit\Dog_Tailwag" DurationType="OneShot" DurationMin="0.903419" DurationMax="0.957139"/>
-				<Event Id="566396871" Name="Item_Pickup" ObjectPath="\Events\Default Work Unit\Item_Pickup" DurationType="OneShot" DurationMin="0.209918" DurationMax="0.209918"/>
-				<Event Id="2355367520" Name="Junktyard_Ambience" ObjectPath="\Events\Default Work Unit\Junktyard_Ambience" DurationType="Infinite"/>
+				<Event Id="566396871" Name="Item_Pickup" ObjectPath="\Events\Default Work Unit\Item_Pickup" DurationType="OneShot" DurationMin="1.693771" DurationMax="1.939462"/>
 				<Event Id="3991942870" Name="Music" ObjectPath="\Events\Default Work Unit\Music" DurationType="Infinite"/>
-				<Event Id="2057654685" Name="PlayerDog_Bark" ObjectPath="\Events\Default Work Unit\PlayerDog_Bark" DurationType="OneShot" DurationMin="1.081606" DurationMax="1.265667"/>
+				<Event Id="2057654685" Name="PlayerDog_Bark" ObjectPath="\Events\Default Work Unit\PlayerDog_Bark" DurationType="OneShot" DurationMin="1.443771" DurationMax="1.689462"/>
 				<Event Id="1936541503" Name="Room_Ambience" ObjectPath="\Events\Default Work Unit\Room_Ambience" DurationType="Infinite"/>
 				<Event Id="1723787087" Name="Roomba" ObjectPath="\Events\Default Work Unit\Roomba" DurationType="Infinite"/>
-				<Event Id="3254411891" Name="SoccerBall" ObjectPath="\Events\Default Work Unit\SoccerBall" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3949529627" Name="Treat" ObjectPath="\Events\Default Work Unit\Treat" DurationType="OneShot" DurationMin="0.646306" DurationMax="0.646306"/>
+				<Event Id="2249769530" Name="UI_Click" ObjectPath="\Events\Default Work Unit\UI_Click" DurationType="OneShot" DurationMin="1.204354" DurationMax="1.204354"/>
+				<Event Id="1513665222" Name="UI_Navi" ObjectPath="\Events\Default Work Unit\UI_Navi" DurationType="OneShot" DurationMin="1.249437" DurationMax="1.249437"/>
 				<Event Id="3590456812" Name="Water_Spray" ObjectPath="\Events\Default Work Unit\Water_Spray" DurationType="OneShot" DurationMin="0.398721" DurationMax="0.532250"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -92,6 +95,10 @@
 					<ShortName>SFX_SprayGun2_5.wav</ShortName>
 					<Path>SFX/SFX_SprayGun2_5_C6AC61FA.wem</Path>
 				</File>
+				<File Id="413447624" Language="SFX">
+					<ShortName>SoccerBall_Kick.wav</ShortName>
+					<Path>SFX/SoccerBall_Kick_C6AC61FA.wem</Path>
+				</File>
 				<File Id="424821462" Language="SFX">
 					<ShortName>City Wind, Leaves, Distant Traffic  _Stereo (LR).wav</ShortName>
 					<Path>SFX/City Wind, Leaves, Distant Traffic  _Stereo (LR)_CF7F9B2B.wem</Path>
@@ -104,9 +111,17 @@
 					<ShortName>BigDog_Bark_6.wav</ShortName>
 					<Path>SFX/BigDog_Bark_6_C6AC61FA.wem</Path>
 				</File>
+				<File Id="472187441" Language="SFX">
+					<ShortName>Park Residential, Birds, Wind, Crows _STEREO.wav</ShortName>
+					<Path>SFX/Park Residential, Birds, Wind, Crows _STEREO_99E25310.wem</Path>
+				</File>
 				<File Id="497012732" Language="SFX">
 					<ShortName>Dog_Bark_3.wav</ShortName>
 					<Path>SFX/Dog_Bark_3_C6AC61FA.wem</Path>
+				</File>
+				<File Id="584293072" Language="SFX">
+					<ShortName>UI_Navi.wav</ShortName>
+					<Path>SFX/UI_Navi_C6AC61FA.wem</Path>
 				</File>
 				<File Id="604519845" Language="SFX">
 					<ShortName>BigDog_Bark_2.wav</ShortName>
@@ -135,6 +150,10 @@
 				<File Id="660867108" Language="SFX">
 					<ShortName>Roomtone,TACF,Auditorium,Light Hum.wav</ShortName>
 					<Path>SFX/Roomtone,TACF,Auditorium,Light Hum_B85CC767.wem</Path>
+				</File>
+				<File Id="689104524" Language="SFX">
+					<ShortName>SoccerBall_Bounce.wav</ShortName>
+					<Path>SFX/SoccerBall_Bounce_C6AC61FA.wem</Path>
 				</File>
 				<File Id="718176670" Language="SFX">
 					<ShortName>Cat_Meow_1.wav</ShortName>

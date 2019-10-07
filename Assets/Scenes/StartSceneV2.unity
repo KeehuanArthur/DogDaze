@@ -646,6 +646,28 @@ MonoBehaviour:
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: c56eea155e8ec41689f491ff7d124d57,
       type: 2}
+  akAmbience: {fileID: 0}
+  streetAmbience:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: abe1d97cfb6a746a3b25ac55251f1f64,
+      type: 2}
+  roomAmbience:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 1e23af73cf9164cf59e00223e44165ef,
+      type: 2}
+  junkyardAmbience:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9e4a52c6abcdf4f7aa30e79c8a3c145a,
+      type: 2}
   materials:
     street_floors: {fileID: 4119429476235930303, guid: d63da3d52aaa1594f965303d20fa0db9,
       type: 3}
@@ -864,6 +886,12 @@ PrefabInstance:
       propertyPath: akMusicPlayer
       value: 
       objectReference: {fileID: 271482753}
+    - target: {fileID: 9223161253375157813, guid: e0ca00f5363ec4ed2a1360e2563bbfcf,
+        type: 3}
+      propertyPath: tailWag.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: e2f79803e6d264cdfad7f8090a219519,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 8499262601308819257, guid: e0ca00f5363ec4ed2a1360e2563bbfcf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e0ca00f5363ec4ed2a1360e2563bbfcf, type: 3}
@@ -878,6 +906,7 @@ GameObject:
   - component: {fileID: 1651455890}
   - component: {fileID: 1651455889}
   - component: {fileID: 1651455888}
+  - component: {fileID: 1651455891}
   m_Layer: 0
   m_Name: Ambience
   m_TagString: Untagged
@@ -905,7 +934,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: e9b52809248d443619cbf885a9453df1,
+    WwiseObjectReference: {fileID: 11400000, guid: e1907dd1d2dc44f9b8a731b151f1ddad,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -955,6 +984,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1651455891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651455887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc03c7d9ea6674b68a394af0d8e43370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 9e4a52c6abcdf4f7aa30e79c8a3c145a,
+      type: 2}
+  valueIdInternal: 0
+  groupIdInternal: 0
+  valueGuidInternal: 
+  groupGuidInternal: 
 --- !u!1 &1726660312
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3461d887bd27e4658b3eb71174fc0f39, type: 3}
+  m_Name: BF9F787E-0F5D-4F60-B949-6F9CE8587989
+  m_EditorClassIdentifier: 
+  objectName: Junkyard
+  id: 294556303
+  guid: BF9F787E-0F5D-4F60-B949-6F9CE8587989
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 73da13c9753cf41199e03980ec5a61f0,
+    type: 2}

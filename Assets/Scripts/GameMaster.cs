@@ -74,7 +74,13 @@ public class GameMaster : MonoBehaviour
     public AK.Wwise.Switch city;
     public AK.Wwise.Switch greyhound;
     public AK.Wwise.Switch cat;
-    public AK.Wwise.Switch dogFather; 
+    public AK.Wwise.Switch dogFather;
+
+    public GameObject akAmbience;
+
+    public AK.Wwise.Switch streetAmbience;
+    public AK.Wwise.Switch roomAmbience;
+    public AK.Wwise.Switch junkyardAmbience;
 
 
     private void OnLevelWasLoaded(int index) {
@@ -151,6 +157,7 @@ public class GameMaster : MonoBehaviour
             case "house0": //Greyhound
                 Debug.Log("Entering Scene: House0");
                 greyhound.SetValue(akMusicPlayer);
+                roomAmbience.SetValue(akAmbience);
                 currentScene = houses[0];
                 currentScene.materialize();
                 player.transform.position = new Vector3(10,1,-1f);
@@ -161,6 +168,7 @@ public class GameMaster : MonoBehaviour
             case "street":
                 Debug.Log("Entering Scene: Street");
                 city.SetValue(akMusicPlayer);
+                streetAmbience.SetValue(akAmbience);
                 currentScene = street;
                 currentScene.materialize();
                 player.transform.position = new Vector3(15,0,-1f);
@@ -170,6 +178,7 @@ public class GameMaster : MonoBehaviour
             case "house1": //Cat
                 Debug.Log("Entering Scene: House1");
                 cat.SetValue(akMusicPlayer);
+                roomAmbience.SetValue(akAmbience);
                 currentScene = houses[1];
                 currentScene.materialize();
                 player.transform.position = new Vector3(10,1,-1f);
@@ -180,6 +189,7 @@ public class GameMaster : MonoBehaviour
             case "house2": //Bulldog (Final Boss)
                 Debug.Log("Entering Scene: House2");
                 dogFather.SetValue(akMusicPlayer);
+                roomAmbience.SetValue(akAmbience);
                 currentScene = houses[2];
                 currentScene.materialize();
                 player.transform.position = new Vector3(10,1,-1f);
@@ -190,6 +200,7 @@ public class GameMaster : MonoBehaviour
             case "junkyard": 
                 Debug.Log("Entering Scene: Junkyard");
                 city.SetValue(akMusicPlayer);
+                junkyardAmbience.SetValue(akAmbience);
                 break;
             
             default:

@@ -6,6 +6,13 @@
 				<Folder Name="Music" ID="{1F80094F-F3D2-440B-8F1C-ED4CAB089CFD}" ShortID="943875540">
 					<ChildrenList>
 						<MusicSwitchContainer Name="LD45 MUSIC" ID="{4880504D-BC77-4BC0-8ED4-A066799289B3}" ShortID="413659734">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
