@@ -1468,6 +1468,25 @@
 						<ActiveSource Name="Item_PickUp" ID="{3A954DCE-3ECE-4332-A93C-A7EFB758384C}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="UI_Navi" ID="{E3F6FA8A-AFFE-4C48-849B-892C2CA289EB}" ShortID="538079955">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="UI_Navi" ID="{4D176141-DE62-4296-972E-A16455535A6A}" ShortID="584293072">
+							<Language>SFX</Language>
+							<AudioFile>UI_Navi.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="UI_Navi" ID="{4D176141-DE62-4296-972E-A16455535A6A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
