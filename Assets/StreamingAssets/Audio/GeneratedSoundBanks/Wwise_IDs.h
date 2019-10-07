@@ -17,9 +17,9 @@ namespace AK
         static const AkUniqueID CAT_HISS = 1347479017U;
         static const AkUniqueID CAT_MEOW = 1968116890U;
         static const AkUniqueID DOG_TAILWAG = 2218763125U;
-        static const AkUniqueID FOOTSTEP = 1866025847U;
+        static const AkUniqueID ITEM_PICKUP = 566396871U;
         static const AkUniqueID JUNKTYARD_AMBIENCE = 2355367520U;
-        static const AkUniqueID JUNKYARD_MUSIC = 2717114767U;
+        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PLAYERDOG_BARK = 2057654685U;
         static const AkUniqueID ROOM_AMBIENCE = 1936541503U;
         static const AkUniqueID ROOMBA = 1723787087U;
@@ -28,8 +28,36 @@ namespace AK
         static const AkUniqueID WATER_SPRAY = 3590456812U;
     } // namespace EVENTS
 
+    namespace STATES
+    {
+        namespace GAMESATE
+        {
+            static const AkUniqueID GROUP = 2260585538U;
+
+            namespace STATE
+            {
+                static const AkUniqueID GAMEPLAY = 89505537U;
+                static const AkUniqueID MENU = 2607556080U;
+            } // namespace STATE
+        } // namespace GAMESATE
+
+    } // namespace STATES
+
     namespace SWITCHES
     {
+        namespace MUSIC
+        {
+            static const AkUniqueID GROUP = 3991942870U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID CATLADY = 3806193355U;
+                static const AkUniqueID FINALBOSS = 2147352708U;
+                static const AkUniqueID GREYHOUND = 3810375574U;
+                static const AkUniqueID STREET = 4142189312U;
+            } // namespace SWITCH
+        } // namespace MUSIC
+
         namespace WEAPON
         {
             static const AkUniqueID GROUP = 3893417221U;

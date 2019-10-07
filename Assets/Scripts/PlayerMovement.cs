@@ -23,14 +23,13 @@ public class PlayerMovement : MonoBehaviour
     [Header("Sounds")]
     public GameObject akMusicPlayer;
     public AK.Wwise.Event waterSpray;
-    public AK.Wwise.Event tailWig;
+    public AK.Wwise.Event tailWag;
     public AK.Wwise.Event soccerBall;
     public AK.Wwise.Event roombaSound;
     public AK.Wwise.Switch Junkyard;
     public AK.Wwise.Switch Street;
     public AK.Wwise.Switch room_1;
     public AK.Wwise.Switch room_2;
-      
 
 
     private void Start()
@@ -43,24 +42,28 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-		PlayerInput();
-		transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
-	}
+        PlayerInput();
+        transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
+    }
 
     private void FixedUpdate()
+
+
+
+
+
     {
         if (!gameMaster.doingSetup)
 	    {
 		    MovePlayer();
-		    //Fire();
+		    Fire();
 		}
 	}
-
 	private void Fire()
     {
         if (Input.GetMouseButtonDown(0) && currentItem == Items[0])   // 
         {
-            tailWig.Post(gameObject);//play sound
+            tailWag.Post(gameObject);//play sound
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Rigidbody2D newCurrentItem;
             newCurrentItem = Instantiate(currentItem, transform.position, Quaternion.identity);
@@ -83,17 +86,19 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+
     public void PlayerInput()
     {
         // PLAYER MOVEMENT
         float hAxis = Input.GetAxisRaw("Horizontal");
         float vAxis = Input.GetAxisRaw("Vertical");
         moveInput = new Vector2(hAxis, vAxis);
+       
         moveVelocity = moveInput.normalized * playerSpeed;
 
 
         // ITEM INPUT
-        if (ItemOption() == 1) // Tailwig
+        if (ItemOption() == 1) // Laser
         {
             currentItem = Items[ItemOption() - 1];
         }
@@ -122,17 +127,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            //switch wwise to tailWig
             return 1;
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            //switch wwise to tennisball
             return 2;
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
-            //switch wwise to roomba 
             return 3;
         }
         else
@@ -147,30 +149,16 @@ public class PlayerMovement : MonoBehaviour
         playerBody.MovePosition(playerBody.position + moveVelocity * Time.fixedDeltaTime);
     }
 
-    void OnTriggerEnter2D(Collider2D c) 
-    {
-        BoxCollider2D collider = c.GetComponent<BoxCollider2D>();
-        if (collider.tag == "Door") {
-            int houseNumber = Int32.Parse(collider.name.Substring(4,1));
-			//gameMaster.cur_game_state = GameMaster.game_state_start_loading_level;
-			gameMaster.UpdateCanvas("House", false, houseNumber);
-			gameMaster.SetCurrentGameState("load");
-            room_1.SetValue(akMusicPlayer); //music changes
-            gameMaster.EnterHouse(houseNumber);
-            
-        }
-	}
-
     void OnTriggerStay2D(Collider2D c)
 	{
         if (c.tag == "SpecialItem" && Input.GetKey(KeyCode.C))
 		{
 			// TODO: save the item under the player
 			gameMaster.UpdateCanvas("Street", true, -1);
-			gameMaster.SetCurrentGameState("load");
+            gameMaster.SetCurrentGameState(GameMaster.game_state_start_loading_level);
             Street.SetValue(akMusicPlayer);//music changes
-			gameMaster.EnterStreet();
-		}
+            gameMaster.EnterScene("street");
+        }
 	}
-
 }
+

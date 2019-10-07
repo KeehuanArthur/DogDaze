@@ -6,6 +6,7 @@
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Originals\SFX"/>
 				<Property Name="Event Action List\{003D1326-6A33-4810-A754-CD2E1FB5F3F9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{0243B86B-A335-4C3F-ACD1-3E0D8773A02D}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{0820C2DA-019A-495A-82A4-988B8A6DAFE3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{09025EC5-0432-40C6-8033-A7D756AA6A62}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{092BC6EC-8D4F-49F3-97F2-18FCDB1614FC}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{10D5DA4E-20FC-4311-8A31-34763D189297}\x64_Expand States" Type="string" Value=""/>
@@ -61,6 +62,7 @@
 				<Property Name="MonitoringManager\WatchMgr\x64_GameSyncWatches" Type="string" Value=""/>
 				<Property Name="MonitoringManager\WatchMgr\x64_Watches" Type="string" Value=""/>
 				<Property Name="Music Transition List\{03D8DE16-1AE0-4741-B6F3-7C543804E16C}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Music Transition List\{4880504D-BC77-4BC0-8ED4-A066799289B3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{6AE99EB0-D0D6-4013-9F6B-3DD3AB789429}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{855E321A-C87B-4217-80E7-2FCD878ABE23}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Music Transition List\{8FAF4EDE-FF72-4A5D-83F8-1B1CB61E51D5}\x64_Expand States" Type="string" Value=""/>

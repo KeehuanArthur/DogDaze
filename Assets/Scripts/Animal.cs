@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class Animal : MovingObject
-{
+{ 
 	private Transform player;
 	public Sprite sprite; // for Animal's child classes
+
     public GameMaster gameMaster;
 
     protected override void Start()
@@ -41,10 +42,9 @@ public class Animal : MovingObject
         if (collision.collider.tag == "Player")
         {
 			gameMaster.UpdateCanvas("Street", false, -1);
-			gameMaster.SetCurrentGameState("load");
-            gameMaster.EnterStreet();
+            gameMaster.SetCurrentGameState(GameMaster.game_state_start_loading_level);
+            gameMaster.EnterScene("street");
+
         }
     }
-
-    //protected override void OnCollisionEnter(Collision collision)
 }

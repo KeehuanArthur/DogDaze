@@ -10,6 +10,14 @@
 						<Switch Name="SoccerBall" ID="{AA086A2F-B86A-4E33-A9D6-E5DF4A2F55D1}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Music" ID="{DB0121CE-5BF2-46E2-8CC8-27EB48B132ED}">
+					<ChildrenList>
+						<Switch Name="Greyhound" ID="{91D2BCD5-D774-444B-936B-4A469F385E30}"/>
+						<Switch Name="Street" ID="{E4863BC5-28E1-4474-9F34-C30424D2786D}"/>
+						<Switch Name="CatLady" ID="{C1DBADD6-D23D-4DC7-8072-FDB08BCB9C10}"/>
+						<Switch Name="FinalBoss" ID="{8BB33B4C-AFFC-49B7-8BCF-5E4AB8E28AD0}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

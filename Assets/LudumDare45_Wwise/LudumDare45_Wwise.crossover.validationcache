@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="94">
-	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1570393773" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="1570393773" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1570406969" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Actor-Mixer Hierarchy\Factory SoundSeed Air Objects.wwu" DateLow="1570406976" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Actor-Mixer Hierarchy\Factory Synth One.wwu" DateLow="1570143172" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Attenuations\Default Work Unit.wwu" DateLow="1570247114" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Audio Devices\Default Work Unit.wwu" DateLow="1570247316" DateHigh="0"/>
@@ -23,12 +23,12 @@
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Effects\Factory iZotope Multiband Distortion.wwu" DateLow="1570143172" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Effects\Factory iZotope Singleband Distortion.wwu" DateLow="1570143172" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Effects\Factory McDSP Effects.wwu" DateLow="1570143172" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Events\Default Work Unit.wwu" DateLow="1570393773" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Events\Default Work Unit.wwu" DateLow="1570406969" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Game Parameters\Default Work Unit.wwu" DateLow="1570393773" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Game Parameters\Factory Motion.wwu" DateLow="1570143172" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Game Parameters\Factory SoundSeed Air Game Syncs.wwu" DateLow="1570143172" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1570393773" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\LudumDare45_Wwise.crossover.wsettings" DateLow="1570393773" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1570406969" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\LudumDare45_Wwise.crossover.wsettings" DateLow="1570406969" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\LudumDare45_Wwise.wproj" DateLow="1570249366" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1570249035" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Mixing Sessions\Default Work Unit.wwu" DateLow="1570247114" DateHigh="0"/>
@@ -36,10 +36,10 @@
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Presets\Default Work Unit.wwu" DateLow="1570247114" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Queries\Default Work Unit.wwu" DateLow="1570247114" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Queries\Factory Queries.wwu" DateLow="1570143170" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\SoundBanks\Default Work Unit.wwu" DateLow="1570393790" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\SoundBanks\Default Work Unit.wwu" DateLow="1570406970" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1570247114" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\States\Default Work Unit.wwu" DateLow="1570247114" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Switches\Default Work Unit.wwu" DateLow="1570247114" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Switches\Default Work Unit.wwu" DateLow="1570396537" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Triggers\Default Work Unit.wwu" DateLow="1570247114" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Virtual Acoustics\Default Work Unit.wwu" DateLow="1570247114" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Virtual Acoustics\Factory Reflect Acoustic Textures.wwu" DateLow="1570143172" DateHigh="0"/>
