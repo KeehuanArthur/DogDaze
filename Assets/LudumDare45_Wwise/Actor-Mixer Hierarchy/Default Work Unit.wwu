@@ -177,175 +177,6 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
-				<RandomSequenceContainer Name="SprayGun2" ID="{82D190F0-8CDC-4A9E-AE49-ABFBCB917CC0}" ShortID="350668050">
-					<PropertyList>
-						<Property Name="Highpass" Type="int16">
-							<ValueList>
-								<Value>50</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Lowpass" Type="int16">
-							<ValueList>
-								<Value>17</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Pitch" Type="int32">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{3A1D389D-2661-46AD-995A-A262B93C5D74}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="500"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="SFX_SprayGun2_1" ID="{B103E9C8-AB93-44F6-A0C2-93396BBC1D90}" ShortID="348153459">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_SprayGun2_1" ID="{506206F9-2C00-427F-B3A6-7BBCAFB57DAD}" ShortID="228904637">
-									<Language>SFX</Language>
-									<AudioFile>SFX_SprayGun2_1.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_SprayGun2_1" ID="{506206F9-2C00-427F-B3A6-7BBCAFB57DAD}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="SFX_SprayGun2_3" ID="{FD1BDFF2-EF56-4673-9CCA-79C2CD412ADE}" ShortID="615072886">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_SprayGun2_3" ID="{ABEB7567-F03D-4342-82EF-FECB201426AC}" ShortID="850115381">
-									<Language>SFX</Language>
-									<AudioFile>SFX_SprayGun2_3.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_SprayGun2_3" ID="{ABEB7567-F03D-4342-82EF-FECB201426AC}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="SFX_SprayGun2_2" ID="{055ED700-85C4-4F9A-A5AD-47C9F644F463}" ShortID="39409093">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_SprayGun2_2" ID="{52E0C390-D07C-4F77-B064-A057B94CF8E0}" ShortID="910188283">
-									<Language>SFX</Language>
-									<AudioFile>SFX_SprayGun2_2.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_SprayGun2_2" ID="{52E0C390-D07C-4F77-B064-A057B94CF8E0}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="SFX_SprayGun2_6" ID="{42A05411-E99A-42E2-A35A-99DA31665146}" ShortID="509014811">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_SprayGun2_6" ID="{0C833E41-FA8B-45BE-B842-9CF82D123575}" ShortID="734777411">
-									<Language>SFX</Language>
-									<AudioFile>SFX_SprayGun2_6.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_SprayGun2_6" ID="{0C833E41-FA8B-45BE-B842-9CF82D123575}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="SFX_SprayGun2_4" ID="{F1595782-EFDA-443F-93CD-16BEFC4A0A9C}" ShortID="218570855">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_SprayGun2_4" ID="{1AFBF133-4A6C-4E44-A763-229D73FD3281}" ShortID="640937498">
-									<Language>SFX</Language>
-									<AudioFile>SFX_SprayGun2_4.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_SprayGun2_4" ID="{1AFBF133-4A6C-4E44-A763-229D73FD3281}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="SFX_SprayGun2_5" ID="{2A5B758A-3603-4567-942B-81D005EBBE2A}" ShortID="257252285">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_SprayGun2_5" ID="{81A0C887-2292-43A4-8F87-89514597AECA}" ShortID="393764157">
-									<Language>SFX</Language>
-									<AudioFile>SFX_SprayGun2_5.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_SprayGun2_5" ID="{81A0C887-2292-43A4-8F87-89514597AECA}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="SFX_SprayGun2_7" ID="{D101B5AB-9684-4AB6-B3D7-20DC5275F2F6}" ShortID="1015108135">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="SFX_SprayGun2_7" ID="{20D99523-2079-4631-9A4C-0B4157CA9270}" ShortID="1040663324">
-									<Language>SFX</Language>
-									<AudioFile>SFX_SprayGun2_7.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="SFX_SprayGun2_7" ID="{20D99523-2079-4631-9A4C-0B4157CA9270}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="SmallDog_Bark" ID="{E49674CE-3415-4496-8865-2D738B43AE8E}" ShortID="876299571">
 					<PropertyList>
 						<Property Name="Highpass" Type="int16">
@@ -1137,60 +968,6 @@
 						<ActiveSource Name="Cat_Hissing_1" ID="{1145719B-E981-4C5E-8D5B-DC643A198787}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="Dog_Tailwag" ID="{82CA771C-ADC2-4F4A-A731-8CD9BC57FAAC}" ShortID="378411509">
-					<PropertyList>
-						<Property Name="Highpass" Type="int16">
-							<ValueList>
-								<Value>30</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Lowpass" Type="int16">
-							<ValueList>
-								<Value>20</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Pitch" Type="int32">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{D0B0B875-8EDA-4EA0-A369-8A21BB1CE0C0}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="50"/>
-											<Property Name="Min" Type="Real64" Value="-50"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>4</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Dog_Tailwag" ID="{434452D9-4775-449E-8CFD-81126677DACD}" ShortID="375039660">
-							<PropertyList>
-								<Property Name="FadeOutDuration" Type="Real64" Value="0.660277777777778"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimEnd" Type="Real64" Value="0.929891203703704"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>Dog_Tailwag.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Dog_Tailwag" ID="{434452D9-4775-449E-8CFD-81126677DACD}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="Treat_Throw" ID="{DA3AB863-5E7B-4495-A55F-89E9A8D7FFA3}" ShortID="864768837">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -1432,6 +1209,284 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<Sound Name="Dog_Tailwag" ID="{82CA771C-ADC2-4F4A-A731-8CD9BC57FAAC}" ShortID="378411509">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>30</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>20</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{D0B0B875-8EDA-4EA0-A369-8A21BB1CE0C0}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-50"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Dog_Tailwag" ID="{434452D9-4775-449E-8CFD-81126677DACD}" ShortID="375039660">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.660277777777778"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.929891203703704"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Dog_Tailwag.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Dog_Tailwag" ID="{434452D9-4775-449E-8CFD-81126677DACD}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="SprayGun2" ID="{82D190F0-8CDC-4A9E-AE49-ABFBCB917CC0}" ShortID="350668050">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>50</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>17</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{3A1D389D-2661-46AD-995A-A262B93C5D74}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="500"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SFX_SprayGun2_1" ID="{B103E9C8-AB93-44F6-A0C2-93396BBC1D90}" ShortID="348153459">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_SprayGun2_1" ID="{506206F9-2C00-427F-B3A6-7BBCAFB57DAD}" ShortID="228904637">
+									<Language>SFX</Language>
+									<AudioFile>SFX_SprayGun2_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_SprayGun2_1" ID="{506206F9-2C00-427F-B3A6-7BBCAFB57DAD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_SprayGun2_3" ID="{FD1BDFF2-EF56-4673-9CCA-79C2CD412ADE}" ShortID="615072886">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_SprayGun2_3" ID="{ABEB7567-F03D-4342-82EF-FECB201426AC}" ShortID="850115381">
+									<Language>SFX</Language>
+									<AudioFile>SFX_SprayGun2_3.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_SprayGun2_3" ID="{ABEB7567-F03D-4342-82EF-FECB201426AC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_SprayGun2_2" ID="{055ED700-85C4-4F9A-A5AD-47C9F644F463}" ShortID="39409093">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_SprayGun2_2" ID="{52E0C390-D07C-4F77-B064-A057B94CF8E0}" ShortID="910188283">
+									<Language>SFX</Language>
+									<AudioFile>SFX_SprayGun2_2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_SprayGun2_2" ID="{52E0C390-D07C-4F77-B064-A057B94CF8E0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_SprayGun2_6" ID="{42A05411-E99A-42E2-A35A-99DA31665146}" ShortID="509014811">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_SprayGun2_6" ID="{0C833E41-FA8B-45BE-B842-9CF82D123575}" ShortID="734777411">
+									<Language>SFX</Language>
+									<AudioFile>SFX_SprayGun2_6.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_SprayGun2_6" ID="{0C833E41-FA8B-45BE-B842-9CF82D123575}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_SprayGun2_4" ID="{F1595782-EFDA-443F-93CD-16BEFC4A0A9C}" ShortID="218570855">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_SprayGun2_4" ID="{1AFBF133-4A6C-4E44-A763-229D73FD3281}" ShortID="640937498">
+									<Language>SFX</Language>
+									<AudioFile>SFX_SprayGun2_4.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_SprayGun2_4" ID="{1AFBF133-4A6C-4E44-A763-229D73FD3281}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_SprayGun2_5" ID="{2A5B758A-3603-4567-942B-81D005EBBE2A}" ShortID="257252285">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_SprayGun2_5" ID="{81A0C887-2292-43A4-8F87-89514597AECA}" ShortID="393764157">
+									<Language>SFX</Language>
+									<AudioFile>SFX_SprayGun2_5.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_SprayGun2_5" ID="{81A0C887-2292-43A4-8F87-89514597AECA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="SFX_SprayGun2_7" ID="{D101B5AB-9684-4AB6-B3D7-20DC5275F2F6}" ShortID="1015108135">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="SFX_SprayGun2_7" ID="{20D99523-2079-4631-9A4C-0B4157CA9270}" ShortID="1040663324">
+									<Language>SFX</Language>
+									<AudioFile>SFX_SprayGun2_7.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="SFX_SprayGun2_7" ID="{20D99523-2079-4631-9A4C-0B4157CA9270}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<Sound Name="Item_PickUp" ID="{8AB54418-24E7-49E3-B507-3E70AF00C040}" ShortID="634659107">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>11</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>150</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Item_PickUp" ID="{3A954DCE-3ECE-4332-A93C-A7EFB758384C}" ShortID="723363963">
+							<Language>SFX</Language>
+							<AudioFile>Item_PickUp.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Item_PickUp" ID="{3A954DCE-3ECE-4332-A93C-A7EFB758384C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="UI_Navi" ID="{E3F6FA8A-AFFE-4C48-849B-892C2CA289EB}" ShortID="538079955">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="UI_Navi" ID="{4D176141-DE62-4296-972E-A16455535A6A}" ShortID="584293072">
+							<Language>SFX</Language>
+							<AudioFile>UI_Navi.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="UI_Navi" ID="{4D176141-DE62-4296-972E-A16455535A6A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
