@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 9223161253375157813}
   - component: {fileID: 6669769674277711897}
   - component: {fileID: 8499262601308819256}
-  - component: {fileID: 8499262601308819257}
   m_Layer: 0
   m_Name: DummyPlayer 1
   m_TagString: Player
@@ -31,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7119733194571785666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -11.11, y: -8.23, z: -1.4648438}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: fbe1e7b94bb1a4a099d5bcb15a00141c, type: 3}
+  m_Sprite: {fileID: -2616557156693503586, guid: b15c631e3d5d12c44879ccbba2497612,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 7119733194571785666}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3202cb13c0e90934fa7d921d85c297bf, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8db0befccf7b8b34992525a2bfb62c08, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -117,13 +117,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 10
-  moveVelocity: {x: 0, y: 0}
-  moveInput: {x: 0, y: 0}
+  animator: {fileID: 7119733194571785665}
   gameMaster: {fileID: 0}
   Items:
-  - {fileID: 6827151168929318713, guid: fda757f6909664be98d620f2466ca25c, type: 3}
-  - {fileID: 8936105327397142829, guid: 6c96e45abdcf04df7adbdc4fa611bd14, type: 3}
-  spraySound:
+  - {fileID: -898830827853358305, guid: a845a3e18405ea042b257daf33f27c07, type: 3}
+  - {fileID: -2129276093862376543, guid: a663fe3cd4ac45f4994c500a689f67a2, type: 3}
+  nyumBall: 2
+  akMusicPlayer: {fileID: 0}
+  waterSpray:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 6df6de6edd4b6449e9e9fb76b0914e3d,
@@ -141,6 +142,31 @@ MonoBehaviour:
   roombaSound:
     idInternal: 0
     valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 24c571942c9e34ef7b3dde2114b54183,
+      type: 2}
+  Junkyard:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  Street:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  room_1:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  room_2:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
     WwiseObjectReference: {fileID: 0}
 --- !u!60 &6669769674277711897
 PolygonCollider2D:
@@ -159,7 +185,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.57, y: 0.58}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -167,11 +193,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 1}
-      - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
-      - {x: 0.9510565, y: 0.30901712}
+    - - {x: 0.2516861, y: 0.42798555}
+      - {x: -0.16683006, y: 0.4546609}
+      - {x: -0.3104, y: 0.35477814}
+      - {x: -0.33201885, y: 0.035521448}
+      - {x: -0.31550407, y: -0.24520105}
+      - {x: -0.15305328, y: -0.35140544}
+      - {x: 0.06432915, y: -0.4772486}
+      - {x: 0.35898113, y: -0.3170845}
+      - {x: 0.35616112, y: -0.079952896}
 --- !u!50 &8499262601308819256
 Rigidbody2D:
   serializedVersion: 4
@@ -193,36 +223,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8499262601308819257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7119733194571785666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97ee580ef3380574390768b6778f155b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerSpeed: 10
-  moveVelocity: {x: 0, y: 0}
-  moveInput: {x: 0, y: 0}
-  gameMaster: {fileID: 0}
-  Items: []
-  spraySound:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  tailWig:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  soccerBall:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  roombaSound:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}

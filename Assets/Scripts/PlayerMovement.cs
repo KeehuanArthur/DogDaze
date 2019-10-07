@@ -8,17 +8,20 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Player")]
     public float playerSpeed = 10;
-    public Vector2 moveVelocity;
-    public Vector2 moveInput;
+    private Vector2 moveVelocity;
+    private Vector2 moveInput;
+    public Animator animator;
 
     Rigidbody2D playerBody;
     SpriteRenderer playerSprite;
     public GameMaster gameMaster;
 
-    [Header("Projectile")] //From here
+    [Header("Items")] //From here
     private Vector3 target; //To here
     public Rigidbody2D[] Items;
     Rigidbody2D currentItem;
+    public int nyumBall = 2;
+    private GameObject[] getCount;
 
     [Header("Sounds")]
     public GameObject akMusicPlayer;
@@ -38,20 +41,17 @@ public class PlayerMovement : MonoBehaviour
         gameMaster = FindObjectsOfType<GameMaster>()[0];
         // playerSprite = GetComponent<SpriteRenderer>();
         //target = projectile.transform.position; // here
+        
     }
 
     private void Update()
     {
+        animator.SetFloat("Speed", moveInput.magnitude * playerSpeed);
         PlayerInput();
         transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
     }
 
     private void FixedUpdate()
-
-
-
-
-
     {
         if (!gameMaster.doingSetup)
 	    {
@@ -59,32 +59,63 @@ public class PlayerMovement : MonoBehaviour
 		    Fire();
 		}
 	}
+
+    public void MovePlayer()
+    {
+        playerBody.MovePosition(playerBody.position + moveVelocity * Time.fixedDeltaTime);
+    }
+
+
 	private void Fire()
     {
-        if (Input.GetMouseButtonDown(0) && currentItem == Items[0])   // 
+        // Key 2. Spray
+        if (Input.GetMouseButtonDown(0) && currentItem == Items[0])
         {
-            tailWig.Post(gameObject);//play sound
-            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Rigidbody2D newCurrentItem;
-            newCurrentItem = Instantiate(currentItem, transform.position, Quaternion.identity);
-            target.z = newCurrentItem.transform.position.z;
-            newCurrentItem.transform.position = target;
-            Destroy(newCurrentItem.gameObject, 3.0f);
-        }
-
-        if (Input.GetMouseButtonDown(0) && currentItem == Items[1])   // Useful for tennisball
-        {
-
             waterSpray.Post(gameObject); //play sound
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Rigidbody2D newCurrentItem;
+
+            var heading = target - transform.position;
+            var distance = heading.magnitude;
+            var direction = heading * 2 / distance;
+
             newCurrentItem = Instantiate(currentItem, transform.position, Quaternion.identity);
             target.z = newCurrentItem.transform.position.z;
-            newCurrentItem.velocity = newCurrentItem.transform.TransformDirection(target - transform.position);
-            Destroy(newCurrentItem.gameObject, 3.0f);
+            newCurrentItem.velocity = newCurrentItem.transform.TransformDirection(direction);
+            Destroy(newCurrentItem.gameObject, 2.0f);
         }
 
+        // Key 3. Soccer Ball
+        else if (Input.GetMouseButtonDown(0) && currentItem == Items[1])
+        {
+            getCount = GameObject.FindGameObjectsWithTag("Balls");
+            int count = getCount.Length;
+
+            if (count < 2)
+            {
+                // Here Soccer Ball Sound
+                target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Rigidbody2D newCurrentItem;
+
+                var heading = target - transform.position;
+                var distance = heading.magnitude;
+                var direction = heading * 3 / distance;
+
+                newCurrentItem = Instantiate(currentItem, transform.position + direction, Quaternion.identity);
+                target.z = newCurrentItem.transform.position.z;
+                newCurrentItem.velocity = newCurrentItem.transform.TransformDirection(target - transform.position);
+            }
+        }
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Balls")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
+
 
 
     public void PlayerInput()
@@ -98,55 +129,38 @@ public class PlayerMovement : MonoBehaviour
 
 
         // ITEM INPUT
-        if (ItemOption() == 1) // Laser
-        {
-            currentItem = Items[ItemOption() - 1];
-        }
-        else if (ItemOption() == 2) // Tennis
-        {
-            currentItem = Items[ItemOption() - 1];
-        }
-        else if (ItemOption() == 3) // Booster
-        {
+        int option = ItemOption();
+
+        if (option == 0) {// Booster - Spacebar
             Booster();
             Invoke("NormalSpeed", 1f);
+        } else if (option == 1) {// Tail Wagging - Alpha1
+            animator.SetBool("IsWag", true);
+            IsWagging();
+        } else if (option == 2){// Spray
+            animator.SetBool("IsKick", true);
+            currentItem = Items[option - 2];
+        } else if (option == 3){// Soccer Ball
+            currentItem = Items[option - 2];
         }
     }
 
-    private void NormalSpeed()
+    private void IsWagging()
     {
-        playerSpeed = 10;
+        tailWig.Post(gameObject);//play sound
+        Invoke("StopWagging", 3f);
     }
-
-    private void Booster()
-    {
-        playerSpeed = 20;
-    }
+    private void StopWagging(){animator.SetBool("IsWag", false);}
+    private void NormalSpeed(){playerSpeed = 10;}
+    private void Booster(){playerSpeed = 20;}
 
     public int ItemOption()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            return 1;
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            return 2;
-        }
-        else if (Input.GetKeyDown(KeyCode.Space))
-        {
-            return 3;
-        }
-        else
-        {
-            return 0;
-        }
-    }
-
-    
-    public void MovePlayer()
-    {
-        playerBody.MovePosition(playerBody.position + moveVelocity * Time.fixedDeltaTime);
+        if (Input.GetKeyDown(KeyCode.Space)){return 0;} // Booster
+        else if (Input.GetKeyDown(KeyCode.Alpha1)){return 1;} // Tail Wagging
+        else if (Input.GetKeyDown(KeyCode.Alpha2)){return 2;} // Spray
+        else if (Input.GetKeyDown(KeyCode.Alpha3)){return 3;} // Soccer Ball
+        else {return 5;}
     }
 
     void OnTriggerStay2D(Collider2D c)
