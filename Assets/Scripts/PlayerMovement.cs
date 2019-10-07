@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Sounds")]
     public GameObject akMusicPlayer;
     public AK.Wwise.Event waterSpray;
-    public AK.Wwise.Event tailWig;
+    public AK.Wwise.Event tailWag;
     public AK.Wwise.Event soccerBall;
     public AK.Wwise.Event roombaSound;
     public AK.Wwise.Switch Junkyard;
@@ -147,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void IsWagging()
     {
-        tailWig.Post(gameObject);//play sound
+        tailWag.Post(gameObject);//play sound
         Invoke("StopWagging", 3f);
     }
     private void StopWagging(){animator.SetBool("IsWag", false);}

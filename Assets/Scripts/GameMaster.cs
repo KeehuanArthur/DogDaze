@@ -69,6 +69,12 @@ public class GameMaster : MonoBehaviour
 
     IDictionary<string, int[]> sprite_mapper;
 
+    public GameObject akMusicPlayer; 
+    
+    public AK.Wwise.Switch city;
+    public AK.Wwise.Switch greyhound;
+    public AK.Wwise.Switch cat;
+    public AK.Wwise.Switch dogFather; 
 
 
     private void OnLevelWasLoaded(int index) {
@@ -142,43 +148,48 @@ public class GameMaster : MonoBehaviour
 
         switch (location) {
 
-            case "house0":
+            case "house0": //Greyhound
                 Debug.Log("Entering Scene: House0");
-
+                greyhound.SetValue(akMusicPlayer);
                 currentScene = houses[0];
                 currentScene.materialize();
                 player.transform.position = new Vector3(10,1,-1f);
                 SpawnEnemies(3);
+                
                 break;
             
             case "street":
                 Debug.Log("Entering Scene: Street");
-
+                city.SetValue(akMusicPlayer);
                 currentScene = street;
                 currentScene.materialize();
                 player.transform.position = new Vector3(15,0,-1f);
+                
                 break;
 
-            case "house1":
+            case "house1": //Cat
                 Debug.Log("Entering Scene: House1");
-
+                cat.SetValue(akMusicPlayer);
                 currentScene = houses[1];
                 currentScene.materialize();
                 player.transform.position = new Vector3(10,1,-1f);
                 SpawnEnemies(0);
+                
                 break;
 
-            case "house2":
+            case "house2": //Bulldog (Final Boss)
                 Debug.Log("Entering Scene: House2");
-
+                dogFather.SetValue(akMusicPlayer);
                 currentScene = houses[2];
                 currentScene.materialize();
                 player.transform.position = new Vector3(10,1,-1f);
                 SpawnEnemies(0);
+               
                 break;
 
-            case "junkyard":
+            case "junkyard": 
                 Debug.Log("Entering Scene: Junkyard");
+                city.SetValue(akMusicPlayer);
                 break;
             
             default:

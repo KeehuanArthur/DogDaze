@@ -131,6 +131,8 @@ GameObject:
   - component: {fileID: 271482756}
   - component: {fileID: 271482755}
   - component: {fileID: 271482754}
+  - component: {fileID: 271482757}
+  - component: {fileID: 271482758}
   m_Layer: 0
   m_Name: Music Player
   m_TagString: Untagged
@@ -158,7 +160,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: ca1bcd38f60664cf9be70b128a84991f,
+    WwiseObjectReference: {fileID: 11400000, guid: 83d1bb0d8fa3544e1bf883e9ac460abc,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -204,6 +206,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &271482757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271482753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc03c7d9ea6674b68a394af0d8e43370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 155b218ded4934f369d972d49457181b,
+      type: 2}
+  valueIdInternal: 0
+  groupIdInternal: 0
+  valueGuidInternal: 
+  groupGuidInternal: 
+--- !u!114 &271482758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271482753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03e2ff08a1bff4a24a428db853ab3401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5c284fe04352649698a07772162060ee,
+      type: 2}
+  valueIdInternal: 0
+  groupIdInternal: 0
+  valueGuidInternal: 
+  groupGuidInternal: 
 --- !u!1 &405579193
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,6 +717,35 @@ MonoBehaviour:
   spriteListHouse2: []
   spriteListHouse3: []
   streetSpriteList: []
+  akMusicPlayer: {fileID: 271482753}
+  city:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 155b218ded4934f369d972d49457181b,
+      type: 2}
+  greyhound:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2d1debcfbf5284ba59c95e394d19015e,
+      type: 2}
+  cat:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d76e0830b5d21403b86b25c5c63701c0,
+      type: 2}
+  dogFather:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c56eea155e8ec41689f491ff7d124d57,
+      type: 2}
   materials:
     street_floors: {fileID: 4119429476235930303, guid: d63da3d52aaa1594f965303d20fa0db9,
       type: 3}
