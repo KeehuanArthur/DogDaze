@@ -14,32 +14,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Spray" ID="{7AFBA1D8-CAC6-4D32-A1DC-876DB3DFEE8A}">
-					<ChildrenList>
-						<Action Name="" ID="{5A1837E5-1D0B-497A-914D-19FC79C52182}" ShortID="1048262437">
-							<PropertyList>
-								<Property Name="Inclusion" Type="bool">
-									<ValueList>
-										<Value>False</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="SprayGun" ID="{1AD01913-C4D7-420F-8128-FD9788E6E2A4}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{5DD0F8DF-6A1C-4F2B-A681-A5D9523AD0D1}" ShortID="150463416">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="SprayGun2" ID="{82D190F0-8CDC-4A9E-AE49-ABFBCB917CC0}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="TennisBall" ID="{4A5484E6-2A11-4840-A57A-2E6FA9A01FA3}"/>
 				<Event Name="Junktyard_Ambience" ID="{0243B86B-A335-4C3F-ACD1-3E0D8773A02D}">
 					<ChildrenList>
 						<Action Name="" ID="{E0E3B6B2-2115-4D71-A1FF-3A05722AE717}" ShortID="1012359535">
@@ -75,6 +49,9 @@
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{FC9E9FC6-EECA-4161-8BEE-CA81B4542FAA}" ShortID="590506798">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Junkyard Music" ID="{F8AA21A1-FD1E-4AF9-A279-A0CE4CD0C6A2}" WorkUnitID="{A9B4FD7A-984E-4BCC-BF85-1470EC9C5986}"/>
@@ -86,6 +63,9 @@
 				<Event Name="Room_Ambience" ID="{003D1326-6A33-4810-A754-CD2E1FB5F3F9}">
 					<ChildrenList>
 						<Action Name="" ID="{47484126-E3FD-46F9-B826-77C4FBFBCB23}" ShortID="951025267">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Room_Ambience" ID="{D971D387-E684-4AC4-8D36-CFEE1C5854F5}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
@@ -150,6 +130,8 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Water_Spray" ID="{3990311E-24EC-4E22-B991-E53406D09EDF}"/>
+				<Event Name="SoccerBall" ID="{10D5DA4E-20FC-4311-8A31-34763D189297}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

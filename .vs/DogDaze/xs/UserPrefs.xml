@@ -1,33 +1,37 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameMaster.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/StreetGenerator.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameMaster.cs" Line="225" Column="49" />
-      <File FileName="Assets/Scripts/SceneBuilder.cs" Line="50" Column="41" />
+      <File FileName="Assets/Scripts/GameMaster.cs" Line="296" Column="1" />
+      <File FileName="Assets/Scripts/SceneBuilder.cs" Line="88" Column="1" />
       <File FileName="Assets/Scripts/HouseBuilder.cs" Line="147" Column="1" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="164" Column="39" />
-      <File FileName="Assets/Scripts/Animal.cs" Line="42" Column="1" />
-      <File FileName="Assets/Scripts/Animals/Bulldog.cs" />
-      <File FileName="Assets/Scripts/StreetBuilder.cs" Line="11" Column="1" />
-      <File FileName="Assets/Scripts/MovingObject.cs" Line="10" Column="13" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Animal.cs" Line="50" Column="1" />
+      <File FileName="Assets/Scripts/Animals/Bulldog.cs" Line="10" Column="1" />
+      <File FileName="Assets/Scripts/StreetBuilder.cs" Line="112" Column="1" />
+      <File FileName="Assets/Scripts/MovingObject.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/HouseGenerator.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/JunkyardGenerator.cs" Line="19" Column="1" />
+      <File FileName="Assets/Scripts/StreetGenerator.cs" Line="19" Column="1" />
+      <File FileName="Assets/Wwise/Editor/WwiseSetupWizard/AkPluginActivator.cs" Line="476" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="DogDaze" expanded="True" />
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="DogDaze" selected="True" />
+          <Node name="DogDaze" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Animals" expanded="True" />
+                <Node name="StreetGenerator.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0232788b-ed0f-4ff2-9114-91b456da7322" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

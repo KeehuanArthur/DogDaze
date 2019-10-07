@@ -6,13 +6,17 @@
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Desktop\LudumDare45\DogDaze\Assets\LudumDare45_Wwise\Originals\SFX"/>
 				<Property Name="Event Action List\{003D1326-6A33-4810-A754-CD2E1FB5F3F9}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{0243B86B-A335-4C3F-ACD1-3E0D8773A02D}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{09025EC5-0432-40C6-8033-A7D756AA6A62}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{092BC6EC-8D4F-49F3-97F2-18FCDB1614FC}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{10D5DA4E-20FC-4311-8A31-34763D189297}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{23501ED6-6E4C-46D5-AFE2-D38C6B18C67F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{2A23A297-91F8-4120-82AB-B01EEC0B77F8}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{3990311E-24EC-4E22-B991-E53406D09EDF}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{3C12C756-E243-42C4-9859-91C51EC87321}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{4909D516-AF38-4340-A49A-6B6E260480E6}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{4A5484E6-2A11-4840-A57A-2E6FA9A01FA3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{52062C89-CF45-42E2-8DB6-811E0D35594D}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{570F480D-22AD-435A-98AD-FB4C8A476C23}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7AFBA1D8-CAC6-4D32-A1DC-876DB3DFEE8A}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{90AF7366-5E1D-4EDC-86E6-ED4CE597ABBE}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{AE3C0EE0-A4E1-45AC-9754-C6AC7D49DB55}\x64_Expand States" Type="string" Value=""/>

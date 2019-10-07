@@ -12,11 +12,9 @@
 						<ObjectRef Name="Junkyard_Music" ID="{AE3C0EE0-A4E1-45AC-9754-C6AC7D49DB55}" WorkUnitID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="BigDog_Bark" ID="{23501ED6-6E4C-46D5-AFE2-D38C6B18C67F}" WorkUnitID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Room_Ambience" ID="{003D1326-6A33-4810-A754-CD2E1FB5F3F9}" WorkUnitID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="TennisBall" ID="{4A5484E6-2A11-4840-A57A-2E6FA9A01FA3}" WorkUnitID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Roomba" ID="{DD41B2AB-6872-487A-AD4B-18A3F846BB53}" WorkUnitID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Treat" ID="{092BC6EC-8D4F-49F3-97F2-18FCDB1614FC}" WorkUnitID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Junktyard_Ambience" ID="{0243B86B-A335-4C3F-ACD1-3E0D8773A02D}" WorkUnitID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Spray" ID="{7AFBA1D8-CAC6-4D32-A1DC-876DB3DFEE8A}" WorkUnitID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Cat_Meow" ID="{B5B0BF93-6383-4FE1-AAA6-3BEC9C966CE6}" WorkUnitID="{7D983D6F-2CB1-4398-B177-D417AE55BDF1}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

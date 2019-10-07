@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -7,22 +7,44 @@ using Random = UnityEngine.Random;
 public class HouseBuilder : SceneBuilder
 {
 
+    private string specialItem;
+
+    GameObject wall_tile;
+    GameObject floor_tile;
+    GameObject special_item_tile;
+
     public GameMaster.HouseComponents houseComponents;
+
+    // void Start() {
+    //     wall_tile = new GameObject();                   
+    //     floor_tile = new GameObject();
+    //     special_item_tile = new GameObject();
+
+    //     wall_tile.AddComponent<SpriteRenderer>();
+    //     floor_tile.AddComponent<SpriteRenderer>();
+    //     special_item_tile.AddComponent<SpriteRenderer>();
+
+    //     wall_tile.AddComponent<BoxCollider2D>();
+    // }
 
     public override void serealize() {
         // Game Objects here are a list of tiles to choose from
         List<List<GameObject>> ret = new List<List<GameObject>>();
         frame = new List<List<GameObject>>();
-		topFrameObjects = new List<GameObject>();
-		topFramePositions = new List<List<int>>();
+        topFrameObjects = new List<GameObject>();
+        topFramePositions = new List<List<int>>();
 
+        wall_tile = new GameObject();                   
+        floor_tile = new GameObject();
+        special_item_tile = new GameObject();
 
-    	GameObject wall_tile = houseComponents.wall_sprite_holder;
-		GameObject floor_tile = houseComponents.floor_sprite_holder;
-		GameObject special_item_tile = houseComponents.special_item_sprite_holder;
+        wall_tile.AddComponent<SpriteRenderer>();
+        floor_tile.AddComponent<SpriteRenderer>();
+        special_item_tile.AddComponent<SpriteRenderer>();
 
+        wall_tile.AddComponent<BoxCollider2D>();
+        wall_tile.GetComponent<BoxCollider2D>().size = new Vector2(1,1);
 
-		wall_tile.AddComponent<BoxCollider2D>();
 
         for( int i=0; i < columns; i++ ) {
             frame.Add(new List<GameObject>());
@@ -32,11 +54,13 @@ public class HouseBuilder : SceneBuilder
                     frame[i].Add(wall_tile);
                 }
                 else {
-                    floor_tiles.GetComponent<SpriteRenderer>().sprite = sprite_list[sprite_mapper["floor"][0]];
-                    frame[i].Add(floor_tiles);    
+                    floor_tile.GetComponent<SpriteRenderer>().sprite = sprite_list[sprite_mapper["floor"][0]];
+                    frame[i].Add(floor_tile);    
                 }
             }
         }
+
+
 
 		special_item_tile.GetComponent<SpriteRenderer>().sprite = sprite_list[sprite_mapper["specialitem"][0]];
         if (special_item_tile.GetComponent<BoxCollider2D>() == null)
@@ -46,8 +70,13 @@ public class HouseBuilder : SceneBuilder
 		special_item_tile.GetComponent<BoxCollider2D>().isTrigger = true;
 		special_item_tile.GetComponent<BoxCollider2D>().tag = "SpecialItem";
 
+        Debug.Log(topFrameObjects);
+
 		topFrameObjects.Add(special_item_tile);
 		topFramePositions.Add(new List<int>(new int[] { 6, 6 }));
+
+
+
 
         // Add Walls
         // Create middle divider
@@ -69,6 +98,15 @@ public class HouseBuilder : SceneBuilder
             column_divider2 = Random.Range(column_divider1 + 4, columns);
             CreateRandomVerticalWall(row_divider, column_divider2);
         }
+
+
+
+        // Add Doors
+        frame[8][0] = Instantiate(door1);
+        frame[8][1] = Instantiate(door2);
+
+        frame[8][1].GetComponent<Doors>().destination = "street";
+        frame[8][1].GetComponent<Doors>().gm = gm;
     }
 
     void CreateRandomVerticalWall(int horizontal_wall_location, int new_column_location) {
@@ -90,9 +128,6 @@ public class HouseBuilder : SceneBuilder
 
     void CreateWalls(string orientation, int[] xRange, int[] yRange) {
 
-        GameObject wall_tile = houseComponents.wall_sprite_holder;                   
-        wall_tile.AddComponent<BoxCollider2D>();
-
         int total_index_counter = 0;
 
 
@@ -103,7 +138,6 @@ public class HouseBuilder : SceneBuilder
                         total_index_counter += 1;
                         if (total_index_counter < 5 && total_index_counter > 2)
                             continue;
-                        Debug.Log("trying to add wall");
                         frame[i][j] = wall_tile;
                     }
                 }
@@ -126,21 +160,6 @@ public class HouseBuilder : SceneBuilder
                 Debug.Log("You dun fuked up.");
                 break;
         }
-
     }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-	}
-
-	// Update is called once per frame
-	void Update()
-    {
-        
-    }
-
-
 }
+

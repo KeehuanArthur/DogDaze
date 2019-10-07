@@ -1,73 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class StreetBuilder : MonoBehaviour
-{
-
-    // Hardcoded Street Stuff
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
-=======
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class StreetBuilder : MonoBehaviour
-{
-
-    // Hardcoded Street Stuff
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
->>>>>>> 72819a0f579cd6391dcf90477d0a530b3d776385
-=======
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class StreetBuilder : SceneBuilder
 {
+
     public override void serealize() {
         frame = new List<List<GameObject>>();
+
         topFrameObjects = new List<GameObject>();
         topFramePositions = new List<List<int>>();
-
 
         for (int i=0; i<columns; i++) {
             frame.Add(new List<GameObject>());
             for (int j=0; j<rows; j++ ) {
-
-                // Doors
-                if (i == 0 && j == 25) {
-                    frame[i].Add(door_tiles);
-                    frame[i][frame[i].Count-1].name = "door1";
-                }
 
                 if (i > 10 && i < 20) {
                     frame[i].Add(floor_tiles);
@@ -92,6 +38,7 @@ public class StreetBuilder : SceneBuilder
         }
 
 
+        /* Add Walls */
         for (int i=0; i < columns; i++)
         {
             for (int j=0; j < rows; j++)
@@ -155,7 +102,24 @@ public class StreetBuilder : SceneBuilder
 
             }
         }
+
+        // Question: Will frame point to same instances?
+        // maybe have to use new_var = Instantiate();
+
+        /* Add Door1 */
+        frame[0][25] = Instantiate(door1);
+        frame[0][26] = Instantiate(door2);
+        frame[0][25].GetComponent<Doors>().destination = "house0";
+        frame[0][25].GetComponent<Doors>().gm = gm;
+
+        // door1.GetComponent<Doors>().destination = "house0";
+        // door1.GetComponent<Doors>().gm = gm;
+
+        /* Add Door2 */        
+        frame[29][45] = Instantiate(door1);
+        frame[29][46] = Instantiate(door2);
+        frame[29][45].GetComponent<Doors>().destination = "house1";
+        frame[29][45].GetComponent<Doors>().gm = gm;
     }
    
 }
->>>>>>> c3a1e0f639fcc0c50b9947e79dab30dfa17b5089

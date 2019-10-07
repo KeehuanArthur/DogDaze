@@ -119,9 +119,29 @@ MonoBehaviour:
   playerSpeed: 10
   moveVelocity: {x: 0, y: 0}
   moveInput: {x: 0, y: 0}
+  gameMaster: {fileID: 0}
   Items:
   - {fileID: 6827151168929318713, guid: fda757f6909664be98d620f2466ca25c, type: 3}
   - {fileID: 8936105327397142829, guid: 6c96e45abdcf04df7adbdc4fa611bd14, type: 3}
+  spraySound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6df6de6edd4b6449e9e9fb76b0914e3d,
+      type: 2}
+  tailWig:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e2f79803e6d264cdfad7f8090a219519,
+      type: 2}
+  soccerBall:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 28fe13c0059054b61bb51ef7a1742cae,
+      type: 2}
+  roombaSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!60 &6669769674277711897
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -188,4 +208,21 @@ MonoBehaviour:
   playerSpeed: 10
   moveVelocity: {x: 0, y: 0}
   moveInput: {x: 0, y: 0}
+  gameMaster: {fileID: 0}
   Items: []
+  spraySound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  tailWig:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  soccerBall:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  roombaSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
