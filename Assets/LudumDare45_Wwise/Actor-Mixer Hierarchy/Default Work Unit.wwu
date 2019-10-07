@@ -181,10 +181,13 @@
 					<PropertyList>
 						<Property Name="Highpass" Type="int16">
 							<ValueList>
-								<Value>6</Value>
+								<Value>20</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-500</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{4898585C-0C47-40E5-940D-8D76CBA9B573}">
@@ -195,6 +198,11 @@
 									</Modifier>
 								</ModifierInfo>
 							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-8</Value>
+							</ValueList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
@@ -236,7 +244,7 @@
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
-										<Value>44</Value>
+										<Value>22</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -262,7 +270,7 @@
 							<PropertyList>
 								<Property Name="Highpass" Type="int16">
 									<ValueList>
-										<Value>45</Value>
+										<Value>20</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -597,339 +605,6 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
-				<Sound Name="Room_Ambience" ID="{D971D387-E684-4AC4-8D36-CFEE1C5854F5}" ShortID="127235285">
-					<PropertyList>
-						<Property Name="Highpass" Type="int16">
-							<ValueList>
-								<Value>41</Value>
-							</ValueList>
-						</Property>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-						<Property Name="Lowpass" Type="int16">
-							<ValueList>
-								<Value>50</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Roomtone,TACF,Auditorium,Light Hum" ID="{14F63735-BE17-4764-9149-BB3529E6663E}" ShortID="660867108">
-							<PropertyList>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-								<Property Name="TrimEnd" Type="Real64" Value="29.325"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>Roomtone,TACF,Auditorium,Light Hum.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Roomtone,TACF,Auditorium,Light Hum" ID="{14F63735-BE17-4764-9149-BB3529E6663E}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<BlendContainer Name="JunkYard_Ambience" ID="{1E07DA86-A99F-404A-A5D3-D3803A38DF49}" ShortID="986945529">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="America_BBC_ECD24i" ID="{F8A3E44E-3395-4CDF-81B8-A82121C90674}" ShortID="489538912">
-							<PropertyList>
-								<Property Name="Highpass" Type="int16">
-									<ValueList>
-										<Value>17</Value>
-									</ValueList>
-								</Property>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-25</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="America_BBC_ECD24i" ID="{C8797A7D-1CE4-4567-9D54-3D2B16E1744B}" ShortID="927357170">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="3.60673659040435"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="2.94291666666666"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="48.2201260291536"/>
-										<Property Name="TrimEnd" Type="Real64" Value="79.4996838600251"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>America.BBC.ECD24i.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="America_BBC_ECD24i" ID="{C8797A7D-1CE4-4567-9D54-3D2B16E1744B}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Industrial_Ambient_Spaces_04" ID="{C0B7E56F-4A6E-47A5-B7D1-6C81724EC88C}" ShortID="144130033">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-27</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Industrial_Ambient_Spaces_04" ID="{85582F29-564A-483A-B3EE-BFA51AEEA67C}" ShortID="1061477611">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="1.52335069444444"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="1.52335069444444"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="21.93625"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Industrial_Ambient_Spaces_04.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Industrial_Ambient_Spaces_04" ID="{85582F29-564A-483A-B3EE-BFA51AEEA67C}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Traffic_city_day_close" ID="{670A6330-F80A-417D-85E8-FA4A1BEE6A6F}" ShortID="340585591">
-							<PropertyList>
-								<Property Name="Highpass" Type="int16">
-									<ValueList>
-										<Value>40</Value>
-									</ValueList>
-								</Property>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-48</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Traffic_city_day_close" ID="{E87E61F5-98F9-464B-886E-A986A44380B4}" ShortID="644922975">
-									<PropertyList>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Traffic_city_day_close.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Traffic_city_day_close" ID="{E87E61F5-98F9-464B-886E-A986A44380B4}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Bluezone_BC0247_008_ambience_wind" ID="{B01424F3-CF91-4989-BC37-4D1A2355F7DE}" ShortID="575833820">
-							<PropertyList>
-								<Property Name="Highpass" Type="int16">
-									<ValueList>
-										<Value>36</Value>
-									</ValueList>
-								</Property>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Lowpass" Type="int16">
-									<ValueList>
-										<Value>15</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-28</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Bluezone_BC0247_008_ambience_wind" ID="{D71C5E84-40AF-4835-8C45-466E52F1076A}" ShortID="913886551">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="1.99666666666667"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.998333333333331"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Bluezone_BC0247_008_ambience_wind.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Bluezone_BC0247_008_ambience_wind" ID="{D71C5E84-40AF-4835-8C45-466E52F1076A}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="CA_35_Construction Site_Street_Fadromas Loading Truck_3" ID="{3F8133BD-9D45-4019-B679-BA034AB12B00}" ShortID="786107790">
-							<PropertyList>
-								<Property Name="Highpass" Type="int16">
-									<ValueList>
-										<Value>10</Value>
-									</ValueList>
-								</Property>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Lowpass" Type="int16">
-									<ValueList>
-										<Value>50</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-16</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="CA_35_Construction Site_Street_Fadromas Loading Truck_3" ID="{E4652818-F151-4483-8939-8420232FB284}" ShortID="758611887">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="9.73090277777778"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="23.3029513888889"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="131.3671875"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>CA_35_Construction Site_Street_Fadromas Loading Truck_3.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="CA_35_Construction Site_Street_Fadromas Loading Truck_3" ID="{E4652818-F151-4483-8939-8420232FB284}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="City Wind, Leaves, Distant Traffic  _Stereo (LR)" ID="{619D6958-2057-40DC-AAC3-97CC5BA60B8D}" ShortID="803575559">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-15</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="City Wind, Leaves, Distant Traffic  _Stereo (LR)" ID="{7B2D88C5-2F01-4E71-BB56-2A3D1DCB8E72}" ShortID="424821462">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="5.71454253472222"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="5.71454253472221"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>City Wind, Leaves, Distant Traffic  _Stereo (LR).wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="City Wind, Leaves, Distant Traffic  _Stereo (LR)" ID="{7B2D88C5-2F01-4E71-BB56-2A3D1DCB8E72}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</BlendContainer>
-				<BlendContainer Name="City_Ambience" ID="{E3364C13-896F-4064-A819-0085A60C90E9}" ShortID="243911407">
-					<PropertyList>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-3</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="Park Residential, Birds, Wind, Crows _STEREO" ID="{5DA35564-77A8-4F85-93D5-FDAA47EAC1D4}" ShortID="1024438712">
-							<PropertyList>
-								<Property Name="Highpass" Type="int16">
-									<ValueList>
-										<Value>39</Value>
-									</ValueList>
-								</Property>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Lowpass" Type="int16">
-									<ValueList>
-										<Value>45</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-11</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Park Residential, Birds, Wind, Crows _STEREO" ID="{00AB76C5-D555-4744-A5F0-4A8A2AAA79F0}" ShortID="472187441">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="6.81770833333337"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="17.3541666666666"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Park Residential, Birds, Wind, Crows _STEREO.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Park Residential, Birds, Wind, Crows _STEREO" ID="{00AB76C5-D555-4744-A5F0-4A8A2AAA79F0}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</BlendContainer>
 				<Sound Name="Cat_Hissing_1" ID="{868D1B69-6805-409A-BD7D-A832E40B0387}" ShortID="427090795">
 					<PropertyList>
 						<Property Name="Highpass" Type="int16">
@@ -1085,7 +760,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-5</Value>
+								<Value>-10</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -1485,6 +1160,518 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="UI_Navi" ID="{4D176141-DE62-4296-972E-A16455535A6A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SoccerBall_Kick" ID="{DD3261B3-E24F-47B1-9B20-EACABF71F2FA}" ShortID="191912126">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>19</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>39</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-200</Value>
+							</ValueList>
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{480234FB-FE08-4FB8-BDC3-3E4F275F2918}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-51"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SoccerBall_Kick" ID="{F3F17F32-509D-4E5C-AD33-6F1AF781F6B9}" ShortID="413447624">
+							<Language>SFX</Language>
+							<AudioFile>SoccerBall_Kick.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{961E567A-7275-4D07-92D1-7E87A19442D2}">
+							<PropertyList>
+								<Property Name="PanX" Type="Real64" Value="85.6531049250535"/>
+								<Property Name="PanY" Type="Real64" Value="72.4373576309795"/>
+							</PropertyList>
+						</Panner>
+					</PositioningInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="SoccerBall_Kick" ID="{F3F17F32-509D-4E5C-AD33-6F1AF781F6B9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="SoccerBall_Bounce" ID="{890B776E-8AF2-4B47-9280-3B217074A1B4}" ShortID="571972561">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SoccerBall_Bounce" ID="{22D8A4C2-D805-473A-8C85-62C173DA4773}" ShortID="689104524">
+							<Language>SFX</Language>
+							<AudioFile>SoccerBall_Bounce.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SoccerBall_Bounce" ID="{22D8A4C2-D805-473A-8C85-62C173DA4773}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<SwitchContainer Name="Ambience" ID="{BAA38C9D-54F1-4F7E-9989-A85769969B04}" ShortID="850644319">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="Junkyard" ID="{BF9F787E-0F5D-4F60-B949-6F9CE8587989}" WorkUnitID="{870B77DE-264F-4C1B-8F3E-5251D354222C}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="Ambience" ID="{3938DCD9-CD85-4177-9A5D-D16662409B36}" WorkUnitID="{870B77DE-264F-4C1B-8F3E-5251D354222C}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="JunkYard_Ambience" ID="{1E07DA86-A99F-404A-A5D3-D3803A38DF49}" ShortID="986945529">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="America_BBC_ECD24i" ID="{F8A3E44E-3395-4CDF-81B8-A82121C90674}" ShortID="489538912">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>17</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-25</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="America_BBC_ECD24i" ID="{C8797A7D-1CE4-4567-9D54-3D2B16E1744B}" ShortID="927357170">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="3.60673659040435"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.94291666666666"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="48.2201260291536"/>
+												<Property Name="TrimEnd" Type="Real64" Value="79.4996838600251"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>America.BBC.ECD24i.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="America_BBC_ECD24i" ID="{C8797A7D-1CE4-4567-9D54-3D2B16E1744B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Industrial_Ambient_Spaces_04" ID="{C0B7E56F-4A6E-47A5-B7D1-6C81724EC88C}" ShortID="144130033">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-27</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Industrial_Ambient_Spaces_04" ID="{85582F29-564A-483A-B3EE-BFA51AEEA67C}" ShortID="1061477611">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.52335069444444"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.52335069444444"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="21.93625"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Industrial_Ambient_Spaces_04.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Industrial_Ambient_Spaces_04" ID="{85582F29-564A-483A-B3EE-BFA51AEEA67C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Traffic_city_day_close" ID="{670A6330-F80A-417D-85E8-FA4A1BEE6A6F}" ShortID="340585591">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>40</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-48</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Traffic_city_day_close" ID="{E87E61F5-98F9-464B-886E-A986A44380B4}" ShortID="644922975">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Traffic_city_day_close.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Traffic_city_day_close" ID="{E87E61F5-98F9-464B-886E-A986A44380B4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Bluezone_BC0247_008_ambience_wind" ID="{B01424F3-CF91-4989-BC37-4D1A2355F7DE}" ShortID="575833820">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>36</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>15</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-28</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Bluezone_BC0247_008_ambience_wind" ID="{D71C5E84-40AF-4835-8C45-466E52F1076A}" ShortID="913886551">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="1.99666666666667"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.998333333333331"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Bluezone_BC0247_008_ambience_wind.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Bluezone_BC0247_008_ambience_wind" ID="{D71C5E84-40AF-4835-8C45-466E52F1076A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="CA_35_Construction Site_Street_Fadromas Loading Truck_3" ID="{3F8133BD-9D45-4019-B679-BA034AB12B00}" ShortID="786107790">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>50</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-16</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="CA_35_Construction Site_Street_Fadromas Loading Truck_3" ID="{E4652818-F151-4483-8939-8420232FB284}" ShortID="758611887">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.73090277777778"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="23.3029513888889"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="131.3671875"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>CA_35_Construction Site_Street_Fadromas Loading Truck_3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="CA_35_Construction Site_Street_Fadromas Loading Truck_3" ID="{E4652818-F151-4483-8939-8420232FB284}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="City Wind, Leaves, Distant Traffic  _Stereo (LR)" ID="{619D6958-2057-40DC-AAC3-97CC5BA60B8D}" ShortID="803575559">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-15</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="City Wind, Leaves, Distant Traffic  _Stereo (LR)" ID="{7B2D88C5-2F01-4E71-BB56-2A3D1DCB8E72}" ShortID="424821462">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="5.71454253472222"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="5.71454253472221"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>City Wind, Leaves, Distant Traffic  _Stereo (LR).wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="City Wind, Leaves, Distant Traffic  _Stereo (LR)" ID="{7B2D88C5-2F01-4E71-BB56-2A3D1DCB8E72}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<Sound Name="Room_Ambience" ID="{D971D387-E684-4AC4-8D36-CFEE1C5854F5}" ShortID="127235285">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>41</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>50</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Roomtone,TACF,Auditorium,Light Hum" ID="{14F63735-BE17-4764-9149-BB3529E6663E}" ShortID="660867108">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="29.325"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Roomtone,TACF,Auditorium,Light Hum.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Roomtone,TACF,Auditorium,Light Hum" ID="{14F63735-BE17-4764-9149-BB3529E6663E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<BlendContainer Name="City_Ambience" ID="{E3364C13-896F-4064-A819-0085A60C90E9}" ShortID="243911407">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Park Residential, Birds, Wind, Crows _STEREO" ID="{5DA35564-77A8-4F85-93D5-FDAA47EAC1D4}" ShortID="1024438712">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>39</Value>
+											</ValueList>
+										</Property>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>45</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-11</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Park Residential, Birds, Wind, Crows _STEREO" ID="{00AB76C5-D555-4744-A5F0-4A8A2AAA79F0}" ShortID="472187441">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="6.81770833333337"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="17.3541666666666"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Park Residential, Birds, Wind, Crows _STEREO.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Park Residential, Birds, Wind, Crows _STEREO" ID="{00AB76C5-D555-4744-A5F0-4A8A2AAA79F0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="City_Ambience" ID="{E3364C13-896F-4064-A819-0085A60C90E9}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="JunkYard_Ambience" ID="{1E07DA86-A99F-404A-A5D3-D3803A38DF49}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Room_Ambience" ID="{D971D387-E684-4AC4-8D36-CFEE1C5854F5}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Junkyard" ID="{BF9F787E-0F5D-4F60-B949-6F9CE8587989}"/>
+								<ItemList>
+									<ItemRef Name="JunkYard_Ambience" ID="{1E07DA86-A99F-404A-A5D3-D3803A38DF49}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Street" ID="{86A998C7-FBD0-4E0D-A79F-5DFA7BE4FB30}"/>
+								<ItemList>
+									<ItemRef Name="City_Ambience" ID="{E3364C13-896F-4064-A819-0085A60C90E9}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Room" ID="{E6DB6DD6-15ED-430D-8AEC-908161FCDFEF}"/>
+								<ItemList>
+									<ItemRef Name="Room_Ambience" ID="{D971D387-E684-4AC4-8D36-CFEE1C5854F5}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+				<Sound Name="Dog_Bark_Click" ID="{AFC86D07-F06C-42CB-ABAF-C5E7E2BF1109}" ShortID="598912302">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4515EFA0-DBC3-404F-BEC2-28A5DE512225}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{A398088C-9550-43B8-8FD2-EE587892C7FC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Dog_Bark_6" ID="{C3AD70AC-3472-4FB6-91C5-3BC23C1BF48D}" ShortID="111539609">
+							<Language>SFX</Language>
+							<AudioFile>Dog_Bark_6.wav</AudioFile>
+							<ConvertedFileIDList>
+								<File ID="463127310"/>
+							</ConvertedFileIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Dog_Bark_6" ID="{C3AD70AC-3472-4FB6-91C5-3BC23C1BF48D}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

@@ -14,17 +14,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Junktyard_Ambience" ID="{0243B86B-A335-4C3F-ACD1-3E0D8773A02D}">
-					<ChildrenList>
-						<Action Name="" ID="{E0E3B6B2-2115-4D71-A1FF-3A05722AE717}" ShortID="1012359535">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="JunkYard_Ambience" ID="{1E07DA86-A99F-404A-A5D3-D3803A38DF49}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="PlayerDog_Bark" ID="{2A23A297-91F8-4120-82AB-B01EEC0B77F8}">
 					<ChildrenList>
 						<Action Name="" ID="{FBEC4086-1E77-4CA2-8CAF-7E4B68E46C37}" ShortID="289993590">
@@ -116,13 +105,22 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="SoccerBall" ID="{10D5DA4E-20FC-4311-8A31-34763D189297}"/>
 				<Event Name="Item_Pickup" ID="{C20509F2-B3CC-4C28-948C-B068759E6370}">
 					<ChildrenList>
 						<Action Name="" ID="{7277715A-6ACE-4EB7-83ED-6C310D2B6795}" ShortID="862888284">
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Item_PickUp" ID="{8AB54418-24E7-49E3-B507-3E70AF00C040}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D2FD130E-884D-4C11-9536-99846565492F}" ShortID="318044679">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.25"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SmallDog_Bark" ID="{E49674CE-3415-4496-8865-2D738B43AE8E}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -144,6 +142,71 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="LD45 MUSIC" ID="{4880504D-BC77-4BC0-8ED4-A066799289B3}" WorkUnitID="{A9B4FD7A-984E-4BCC-BF85-1470EC9C5986}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Ball_Kick" ID="{E96A9F0B-D1C5-4DF9-880D-C557F6B356AE}">
+					<ChildrenList>
+						<Action Name="" ID="{4C2B67BC-6570-415C-8024-87A0DB11FEFA}" ShortID="695714983">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SoccerBall_Kick" ID="{DD3261B3-E24F-47B1-9B20-EACABF71F2FA}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Ball_Bounce" ID="{7B6E26E9-ADF2-42BD-8A5E-3358A3176C5A}">
+					<ChildrenList>
+						<Action Name="" ID="{D3B0DC43-E568-49C1-A288-8893149881E6}" ShortID="75867587">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="SoccerBall_Bounce" ID="{890B776E-8AF2-4B47-9280-3B217074A1B4}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Ambience" ID="{CE7162FF-882E-4420-ACEB-A350D5111972}">
+					<ChildrenList>
+						<Action Name="" ID="{64DA0753-1AFF-420A-B025-7963B1856B47}" ShortID="335815280">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience" ID="{BAA38C9D-54F1-4F7E-9989-A85769969B04}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4AAB149E-F791-49EA-92A0-CDC7104494C3}" ShortID="750220638">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience" ID="{BAA38C9D-54F1-4F7E-9989-A85769969B04}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_Navi" ID="{FD1674F4-40F9-4416-9FC1-1BD5A19EED10}">
+					<ChildrenList>
+						<Action Name="" ID="{FA7FD068-387C-4093-9BFB-F611283D1FA3}" ShortID="240143220">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Navi" ID="{E3F6FA8A-AFFE-4C48-849B-892C2CA289EB}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_Click" ID="{F8F490EF-FA69-42C2-9DE3-F6CC6B9F06E8}">
+					<ChildrenList>
+						<Action Name="" ID="{ADB6ADBF-3814-490D-A55E-9D5DBBF9441D}" ShortID="570691635">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dog_Bark_Click" ID="{AFC86D07-F06C-42CB-ABAF-C5E7E2BF1109}" WorkUnitID="{156D64E9-8A98-4767-AB0B-BB11F7B60EC4}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
