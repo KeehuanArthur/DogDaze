@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Sounds")]
     public GameObject akMusicPlayer;
     public AK.Wwise.Event waterSpray;
-    public AK.Wwise.Event tailWig;
+    public AK.Wwise.Event tailWag;
     public AK.Wwise.Event soccerBall;
     public AK.Wwise.Event roombaSound;
     public AK.Wwise.Switch Junkyard;
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && currentItem == Items[0])   // 
         {
-            tailWig.Post(gameObject);//play sound
+            tailWag.Post(gameObject);//play sound
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Rigidbody2D newCurrentItem;
             newCurrentItem = Instantiate(currentItem, transform.position, Quaternion.identity);
