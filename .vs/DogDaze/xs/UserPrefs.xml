@@ -1,7 +1,11 @@
 ﻿<Properties StartupConfiguration="{76EC0281-163F-FEAD-D621-E79C57D63131}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameMaster.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameMaster.cs" Line="196" Column="33" />
+      <File FileName="Assets/Scripts/GameMaster.cs" Line="348" Column="68" />
+      <File FileName="Assets/Wwise/Deployment/API/Handwritten/Common/AkCallbackManager.cs" />
+      <File FileName="Assets/Scripts/Animal.cs" />
+      <File FileName="Assets/Scripts/Doors.cs" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="130" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,6 +15,15 @@
               <Node name="Scripts" expanded="True">
                 <Node name="GameMaster.cs" selected="True" />
               </Node>
+              <Node name="Wwise" expanded="True">
+                <Node name="Deployment" expanded="True">
+                  <Node name="API" expanded="True">
+                    <Node name="Handwritten" expanded="True">
+                      <Node name="Common" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
@@ -19,7 +32,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fb9a5387-5f3d-40ba-a52e-b795f0a6d661" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e3991a49-0771-4913-9770-df7252a7b435" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
